@@ -8,7 +8,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 4px 20px;
+  padding: 12px 18px;
+  background: var(--color-surface, #ffffff);
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-lg, 12px);
+  margin-bottom: 20px;
+  position: sticky;
+  top: 8px;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .cbt-page__brand {
@@ -18,18 +26,28 @@
 
 .cbt-page__body {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr 300px;
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: start;
 }
 
 .cbt-page__main {
   min-width: 0;
 }
 
+.cbt-page__sidebar {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+}
+
 @media (max-width: 900px) {
   .cbt-page__body {
     grid-template-columns: 1fr;
+  }
+  .cbt-page__sidebar {
+    position: static;
   }
 }

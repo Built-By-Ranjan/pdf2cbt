@@ -79,7 +79,12 @@ export default function CBT() {
     <div className="cbt-page" ref={containerRef}>
       <div className="cbt-page__topbar">
         <span className="cbt-page__brand">Paper2CBT — Exam in Progress</span>
-        <Timer secondsLeft={secondsLeft} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <Timer secondsLeft={secondsLeft} />
+          <Button variant="danger" onClick={() => setShowSubmitConfirm(true)}>
+            Finish Test
+          </Button>
+        </div>
       </div>
 
       <div className="cbt-page__body">
@@ -105,12 +110,14 @@ export default function CBT() {
           />
         </div>
 
-        <QuestionPalette
-          questions={questions}
-          statuses={examState.statuses}
-          currentIndex={currentIndex}
-          onJump={goTo}
-        />
+        <div className="cbt-page__sidebar">
+          <QuestionPalette
+            questions={questions}
+            statuses={examState.statuses}
+            currentIndex={currentIndex}
+            onJump={goTo}
+          />
+        </div>
       </div>
 
       {showSubmitConfirm && (

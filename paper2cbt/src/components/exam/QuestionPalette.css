@@ -39,8 +39,10 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 8px;
-  max-height: 320px;
+  max-height: 400px;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 4px;
 }
 
 .palette-item {
