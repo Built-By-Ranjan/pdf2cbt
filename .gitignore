@@ -8,3 +8,8 @@ paper2cbt.zip
 *.log
 .cache
 debug-crops
+eng.traineddata
+tools/*.png
+tools/test_crops/
+tools/ch2_p4_crops/
+test file/
