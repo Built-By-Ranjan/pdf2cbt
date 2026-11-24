@@ -1,32 +1,97 @@
-# Paper2CBT
+# 📄➜💻 PDF2CBT — Instant PDF to Computer Based Test (CBT)
 
-Convert **any question PDF** into a fully working **Computer Based Test (CBT)** — instantly, in the browser.
+[![React](https://img.shields.io/badge/React-19-blue.svg?logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6.x-646CFF.svg?logo=vite)](https://vitejs.dev/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Built by](https://img.shields.io/badge/Author-Built--By--Ranjan-indigo.svg)](https://github.com/Built-By-Ranjan)
 
-Upload a PDF → configure exam settings → take the test with a real CBT interface (timer, question palette, mark for review, auto-submit) → get a result (scored automatically if an answer key was found in the PDF, otherwise a full response log).
-
----
-
-## Tech Stack
-
-- **React 19** + **Vite** (JavaScript, no TypeScript)
-- **React Router** for navigation
-- **pdfjs-dist** for PDF text extraction & page rendering
-- **tesseract.js** for OCR fallback on scanned pages
-- Plain **CSS** with CSS variables (light/dark theme) — no Tailwind
-- Deployed via **GitHub + Vercel**
+> **Convert any question paper PDF into a real-time, interactive Computer Based Test (CBT) instantly — with high-resolution question cropping, official answer key evaluation, and JEE Main PYQ papers ready to practice!**
 
 ---
 
-## Getting Started
+## ⚡ Highlights & Key Features
+
+- **🎯 Exact High-Resolution Question Slicing:** Multi-column & single-column smart boundary detection with 2x crisp rendering and auto-trimming to eliminate watermarks and empty margins.
+- **🖥️ Realistic NTA/JEE CBT Interface:** 
+  - Real-time countdown timer with auto-submit.
+  - Interactive **Question Palette** showing Answered, Not Answered, Marked for Review, and Not Visited statuses.
+  - Sticky exam header with quick **"Finish Test"** and persistent sidebar palette.
+- **🧩 Hybrid Input Widget:** Seamlessly supports both Multiple Choice Options (A–D / 1–4) and Numerical/Integer value inputs.
+- **📊 Instant Result & Auto-Evaluation:** Parses official answer keys at the back of PDFs to automatically calculate scores, negative marking, accuracy, and detailed question-wise breakdowns.
+- **📚 13 Preloaded Physics PYQ Papers:** Instant access to 1,500+ curated JEE Main Physics questions (2019–2026) ready to test without uploading.
+- **🌓 Dark & Light Modes:** Elegant, distraction-free UI with smooth scrolling and responsive design for both desktop and mobile devices.
+
+---
+
+## 📚 Preloaded Exam Papers Collection
+
+| Exam Paper | Questions | Answer Key Status | Format |
+| :--- | :---: | :---: | :---: |
+| **Challenge 1:** All PYQs of JEE Main 2019 | **70** | ✅ Configured | Slide Mode |
+| **Challenge 2:** Top 200 Questions JEE Main 2023 | **200** | ✅ 200 / 200 (100%) | Multi-column |
+| **Challenge 3:** Top 200 Questions JEE Main 2024 | **200** | ✅ 200 / 200 (100%) | Multi-column |
+| **Challenge 4:** Top 200 Questions JEE Main 2022 | **200** | ✅ 200 / 200 (100%) | Multi-column |
+| **Challenge 5:** Top 200 Questions JEE Main 2025 | **200** | ✅ 200 / 200 (100%) | Multi-column |
+| **Challenge 6:** Top 200 Questions JEE Main 2021 | **200** | ✅ 200 / 200 (100%) | Multi-column |
+| **Challenge 7:** Top 100 Questions JEE Main 2020 | **100** | ✅ 100 / 100 (100%) | Multi-column |
+| **Challenge 8:** Top 200 Questions JEE Main 2026 | **200** | ✅ 200 / 200 (100%) | Multi-column |
+| **Challenge 9:** Theoretical Questions 2020–2023 | **141** | ✅ 141 / 141 (100%) | Multi-column |
+| **Challenge 11:** Rank Booster Questions | **20** | ✅ Configured | Multi-column |
+| **Challenge 13:** Top 100 Graphical Questions | **96** | ⚙️ Configurable via Modal | Slide Mode |
+| **Challenge 14:** 30 Experiment & Instruments | **30** | ✅ 30 / 30 (100%) | Multi-column |
+| **Challenge 15:** Top 50 Circuit Questions | **50** | ✅ 50 / 50 (100%) | Multi-column |
+
+---
+
+## 🛠️ Architecture & Pipeline
+
+```text
+Any Question PDF
+       │
+       ▼
+1. Text & Layout Extraction (pdfjs-dist)
+       │
+       ▼
+2. Multi-Column & Slide Detection (Boundary Analyzer)
+       │
+       ▼
+3. High-Res Canvas Rendering & Auto-Trimming (2x Scale)
+       │
+       ▼
+4. Answer Key Parser (Two-pass regex table matching)
+       │
+       ▼
+5. Real-Time CBT Simulation (Timer, Question Palette, Hybrid Input)
+       │
+       ▼
+6. Scorecard & Performance Analytics
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- `npm` or `yarn`
+
+### Installation & Local Run
 
 ```bash
+# Clone the repository
+git clone https://github.com/Built-By-Ranjan/pdf2cbt.git
+cd pdf2cbt/paper2cbt
+
+# Install dependencies
 npm install
+
+# Start local development server
 npm run dev
 ```
 
-Open the printed local URL (typically `http://localhost:5173`).
+Open `http://localhost:5173` in your browser.
 
-### Build for production
+### Production Build
 
 ```bash
 npm run build
@@ -35,115 +100,24 @@ npm run preview
 
 ---
 
-## How the parser works
+## 🌐 Deploy to Vercel (1-Click Free Hosting)
 
-Every PDF goes through the same pipeline (`src/services/parserService.js`):
-
-```
-PDF file
-  │
-  ▼
-Text Extraction (pdfjs-dist reads the embedded text layer, page by page)
-  │
-  ▼
-OCR fallback (tesseract.js) — only runs on pages with no usable text layer,
-  in small batches, so 500-page scanned PDFs don't blow up memory
-  │
-  ▼
-Normalization (src/services/normalizer.js) — fixes line breaks, hyphenation,
-  glued question/option markers, whitespace
-  │
-  ▼
-Tokenizer (src/services/tokenizer.js) — flattens the document into line tokens
-  tagged with their source page
-  │
-  ▼
-Question Parser (src/services/questionParser.js + optionParser.js) — a
-  rule-based, multi-pattern engine (never a single regex) that detects question
-  starts, options (A./B./①/roman numerals/etc.), wrapped lines, and images
-  │
-  ▼
-Answer Key Detector (src/services/answerKeyService.js) — scans for an
-  "Answer Key" section; if none is found, scoring is skipped entirely on
-  the Result page (per spec: never guess/calculate a score without a real key)
-  │
-  ▼
-JSON: { questions: [...], answerKey, pdfType, pageCount }
-```
-
-### Supported question markers
-`Question 1`, `Q1`, `Q.1`, `1.`, `1)`, `01.`
-
-### Supported option markers
-`A.` `B.` `C.` `D.`, `A)` `B)`, `(A)` `(B)`, `①②③④`, Roman numerals (`I.`/`II.`)
-
-### Question types detected
-Single choice MCQ, multiple choice (via "select all/two/three" hints), True/False,
-Assertion–Reason, and image-based questions (flagged via `hasImage`).
+1. Fork or push this repository to your GitHub.
+2. Go to [vercel.com](https://vercel.com) and click **"Add New Project"**.
+3. Import your `pdf2cbt` repository.
+4. Set **Root Directory** to `paper2cbt`.
+5. Keep Build Command as `npm run build` and Output Directory as `dist`.
+6. Click **Deploy** — your CBT website is live in 60 seconds!
 
 ---
 
-## Project Structure
+## 🤝 Contributing
 
-```
-src/
-  assets/              static assets
-  components/
-    common/            Button, Loader, Modal, ProgressBar — reusable, no duplication
-    layout/            Header, Footer, ThemeToggle
-    upload/             DropZone, PdfPreview, ProcessingStatus
-    exam/              QuestionCard, OptionList, QuestionPalette, Timer, NavigationControls
-    result/            SummaryCard, ScoreCard, QuestionWiseResult
-  pages/               Home, Settings, CBT, Result — one per route
-  services/            pdfService, ocrService, normalizer, tokenizer,
-                       questionParser, optionParser, answerKeyService,
-                       scoringService, parserService (orchestrator)
-  utils/               constants, regexPatterns, idGenerator, timeUtils, validators
-  hooks/               useTimer, useFullscreen, useAutoSave, useLocalStorage
-  context/             ExamContext (questions/settings/responses), ThemeContext
-  styles/              variables.css (design tokens), global.css
-```
-
-Each service has a single responsibility, each feature has its own component,
-and all shared UI lives in `components/common` — no duplicated styling or logic.
+Contributions, feedback, and issue reports are always welcome! Feel free to open an issue or submit a pull request.
 
 ---
 
-## CBT Exam Features
+## 👤 Author
 
-- Question navigation: Next / Previous / jump via palette
-- Mark for Review, Clear Response
-- Live auto-save of every response to `localStorage` (survives refresh/crash)
-- Countdown timer with **auto-submit** when time expires
-- Fullscreen mode entered automatically on exam start
-- Fully responsive: desktop, laptop, tablet, mobile
-- Light/Dark mode (persisted, toggle in header)
-
-## Result Logic
-
-- **No answer key in the PDF** → shows Total / Attempted / Skipped and a
-  question-wise log of exactly what was selected (or "Not Attempted").
-  **No score is ever calculated or guessed.**
-- **Answer key detected in the PDF** → additionally shows Correct, Wrong,
-  Score, Percentage, and Accuracy, computed from the marks configured in Settings.
-
-## Performance notes
-
-- OCR runs in batches (`OCR_BATCH_SIZE` in `utils/constants.js`) instead of
-  all pages at once, keeping memory bounded on large (500+ page) scans.
-- Canvas elements used for OCR rendering are explicitly zeroed and pdf.js
-  page objects are `.cleanup()`'d immediately after use.
-- Parsing and OCR are the only heavy operations; the exam UI itself only
-  ever renders the current question, not the whole question set at once.
-
-## Deployment (Vercel)
-
-1. Push this repository to GitHub.
-2. Import the repo in Vercel — framework preset **Vite** is auto-detected.
-3. Build command: `npm run build`, output directory: `dist` (Vercel defaults are correct).
-4. `vercel.json` includes a SPA rewrite so client-side routes
-   (`/settings`, `/exam`, `/result`) work on refresh/direct link.
-
----
-
-Made by Ranjan
+Crafted with ❤️ by **[Built-By-Ranjan](https://github.com/Built-By-Ranjan)**  
+*Connecting technology with competitive exam preparation.*
