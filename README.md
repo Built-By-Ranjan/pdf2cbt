@@ -71,34 +71,7 @@ Any Question PDF
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- `npm` or `yarn`
 
-### Installation & Local Run
-
-```bash
-# Clone the repository
-git clone https://github.com/Built-By-Ranjan/pdf2cbt.git
-cd pdf2cbt/paper2cbt
-
-# Install dependencies
-npm install
-
-# Start local development server
-npm run dev
-```
-
-Open `http://localhost:5173` in your browser.
-
-### Production Build
-
-```bash
-npm run build
-npm run preview
-```
-
----
 
 ## 🌐 Deploy to Vercel (1-Click Free Hosting)
 
