@@ -15,6 +15,34 @@ import { QUESTION_TYPES } from '../utils/constants';
  *   all-or-nothing
  */
 
+/**
+ * Compares two answers by value: handles string equality, letter-to-number
+ * mapping (A=1, B=2, C=3, D=4), and floating point equality with 0.01 tolerance.
+ */
+function compareByValue(userVal, correctVal) {
+  if (userVal === undefined || userVal === null || correctVal === undefined || correctVal === null) {
+    return false;
+  }
+  const uStr = String(userVal).trim().replace(/^[([{<"']+|[)\]}>"']+$/g, '').trim().toUpperCase();
+  const cStr = String(correctVal).trim().replace(/^[([{<"']+|[)\]}>"']+$/g, '').trim().toUpperCase();
+  if (!uStr || !cStr) return false;
+  if (uStr === cStr) return true;
+
+  // Letter <-> Number mapping (A=1, B=2, C=3, D=4)
+  const letterToNum = { A: '1', B: '2', C: '3', D: '4' };
+  if (letterToNum[uStr] && letterToNum[uStr] === cStr) return true;
+  if (letterToNum[cStr] && letterToNum[cStr] === uStr) return true;
+
+  // Floating-point numeric comparison
+  const uNum = parseFloat(uStr);
+  const cNum = parseFloat(cStr);
+  if (!Number.isNaN(uNum) && !Number.isNaN(cNum) && Math.abs(uNum - cNum) < 0.01) {
+    return true;
+  }
+
+  return false;
+}
+
 function normalizeSelection(selected) {
   if (selected === undefined || selected === null || selected === '') return [];
   return Array.isArray(selected) ? selected : [selected];
@@ -105,6 +133,16 @@ export function computeResult(questions, responses, answerKey, marking) {
     } else if (selectedLabels.length > 0 && correctLabels.length > 0) {
       if (qw.type === QUESTION_TYPES.MULTIPLE_CHOICE || correctLabels.length > 1) {
         ({ outcome, marks } = scoreMultipleCorrect(selectedLabels, correctLabels, marking));
+      } else if (qw.type === QUESTION_TYPES.HYBRID) {
+        // Hybrid: compare by value (letter match, number match, letter-to-number mapping, float comparison)
+        const isCorrect = compareByValue(selectedLabels[0], correctLabels[0]);
+        if (isCorrect) {
+          outcome = 'Correct';
+          marks = marking.correctMarks;
+        } else {
+          outcome = 'Wrong';
+          marks = -Math.abs(marking.negativeMarks);
+        }
       } else if (qw.type === QUESTION_TYPES.INTEGER || qw.type === QUESTION_TYPES.NUMERICAL) {
         // Phase C: Numeric comparison with small tolerance
         const userNum = parseFloat(selectedLabels[0]);

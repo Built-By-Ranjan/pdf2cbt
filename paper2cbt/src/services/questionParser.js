@@ -42,13 +42,9 @@ function classifyQuestionType(questionText, options, sectionIsInteger, section) 
   if (options.length === 0) {
     if (sectionIsInteger) return QUESTION_TYPES.INTEGER;
     if (NUMERICAL_ANSWER_HINT.test(questionText)) return QUESTION_TYPES.NUMERICAL;
-    if (hasOptionsInText) return QUESTION_TYPES.SINGLE_CHOICE;
-    // Section-I / Section A / MCQ section in exam papers: if options are graphs or images,
-    // classify as SINGLE_CHOICE so option buttons appear on CBT screen.
-    if (section && /(?:section|part)\s*[-–:]?\s*(?:I|1|A)\b/i.test(section)) {
-      return QUESTION_TYPES.SINGLE_CHOICE;
-    }
-    return QUESTION_TYPES.SUBJECTIVE;
+    // Image-only questions (options inside image/diagram) must NEVER be typeless or subjective.
+    // Assign them HYBRID type (option buttons A-D (1-4) plus a numeric input, value-based scoring).
+    return QUESTION_TYPES.HYBRID;
   }
   if (TRUE_FALSE_PATTERN.test(questionText) && options.length <= 2) return QUESTION_TYPES.TRUE_FALSE;
   if (MULTIPLE_CHOICE_HINT.test(questionText)) return QUESTION_TYPES.MULTIPLE_CHOICE;
@@ -144,17 +140,17 @@ export function parseQuestions(tokens) {
         current.section
       );
 
-      // Phase C: If an MCQ question has no text options (e.g. options are graphs or diagrams),
-      // synthesize default options A-D so CBT screen renders option buttons for the cropped image.
+      // Synthesize default options A-D (1-4) for HYBRID or SINGLE_CHOICE when options are inside the image
       if (
-        current.type === QUESTION_TYPES.SINGLE_CHOICE &&
+        (current.type === QUESTION_TYPES.HYBRID || current.type === QUESTION_TYPES.SINGLE_CHOICE) &&
         current.options.length === 0
       ) {
-        current.options = ['A', 'B', 'C', 'D'].map((label) => ({
-          label,
-          text: '',
-          isImageOption: true,
-        }));
+        current.options = [
+          { label: 'A', text: '(1)', isImageOption: true },
+          { label: 'B', text: '(2)', isImageOption: true },
+          { label: 'C', text: '(3)', isImageOption: true },
+          { label: 'D', text: '(4)', isImageOption: true },
+        ];
       }
 
       current.options = current.options.slice(0, MAX_OPTIONS_PER_QUESTION);

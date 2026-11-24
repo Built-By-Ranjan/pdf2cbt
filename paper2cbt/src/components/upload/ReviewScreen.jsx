@@ -18,6 +18,7 @@ const TYPE_LABELS = {
   [QUESTION_TYPES.MULTIPLE_CHOICE]: 'Multi MCQ',
   [QUESTION_TYPES.INTEGER]: 'Integer',
   [QUESTION_TYPES.NUMERICAL]: 'Numerical',
+  [QUESTION_TYPES.HYBRID]: 'Hybrid (MCQ + Numeric)',
   [QUESTION_TYPES.SUBJECTIVE]: 'Subjective',
   [QUESTION_TYPES.TRUE_FALSE]: 'True/False',
   [QUESTION_TYPES.ASSERTION_REASON]: 'Assert/Reason',
@@ -308,15 +309,22 @@ export default function ReviewScreen({ onProceed }) {
                       <div className="review-card__details">
                         <label>
                           Type:
-                          <select
-                            value={q.type}
-                            onChange={(e) => changeType(q.id, e.target.value)}
-                            className="review-card__select"
-                          >
-                            {Object.entries(TYPE_LABELS).map(([val, label]) => (
-                              <option key={val} value={val}>{label}</option>
-                            ))}
-                          </select>
+                          <div className="review-card__type-row">
+                            <select
+                              value={q.type}
+                              onChange={(e) => changeType(q.id, e.target.value)}
+                              className="review-card__select"
+                            >
+                              {Object.entries(TYPE_LABELS).map(([val, label]) => (
+                                <option key={val} value={val}>{label}</option>
+                              ))}
+                            </select>
+                            {currentAnswer && (
+                              <span className="review-card__hint-badge" title="Answer key value detected (type not forced)">
+                                Hint: Ans = {currentAnswer}
+                              </span>
+                            )}
+                          </div>
                         </label>
 
                         <label>
