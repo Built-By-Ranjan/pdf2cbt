@@ -11,9 +11,24 @@ import { annotateSections } from '../paper2cbt/src/services/sectionDetector.js';
 import { annotateSubjects } from '../paper2cbt/src/services/subjectDetector.js';
 import { parseQuestions } from '../paper2cbt/src/services/questionParser.js';
 import { extractAnswerKey, mapKeyEntriesToQuestions } from '../paper2cbt/src/services/answerKeyService.js';
+import { classifyNonQuestionPage } from '../paper2cbt/src/services/instructionParser.js';
 import { QUESTION_TYPES } from '../paper2cbt/src/utils/constants.js';
 
 const ADI_DIR = 'P:/work/ptocbt/Adi';
+const OCR_CACHE_FILE = 'P:/work/ptocbt/tools/adi_ocr_cache.json';
+
+let ocrCache = {};
+if (fs.existsSync(OCR_CACHE_FILE)) {
+  try {
+    ocrCache = JSON.parse(fs.readFileSync(OCR_CACHE_FILE, 'utf-8'));
+  } catch { /* ignore */ }
+}
+
+function saveOcrCache() {
+  try {
+    fs.writeFileSync(OCR_CACHE_FILE, JSON.stringify(ocrCache, null, 2));
+  } catch { /* ignore */ }
+}
 
 export const DEV_FILES = [
   'Challenge 1_All PYQs of JEE Main 2019.pdf',
@@ -152,24 +167,33 @@ async function processPdfFile(filename, ocrWorker) {
       });
     } else {
       ocrPageCount++;
-      // Render and OCR
-      const scale = 1.5;
-      const ocrViewport = page.getViewport({ scale });
-      const canvas = createCanvas(Math.ceil(ocrViewport.width), Math.ceil(ocrViewport.height));
-      const ctx = canvas.getContext('2d');
-      await page.render({ canvasContext: ctx, viewport: ocrViewport }).promise;
-      const buf = canvas.toBuffer('image/png');
-      const res = await ocrWorker.recognize(buf);
+      const cacheKey = `${filename}_p${pNum}`;
+      let ocrLines;
+      if (ocrCache[cacheKey]) {
+        ocrLines = ocrCache[cacheKey];
+      } else {
+        // Render and OCR
+        const scale = 1.0;
+        const ocrViewport = page.getViewport({ scale });
+        const canvas = createCanvas(Math.ceil(ocrViewport.width), Math.ceil(ocrViewport.height));
+        const ctx = canvas.getContext('2d');
+        await page.render({ canvasContext: ctx, viewport: ocrViewport }).promise;
+        const buf = canvas.toBuffer('image/png');
+        const res = await ocrWorker.recognize(buf);
 
-      const ocrLines = (res.data.lines || [])
-        .map((l) => ({
-          text: (l.text || '').trim(),
-          bbox: l.bbox,
-          x: l.bbox.x0 / scale,
-          y: page.view[3] - (l.bbox.y0 / scale),
-          column: 0,
-        }))
-        .filter((l) => l.text.length > 0);
+        ocrLines = (res.data.lines || [])
+          .map((l) => ({
+            text: (l.text || '').trim(),
+            bbox: l.bbox,
+            x: l.bbox.x0 / scale,
+            y: page.view[3] - (l.bbox.y0 / scale),
+            column: 0,
+          }))
+          .filter((l) => l.text.length > 0);
+
+        ocrCache[cacheKey] = ocrLines;
+        if (pNum % 5 === 0) saveOcrCache();
+      }
 
       pages.push({
         pageNumber: pNum,
@@ -182,21 +206,53 @@ async function processPdfFile(filename, ocrWorker) {
     }
     page.cleanup();
   }
+  saveOcrCache();
 
   let pdfType = 'text';
   if (ocrPageCount === numPages) pdfType = 'scanned';
   else if (ocrPageCount > 0) pdfType = 'mixed';
 
+  // Filter non-question pages
+  const nonQuestionPages = new Set();
+  for (const page of pages) {
+    const pageType = classifyNonQuestionPage(page.text || '');
+    if (pageType) {
+      nonQuestionPages.add(page.pageNumber);
+    }
+  }
+  const questionPages = pages.filter((p) => !nonQuestionPages.has(p.pageNumber));
+
   // Run pipeline
-  const cleaned = cleanPages(pages);
+  const cleaned = cleanPages(questionPages);
   const normalized = normalizePages(cleaned);
   const tokens = tokenizePages(normalized);
   const sectioned = annotateSections(tokens);
   const subjectAnnotated = annotateSubjects(sectioned);
   const questions = parseQuestions(subjectAnnotated);
 
-  const rawKey = extractAnswerKey(tokens);
-  const answerKeyMap = mapKeyEntriesToQuestions(rawKey, questions);
+  const answerKeyMap = extractAnswerKey(tokens, questions);
+
+  // Refine question types and options based on answer key
+  if (answerKeyMap && questions.length > 0) {
+    for (const q of questions) {
+      const ans = answerKeyMap.get(q.number);
+      if (ans && q.type === QUESTION_TYPES.SUBJECTIVE) {
+        if (/^[A-Da-d]$/.test(ans)) {
+          q.type = QUESTION_TYPES.SINGLE_CHOICE;
+          if (!q.options || q.options.length === 0) {
+            q.options = ['A', 'B', 'C', 'D'].map((label) => ({ label, text: '', isImageOption: true }));
+          }
+        } else if (/^[1-4]$/.test(ans)) {
+          q.type = QUESTION_TYPES.SINGLE_CHOICE;
+          if (!q.options || q.options.length === 0) {
+            q.options = ['1', '2', '3', '4'].map((label) => ({ label, text: '', isImageOption: true }));
+          }
+        } else if (/^-?\d+(?:\.\d+)?$/.test(ans)) {
+          q.type = QUESTION_TYPES.INTEGER;
+        }
+      }
+    }
+  }
 
   const durationSec = ((Date.now() - startTime) / 1000).toFixed(1);
 
@@ -306,7 +362,7 @@ async function run() {
       results.push(res);
       console.log(`  -> ${res.questionsFound} questions found, ${res.mcqCount} MCQs, ${res.integerCount} Integers, ${res.answersMapped} Answers mapped. Flags: ${res.flags}`);
     } catch (err) {
-      console.error(`  -> Failed: ${err.message}`);
+      console.error(`  -> Failed: ${err.stack || err.message}`);
       results.push({
         filename: file,
         pages: 0,
@@ -326,46 +382,60 @@ async function run() {
 
   await ocrWorker.terminate();
 
-  fs.writeFileSync('P:/work/ptocbt/tools/adi_batch_before.json', JSON.stringify(results, null, 2));
-  console.log('\nSaved baseline results to P:/work/ptocbt/tools/adi_batch_before.json');
+  const beforeFile = 'P:/work/ptocbt/tools/adi_batch_before.json';
+  const beforeResults = fs.existsSync(beforeFile)
+    ? JSON.parse(fs.readFileSync(beforeFile, 'utf-8'))
+    : null;
 
-  // Print Markdown Table
-  console.log('\n=================== BEFORE BASELINE RESULTS ===================\n');
-  printTable(results);
+  fs.writeFileSync('P:/work/ptocbt/tools/adi_batch_after.json', JSON.stringify(results, null, 2));
+  console.log('\nSaved AFTER results to P:/work/ptocbt/tools/adi_batch_after.json');
+
+  // Print DEV SET Table
+  console.log('\n=================== DEV SET: BEFORE vs AFTER ===================\n');
+  printComparisonTable(DEV_FILES, beforeResults, results);
+
+  // Print HOLD-OUT SET Table
+  console.log('\n=================== HOLD-OUT SET: BEFORE vs AFTER ===================\n');
+  printComparisonTable(HOLDOUT_FILES, beforeResults, results);
 }
 
-function printTable(rows) {
+function printComparisonTable(fileList, beforeRows, afterRows) {
   const headers = [
     'File Name',
     'Pages',
-    'Type',
-    'Time',
-    'Questions',
-    'Subjects',
-    'MCQ',
-    'Integer',
-    'Answers',
-    'Solutions',
-    'Flags',
+    'Time (A)',
+    'Qs (B)',
+    'Qs (A)',
+    'MCQ (B)',
+    'MCQ (A)',
+    'Int (B)',
+    'Int (A)',
+    'Ans (B)',
+    'Ans (A)',
+    'Flags (AFTER)'
   ];
   console.log('| ' + headers.join(' | ') + ' |');
   console.log('| ' + headers.map(() => '---').join(' | ') + ' |');
-  rows.forEach((r) => {
+
+  for (const filename of fileList) {
+    const b = beforeRows?.find((r) => r.filename === filename) || {};
+    const a = afterRows?.find((r) => r.filename === filename) || {};
     const row = [
-      (r.isHoldout ? '⭐ ' : '') + r.filename,
-      r.pages,
-      r.pdfType,
-      r.timeTaken,
-      r.questionsFound,
-      r.subjectsDetected,
-      r.mcqCount,
-      r.integerCount,
-      r.answersMapped,
-      r.solutionsFound,
-      r.flags,
+      filename.replace(/_/g, ' '),
+      a.pages || b.pages || '-',
+      a.timeTaken || '-',
+      b.questionsFound ?? '-',
+      a.questionsFound ?? '-',
+      b.mcqCount ?? '-',
+      a.mcqCount ?? '-',
+      b.integerCount ?? '-',
+      a.integerCount ?? '-',
+      b.answersMapped ?? '-',
+      a.answersMapped ?? '-',
+      a.flags || 'None'
     ];
     console.log('| ' + row.join(' | ') + ' |');
-  });
+  }
 }
 
 run().catch(console.error);

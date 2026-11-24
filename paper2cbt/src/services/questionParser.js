@@ -94,7 +94,13 @@ function createQuestion({ number, text, page, section, sectionIsInteger, subject
  * a stray numbered line with no following content.
  */
 function isValidQuestion(q) {
-  return Boolean(q) && (q.question.trim().length > 0 || q.options.length > 0 || q.hasImage);
+  return (
+    Boolean(q) &&
+    (q.question.trim().length > 0 ||
+      q.options.length > 0 ||
+      q.hasImage ||
+      q.number !== null)
+  );
 }
 
 /**

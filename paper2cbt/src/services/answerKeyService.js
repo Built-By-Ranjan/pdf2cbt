@@ -12,7 +12,7 @@
 //     per subject, using an offset-aware strategy.
 
 import { TOKEN_TYPES } from '../utils/constants';
-import { ANSWER_KEY_HEADER, matchAnswerKeyLine } from '../utils/regexPatterns';
+import { ANSWER_KEY_HEADER, matchAnswerKeyLine, matchAllAnswerKeyEntries } from '../utils/regexPatterns';
 import { buildAnswerKeyFromInline } from './inlineAnswerDetector';
 
 const MIN_DENSE_MATCH_RATIO = 0.6; // fraction of lines on a page that must look like key lines
@@ -75,8 +75,8 @@ function extractRawKeyEntriesFromTokens(tokens) {
 
     if (tok.subject) currentSubject = tok.subject;
 
-    const match = matchAnswerKeyLine(text);
-    if (match) {
+    const entries = matchAllAnswerKeyEntries(text);
+    for (const match of entries) {
       rawEntries.push({
         number: match.number,
         label: match.label,
@@ -98,6 +98,7 @@ function extractRawKeyEntriesFromTokens(tokens) {
  */
 export function mapKeyEntriesToQuestions(rawEntries, questions = []) {
   const map = new Map();
+  if (!Array.isArray(rawEntries) || rawEntries.length === 0) return map;
   if (!questions || questions.length === 0) {
     for (const entry of rawEntries) map.set(entry.number, entry.label);
     return map;

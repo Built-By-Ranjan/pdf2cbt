@@ -233,6 +233,33 @@ export function matchAnswerKeyLine(text) {
   return { number, label: parts.length === 1 ? parts[0] : parts };
 }
 
+/**
+ * Finds all answer-key entries in a line or block of text.
+ * Handles tabular multi-column key lines (e.g. "1. 4  32. 3  63. 1  94. 6")
+ * and space-separated grids ("1-A 2-C 3-B ...").
+ * @param {string} text
+ * @returns {Array<{ number:number, label:string|string[] }>}
+ */
+export function matchAllAnswerKeyEntries(text) {
+  if (!text) return [];
+  const regex = /(?:Q\.?\s*)?0*(\d{1,4})\s*[.):-]\s*\(?([A-Fa-f1-4](?:\s*[,/&]\s*[A-Fa-f1-4])*|-?\d+(?:\.\d+)?)\)?/g;
+  const entries = [];
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    const number = parseInt(match[1], 10);
+    const rawValue = match[2];
+    if (Number.isNaN(number)) continue;
+    let label = rawValue;
+    if (!/^-?\d+(?:\.\d+)?$/.test(rawValue)) {
+      const parts = rawValue.split(/[,/&]/).map((p) => normalizeOptionLabel(p.trim()) || p.trim()).filter(Boolean);
+      if (parts.length === 0) continue;
+      label = parts.length === 1 ? parts[0] : parts;
+    }
+    entries.push({ number, label });
+  }
+  return entries;
+}
+
 // ---------------------------------------------------------------------------
 // Section headers
 // ---------------------------------------------------------------------------

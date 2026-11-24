@@ -102,7 +102,9 @@ export function classifyNonQuestionPage(text) {
 
   // Cover page or blank page: very short text, mostly metadata or header furniture
   const lines = text.split('\n').filter((l) => l.trim().length > 0);
-  if (lines.length <= 4 && !hasOptions) {
+  const cleanCharCount = text.replace(/\s+/g, '').length;
+  const hasQuestionNumbers = /\b\d{1,3}\s*[.):]/.test(text);
+  if (cleanCharCount < 60 && !hasQuestionNumbers && !hasOptions) {
     return 'blank';
   }
 

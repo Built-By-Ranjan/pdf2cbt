@@ -1,11 +1,13 @@
 import { defineConfig } from '../paper2cbt/node_modules/vite/dist/node/index.js';
 import path from 'path';
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const entry = process.env.TOOL_ENTRY || 'tools/inspect_missing_solutions.js';
+const entryFile = path.resolve(__dirname, '.current_entry');
+const entry = (fs.existsSync(entryFile) && fs.readFileSync(entryFile, 'utf-8').trim()) || process.env.TOOL_ENTRY || 'tools/run_adi_batch.js';
 const outName = process.env.TOOL_OUT || 'tool_runner.cjs';
 
 export default defineConfig({
