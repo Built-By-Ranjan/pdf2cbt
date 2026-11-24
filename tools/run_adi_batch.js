@@ -30,21 +30,23 @@ function saveOcrCache() {
   } catch { /* ignore */ }
 }
 
+// Dev Set (11 files) - Note: Challenges 4 & 13 were moved here from hold-out due to inspection/debugging
 export const DEV_FILES = [
   'Challenge 1_All PYQs of JEE Main 2019.pdf',
   'Challenge 2_Top 200 Questions of JEE Main 2023 Physics.pdf',
   'Challenge 3_Top 200 Questions of JEE Main 2024 Physics.pdf',
+  'Challenge 4_Top 200 Questions of JEE Main 2022 Physics.pdf', // contaminated -> treated as dev
   'Challenge 5_Top 200 Questions of JEE Main 2025 Physics.pdf',
   'Challenge 6_Top 200 Questions of JEE Main 2021 Physics.pdf',
   'Challenge 7_Top 100 Questions of JEE Main 2020 Physics.pdf',
   'Challenge 8_Top 200 Questions of JEE Main 2026 Physics.pdf',
   'Challenge 9_Theoretical Ques 2020 to 2023 JEE Main.pdf',
   'Challenge 11_Rank Booster Questions Physics.pdf',
+  'Challenge 13_Top 100 Graphical Questions.pdf', // contaminated -> treated as dev
 ];
 
+// Clean Hold-out Set (2 files) - Strictly uninspected during development
 export const HOLDOUT_FILES = [
-  'Challenge 4_Top 200 Questions of JEE Main 2022 Physics.pdf',
-  'Challenge 13_Top 100 Graphical Questions.pdf',
   'Challenge 14_30 Experiment & Instruments Questions_Eduniti.pdf',
   'Challenge 15_Top 50 Circuit Questions_Full Physics.pdf',
 ];
@@ -245,7 +247,8 @@ async function processPdfFile(filename, ocrWorker) {
   let mcqCount = 0;
   let integerCount = 0;
   let answersMapped = 0;
-  let solutionsFound = 0;
+  let workedSolutions = 0;
+  let answerOnlyFallbacks = 0;
 
   questions.forEach((q) => {
     if (
@@ -262,13 +265,26 @@ async function processPdfFile(filename, ocrWorker) {
     if (q.inlineAnswer || (answerKeyMap && answerKeyMap.has(q.number))) {
       answersMapped++;
     }
-    if (q.solutionText || q.solutionImage) {
-      solutionsFound++;
+
+    // Distinguish worked solutions from answer-only placeholders
+    const isAnsOnly = q.solutionText && /^\s*Ans\.\s*\([A-D0-9-.]+\)\s*$/i.test(q.solutionText.trim());
+    const hasWorked = (q.solutionText && !isAnsOnly) || q.solutionImage;
+
+    if (hasWorked) {
+      workedSolutions++;
+    } else if (isAnsOnly || q.inlineAnswer) {
+      answerOnlyFallbacks++;
     }
   });
 
   // Calculate flags
   const flags = [];
+
+  // Low yield: questions-per-page far below median or under 3 questions from a non-trivial PDF (> 3 pages)
+  if (numPages > 3 && questions.length < 3) {
+    flags.push(`low_yield(${questions.length}Q/${numPages}p)`);
+  }
+
   const numbers = questions.map((q) => q.number);
   const seenNumbers = new Set();
   const dupes = new Set();
@@ -319,7 +335,9 @@ async function processPdfFile(filename, ocrWorker) {
     mcqCount,
     integerCount,
     answersMapped,
-    solutionsFound,
+    solutionsFound: workedSolutions + answerOnlyFallbacks,
+    workedSolutions,
+    answerOnlyFallbacks,
     flags: flags.length > 0 ? flags.join('; ') : 'None',
   };
 }
@@ -372,29 +390,38 @@ async function run() {
   fs.writeFileSync('P:/work/ptocbt/tools/adi_batch_after.json', JSON.stringify(results, null, 2));
   console.log('\nSaved AFTER results to P:/work/ptocbt/tools/adi_batch_after.json');
 
+  const expectedCountsFile = 'P:/work/ptocbt/tools/expected_counts.json';
+  let expectedCounts = null;
+  if (fs.existsSync(expectedCountsFile)) {
+    try {
+      expectedCounts = JSON.parse(fs.readFileSync(expectedCountsFile, 'utf-8'));
+    } catch { /* ignore */ }
+  }
+
   // Print DEV SET Table
   console.log('\n=================== DEV SET: BEFORE vs AFTER ===================\n');
-  printComparisonTable(DEV_FILES, beforeResults, results);
+  printComparisonTable(DEV_FILES, beforeResults, results, expectedCounts);
 
   // Print HOLD-OUT SET Table
   console.log('\n=================== HOLD-OUT SET: BEFORE vs AFTER ===================\n');
-  printComparisonTable(HOLDOUT_FILES, beforeResults, results);
+  printComparisonTable(HOLDOUT_FILES, beforeResults, results, expectedCounts);
 }
 
-function printComparisonTable(fileList, beforeRows, afterRows) {
+function printComparisonTable(fileList, beforeRows, afterRows, expectedCounts = null) {
   const headers = [
     'File Name',
     'Pages',
-    'Time (A)',
-    'Qs (B)',
-    'Qs (A)',
-    'MCQ (B)',
-    'MCQ (A)',
-    'Int (B)',
-    'Int (A)',
-    'Ans (B)',
-    'Ans (A)',
-    'Flags (AFTER)'
+    'Time(A)',
+    'Qs(B)',
+    'Qs(A)',
+    'Exp',
+    'Status',
+    'MCQ(A)',
+    'Int(A)',
+    'Ans(A)',
+    'Sol(Work)',
+    'Sol(Ans)',
+    'Flags(AFTER)'
   ];
   console.log('| ' + headers.join(' | ') + ' |');
   console.log('| ' + headers.map(() => '---').join(' | ') + ' |');
@@ -402,18 +429,28 @@ function printComparisonTable(fileList, beforeRows, afterRows) {
   for (const filename of fileList) {
     const b = beforeRows?.find((r) => r.filename === filename) || {};
     const a = afterRows?.find((r) => r.filename === filename) || {};
+
+    const exp = expectedCounts ? expectedCounts[filename] : null;
+    let status = 'PENDING';
+    if (exp !== null && exp !== undefined) {
+      status = a.questionsFound === exp ? 'PASS' : `FAIL(exp ${exp})`;
+    } else if (!expectedCounts) {
+      status = 'PENDING (no key)';
+    }
+
     const row = [
       filename.replace(/_/g, ' '),
       a.pages || b.pages || '-',
       a.timeTaken || '-',
       b.questionsFound ?? '-',
       a.questionsFound ?? '-',
-      b.mcqCount ?? '-',
+      exp ?? 'PENDING',
+      status,
       a.mcqCount ?? '-',
-      b.integerCount ?? '-',
       a.integerCount ?? '-',
-      b.answersMapped ?? '-',
       a.answersMapped ?? '-',
+      a.workedSolutions ?? 0,
+      a.answerOnlyFallbacks ?? 0,
       a.flags || 'None'
     ];
     console.log('| ' + row.join(' | ') + ' |');
