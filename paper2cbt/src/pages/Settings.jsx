@@ -6,14 +6,18 @@ import { useExam } from '../context/ExamContext';
 import { validateSettings } from '../utils/validators';
 import Button from '../components/common/Button';
 import Modal from '../components/common/Modal';
+import AnswerKeyModal from '../components/common/AnswerKeyModal';
 import './Settings.css';
 
 export default function Settings() {
   const navigate = useNavigate();
-  const { settings, setSettings, questions, startExam } = useExam();
+  const { settings, setSettings, questions, answerKey, setAnswerKey, startExam } = useExam();
   const [form, setForm] = useState(settings);
   const [errors, setErrors] = useState({});
   const [showConfirm, setShowConfirm] = useState(false);
+  const [isKeyModalOpen, setIsKeyModalOpen] = useState(false);
+
+  const answerCount = answerKey ? (answerKey instanceof Map ? answerKey.size : Object.keys(answerKey).length) : 0;
 
   if (!questions || questions.length === 0) {
     return (
@@ -76,6 +80,24 @@ export default function Settings() {
           error={errors.skipMarks}
         />
 
+        <div className="settings-field settings-field--answer-key">
+          <div className="settings-field__info">
+            <span className="settings-field__label">Answer Key</span>
+            <span className="settings-field__hint">
+              {answerCount > 0
+                ? `✓ ${answerCount} of ${questions.length} answers configured`
+                : `⚠ No answers configured yet`}
+            </span>
+          </div>
+          <button
+            type="button"
+            className="settings-field__key-btn"
+            onClick={() => setIsKeyModalOpen(true)}
+          >
+            🔑 {answerCount > 0 ? 'Edit Answer Key' : 'Configure Answer Key'}
+          </button>
+        </div>
+
         <Button variant="primary" size="lg" fullWidth onClick={handleReview}>
           Review & Start Exam
         </Button>
@@ -102,6 +124,14 @@ export default function Settings() {
           <p>Once started, the timer cannot be paused. Good luck!</p>
         </Modal>
       )}
+
+      <AnswerKeyModal
+        isOpen={isKeyModalOpen}
+        onClose={() => setIsKeyModalOpen(false)}
+        questions={questions}
+        currentAnswerKey={answerKey}
+        onSaveAnswerKey={(newKey) => setAnswerKey(newKey)}
+      />
     </div>
   );
 }

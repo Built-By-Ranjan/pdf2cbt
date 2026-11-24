@@ -99,29 +99,30 @@ export function detectBoundariesOnPage(lines, pageNumber, pageWidth, pageHeight)
 
     if (qStarts.length === 0) continue;
 
-    const colLeft = colAnchorMap.get(col) ?? 0;
-    const colRight = colRights.get(col) ?? pageWidth;
+    const isSingleColumn = linesByCol.size === 1;
+    const colLeft = isSingleColumn ? 0 : (colAnchorMap.get(col) ?? (col === 0 ? 0 : pageWidth * 0.5));
+    const colRight = isSingleColumn ? pageWidth : (colRights.get(col) ?? pageWidth);
 
     for (let i = 0; i < qStarts.length; i++) {
       const startLine = qStarts[i].line;
       const endLine = i + 1 < qStarts.length ? qStarts[i + 1].line : null;
 
-      const startY = startLine.topY - LINE_HEIGHT_EST * 0.5;
+      const startY = Math.max(0, startLine.topY - 12);
       let endY;
       if (endLine) {
-        endY = endLine.topY - LINE_HEIGHT_EST * 0.5;
+        endY = Math.max(startY + 20, endLine.topY - 8);
       } else {
-        // Extend to the bottom of the last line in the column
+        // Extend to the bottom of the last line in the column plus margin
         const lastLine = enriched[enriched.length - 1];
-        endY = lastLine.topY + LINE_HEIGHT_EST * 1.5;
+        endY = Math.min(pageHeight, lastLine.topY + 25);
       }
 
       boundaries.push({
         pageNumber,
-        startY: Math.max(0, startY),
-        endY: Math.min(pageHeight, endY),
-        startX: Math.max(0, colLeft - 4),
-        endX: Math.min(pageWidth, colRight + 4),
+        startY,
+        endY,
+        startX: Math.max(0, colLeft),
+        endX: Math.min(pageWidth, colRight),
         questionNumber: qStarts[i].number,
         column: col,
       });

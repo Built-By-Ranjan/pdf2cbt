@@ -56,6 +56,7 @@ export async function cropRegionToBlob(pdfDoc, region, opts = {}) {
 
   const viewport = page.getViewport({ scale: 1 });
   const pageH = viewport.height;
+  const pageW = viewport.width;
 
   // PDF y-axis is bottom-up; canvas y-axis is top-down.
   // region.startY and region.endY are already in top-down (descending) coords
@@ -63,43 +64,49 @@ export async function cropRegionToBlob(pdfDoc, region, opts = {}) {
   const rawTop = Math.max(0, region.startY - trimMargin);
   const rawBottom = Math.min(pageH, region.endY + trimMargin);
   const rawLeft = Math.max(0, (region.startX ?? 0) - trimMargin);
-  const rawRight = Math.min(viewport.width, (region.endX ?? viewport.width) + trimMargin);
+  const rawRight = Math.min(pageW, (region.endX ?? pageW) + trimMargin);
 
-  const cropWidth = Math.max(1, rawRight - rawLeft);
-  const cropHeight = Math.max(1, rawBottom - rawTop);
+  const cropWidth = Math.max(10, rawRight - rawLeft);
+  const cropHeight = Math.max(10, rawBottom - rawTop);
 
-  // Render the page at the desired scale with an offset so only our region is drawn.
-  const scaledViewport = page.getViewport({
-    scale,
-    offsetX: -rawLeft * scale,
-    offsetY: -(pageH - rawBottom) * scale,
-  });
-
-  const canvasW = Math.ceil(cropWidth * scale);
-  const canvasH = Math.ceil(cropHeight * scale);
-
-  const canvas = document.createElement('canvas');
-  canvas.width = canvasW;
-  canvas.height = canvasH;
-  const ctx = canvas.getContext('2d', { alpha: false });
-  ctx.fillStyle = '#ffffff';
-  ctx.fillRect(0, 0, canvasW, canvasH);
+  // Render full page canvas once at the desired scale, then crop exact rectangle via drawImage
+  const fullViewport = page.getViewport({ scale });
+  const fullCanvas = document.createElement('canvas');
+  fullCanvas.width = Math.ceil(pageW * scale);
+  fullCanvas.height = Math.ceil(pageH * scale);
+  const fullCtx = fullCanvas.getContext('2d', { alpha: false });
+  fullCtx.fillStyle = '#ffffff';
+  fullCtx.fillRect(0, 0, fullCanvas.width, fullCanvas.height);
 
   try {
-    await page.render({ canvasContext: ctx, viewport: scaledViewport }).promise;
+    await page.render({ canvasContext: fullCtx, viewport: fullViewport }).promise;
   } catch {
-    canvas.width = 0;
-    canvas.height = 0;
     page.cleanup();
     return null;
   }
 
+  const cropCanvas = document.createElement('canvas');
+  cropCanvas.width = Math.ceil(cropWidth * scale);
+  cropCanvas.height = Math.ceil(cropHeight * scale);
+  const cropCtx = cropCanvas.getContext('2d', { alpha: false });
+  cropCtx.fillStyle = '#ffffff';
+  cropCtx.fillRect(0, 0, cropCanvas.width, cropCanvas.height);
+
+  const srcX = Math.max(0, Math.floor(rawLeft * scale));
+  const srcY = Math.max(0, Math.floor(rawTop * scale));
+  const srcW = Math.min(fullCanvas.width - srcX, Math.ceil(cropWidth * scale));
+  const srcH = Math.min(fullCanvas.height - srcY, Math.ceil(cropHeight * scale));
+
+  cropCtx.drawImage(fullCanvas, srcX, srcY, srcW, srcH, 0, 0, srcW, srcH);
+  page.cleanup();
+
   return new Promise((resolve) => {
-    canvas.toBlob(
+    cropCanvas.toBlob(
       (blob) => {
-        canvas.width = 0;
-        canvas.height = 0;
-        page.cleanup();
+        fullCanvas.width = 0;
+        fullCanvas.height = 0;
+        cropCanvas.width = 0;
+        cropCanvas.height = 0;
         resolve(blob);
       },
       'image/png'

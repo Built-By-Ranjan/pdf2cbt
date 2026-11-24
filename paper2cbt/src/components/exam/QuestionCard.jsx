@@ -20,6 +20,11 @@ export default function QuestionCard({ question, selected, onSelect, questionInd
   // Load the cropped question image lazily when this question is displayed.
   useEffect(() => {
     let cancelled = false;
+    if (question.imageUrl) {
+      setImageUrl(question.imageUrl);
+      setImageLoading(false);
+      return;
+    }
     if (!question.id) return;
 
     setImageUrl(null);
@@ -35,7 +40,7 @@ export default function QuestionCard({ question, selected, onSelect, questionInd
     });
 
     return () => { cancelled = true; };
-  }, [question.id, getQuestionImageUrl]);
+  }, [question.id, question.imageUrl, getQuestionImageUrl]);
 
   const subjectBadge = question.subject && (
     <span className="question-card__subject-badge">{question.subject}</span>

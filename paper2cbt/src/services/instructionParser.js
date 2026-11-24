@@ -89,6 +89,28 @@ export function classifyNonQuestionPage(text) {
     return 'syllabus';
   }
 
+  // Index / Table of contents slides or pages
+  if (
+    (/table\s+of\s+contents|s\.?\s*no\.?\s+chapters?|chapters?\s+total\s+questions|total\s+questions\s+page\s+no/i.test(t) ||
+      (t.includes('index') && t.includes('chapters') && !hasOptions))
+  ) {
+    return 'syllabus';
+  }
+
+  // Cover page or blank page: very short text, mostly metadata or header furniture
+  const lines = text.split('\n').filter((l) => l.trim().length > 0);
+  const cleanCharCount = text.replace(/\s+/g, '').length;
+  const hasQuestionNumbers = /\b\d{1,3}\s*[.):]/.test(text);
+
+  // Promotional or title intro slide without questions (only on very sparse/short pages)
+  if (
+    lines.length <= 4 &&
+    !hasQuestionNumbers &&
+    /learn\s+like\s+never\s+before|welcome\s+to|table\s+of\s+contents/i.test(t)
+  ) {
+    return 'cover';
+  }
+
   if (
     /useful\s+data|physical\s+constants?|fundamental\s+constants?/i.test(text) &&
     !hasOptions
@@ -100,10 +122,6 @@ export function classifyNonQuestionPage(text) {
     return 'blank';
   }
 
-  // Cover page or blank page: very short text, mostly metadata or header furniture
-  const lines = text.split('\n').filter((l) => l.trim().length > 0);
-  const cleanCharCount = text.replace(/\s+/g, '').length;
-  const hasQuestionNumbers = /\b\d{1,3}\s*[.):]/.test(text);
   if (cleanCharCount < 60 && !hasQuestionNumbers && !hasOptions) {
     return 'blank';
   }

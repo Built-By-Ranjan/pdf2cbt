@@ -57,3 +57,40 @@
   flex-direction: column;
   gap: 6px;
 }
+
+.settings-field--answer-key {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  margin-bottom: 6px;
+}
+
+.settings-field__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-field__hint {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.settings-field__key-btn {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.settings-field__key-btn:hover {
+  background: #4338ca;
+}

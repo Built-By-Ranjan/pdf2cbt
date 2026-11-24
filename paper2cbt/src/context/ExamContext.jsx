@@ -193,6 +193,32 @@ export function ExamProvider({ children }) {
     [setExamState]
   );
 
+  const loadPreloadedExam = useCallback(
+    (exam) => {
+      if (!exam) return;
+      setQuestionsState(exam.questions || []);
+      const akMap = new Map();
+      if (exam.answerKey) {
+        for (const [k, v] of Object.entries(exam.answerKey)) {
+          akMap.set(Number(k), String(v));
+        }
+      }
+      setAnswerKeyState(akMap);
+      setExamState({
+        responses: {},
+        statuses: {},
+        startedAt: Date.now(),
+        submittedAt: null,
+        pdfMeta: {
+          fileName: exam.title,
+          pageCount: exam.totalQuestions,
+          pdfType: 'PRELOADED',
+        },
+      });
+    },
+    [setExamState]
+  );
+
   const value = useMemo(
     () => ({
       questions,
@@ -210,6 +236,7 @@ export function ExamProvider({ children }) {
       submitExam,
       resetExam,
       setPdfMeta,
+      loadPreloadedExam,
       getQuestionImageUrl,
       getSolutionImageUrl,
       idbLoaded,
@@ -230,6 +257,7 @@ export function ExamProvider({ children }) {
       submitExam,
       resetExam,
       setPdfMeta,
+      loadPreloadedExam,
       getQuestionImageUrl,
       getSolutionImageUrl,
       idbLoaded,

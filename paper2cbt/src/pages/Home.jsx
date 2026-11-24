@@ -10,6 +10,7 @@ import Button from '../components/common/Button';
 import { parsePdfToQuestions } from '../services/parserService';
 import { useExam } from '../context/ExamContext';
 import { PROCESSING_STAGES } from '../utils/constants';
+import { PRELOADED_EXAMS } from '../data/preloadedExams';
 import './Home.css';
 
 const STAGE_ORDER = [
@@ -32,7 +33,7 @@ const STAGE_ORDER = [
 
 export default function Home() {
   const navigate = useNavigate();
-  const { setQuestions, setAnswerKey, setPdfMeta } = useExam();
+  const { setQuestions, setAnswerKey, setPdfMeta, loadPreloadedExam } = useExam();
 
   const [file, setFile] = useState(null);
   const [stage, setStage] = useState(PROCESSING_STAGES.IDLE);
@@ -41,6 +42,18 @@ export default function Home() {
   const [error, setError] = useState('');
   const [parsedCount, setParsedCount] = useState(null);
   const [showReview, setShowReview] = useState(false);
+
+  const handleSelectPreloaded = useCallback(
+    (exam, mode = 'exam') => {
+      loadPreloadedExam(exam);
+      if (mode === 'review') {
+        setShowReview(true);
+      } else {
+        navigate('/exam');
+      }
+    },
+    [loadPreloadedExam, navigate]
+  );
 
   const handleFileSelected = useCallback(
     async (selectedFile) => {
@@ -100,7 +113,65 @@ export default function Home() {
     <div className="home-page">
       <div className="home-page__intro">
         <h1>Paper2CBT</h1>
-        <p>Upload any question PDF and instantly convert it into a Computer Based Test.</p>
+        <p>Convert any exam PDF into a high-performance Computer Based Test with exact question slicing.</p>
+      </div>
+
+      {/* Pre-stored Adi Physics Exams Collection */}
+      <section className="preloaded-section card">
+        <div className="preloaded-header">
+          <div className="preloaded-header__text">
+            <h2>📚 Stored Physics Collection ({PRELOADED_EXAMS.length} Exam Papers)</h2>
+            <p>
+              Pre-sliced exact question cards with diagrams and answer keys. Click to start CBT instantly or configure answers.
+            </p>
+          </div>
+          <span className="preloaded-badge">Offline Ready • Instant Load</span>
+        </div>
+
+        <div className="preloaded-grid">
+          {PRELOADED_EXAMS.map((exam) => {
+            const hasKey = exam.answerCount > 0;
+            return (
+              <div key={exam.id} className="preloaded-card">
+                <div className="preloaded-card__body">
+                  <h3 className="preloaded-card__title">{exam.title}</h3>
+                  <div className="preloaded-card__meta">
+                    <span className="preloaded-card__chip preloaded-card__chip--count">
+                      📝 {exam.totalQuestions} Questions
+                    </span>
+                    <span
+                      className={`preloaded-card__chip ${
+                        hasKey ? 'preloaded-card__chip--key' : 'preloaded-card__chip--nokey'
+                      }`}
+                    >
+                      {hasKey ? `🔑 ${exam.answerCount} Answers Ready` : '⚠️ Configure Key'}
+                    </span>
+                  </div>
+                </div>
+                <div className="preloaded-card__actions">
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    onClick={() => handleSelectPreloaded(exam, 'exam')}
+                  >
+                    🚀 Start CBT
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    onClick={() => handleSelectPreloaded(exam, 'review')}
+                  >
+                    📋 Review & Key
+                  </Button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <div className="home-page__divider">
+        <span>OR UPLOAD A CUSTOM PDF</span>
       </div>
 
       <DropZone onFileSelected={handleFileSelected} />

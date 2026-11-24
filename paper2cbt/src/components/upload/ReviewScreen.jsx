@@ -11,6 +11,7 @@ import { useExam } from '../../context/ExamContext';
 import { QUESTION_TYPES } from '../../utils/constants';
 import { saveQuestions, saveAnswerKey } from '../../services/indexedDbService';
 import Button from '../common/Button';
+import AnswerKeyModal from '../common/AnswerKeyModal';
 import './ReviewScreen.css';
 
 const TYPE_LABELS = {
@@ -87,6 +88,7 @@ export default function ReviewScreen({ onProceed }) {
   const [imageUrls, setImageUrls] = useState({});
   const [expanded, setExpanded] = useState(null);
   const [splitTargetId, setSplitTargetId] = useState(null);
+  const [isKeyModalOpen, setIsKeyModalOpen] = useState(false);
 
   // Load thumbnails for all questions lazily
   useEffect(() => {
@@ -95,6 +97,10 @@ export default function ReviewScreen({ onProceed }) {
       const urls = {};
       for (const q of localQuestions) {
         if (cancelled) break;
+        if (q.imageUrl) {
+          urls[q.id] = q.imageUrl;
+          continue;
+        }
         try {
           // eslint-disable-next-line no-await-in-loop
           const url = await getQuestionImageUrl(q.id);
@@ -256,13 +262,24 @@ export default function ReviewScreen({ onProceed }) {
   return (
     <div className="review-screen">
       <div className="review-screen__header">
-        <h2>Review Parsed Questions</h2>
-        <p className="review-screen__summary">
-          {localQuestions.length} questions detected across {subjects.length} subject(s).
-          {totalFlags > 0 && (
-            <span className="review-screen__flag-count"> ⚠ {totalFlags} issue(s) flagged.</span>
-          )}
-        </p>
+        <div className="review-screen__header-left">
+          <h2>Review Parsed Questions</h2>
+          <p className="review-screen__summary">
+            {localQuestions.length} questions detected across {subjects.length} subject(s).
+            {totalFlags > 0 && (
+              <span className="review-screen__flag-count"> ⚠ {totalFlags} issue(s) flagged.</span>
+            )}
+          </p>
+        </div>
+        <div className="review-screen__header-actions">
+          <button
+            type="button"
+            className="review-screen__config-key-btn"
+            onClick={() => setIsKeyModalOpen(true)}
+          >
+            🔑 Configure Answer Key ({localAnswerKey.size}/{localQuestions.length})
+          </button>
+        </div>
       </div>
 
       {subjects.map((subject) => {
@@ -462,6 +479,14 @@ export default function ReviewScreen({ onProceed }) {
           Proceed to Settings →
         </Button>
       </div>
+
+      <AnswerKeyModal
+        isOpen={isKeyModalOpen}
+        onClose={() => setIsKeyModalOpen(false)}
+        questions={localQuestions}
+        currentAnswerKey={localAnswerKey}
+        onSaveAnswerKey={(newKey) => setLocalAnswerKey(newKey)}
+      />
     </div>
   );
 }
