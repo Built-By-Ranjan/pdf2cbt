@@ -78,23 +78,51 @@ async function processExam(entry) {
   const numPages = doc.numPages;
 
   const answerKeyMap = new Map();
+  const candidateTexts = [];
 
   // Answer key detection from end of doc
-  for (let p = Math.max(1, numPages - 4); p <= numPages; p++) {
+  for (let p = Math.max(1, numPages - 6); p <= numPages; p++) {
     const page = await doc.getPage(p);
     const tc = await page.getTextContent();
     const raw = tc.items.map(i => i.str).join(' ');
-    if (/answer\s*(?:s|-)?\s*key\b|^\s*answers?\s*[:.-]?\s*|official\s+answer\s+key/i.test(raw)) {
-      const matches = raw.matchAll(/(?:Q\.?\s*)?(\d{1,3})\s*[.:\-–)]\s*\(?([A-Da-d0-9.-]+)\)?/g);
-      for (const m of matches) {
-        const qNum = parseInt(m[1], 10);
-        const ans = m[2].trim().toUpperCase();
-        if (qNum > 0 && qNum <= 350) {
+
+    if (/FILL\s+YOUR\s+ANSWER/i.test(raw)) {
+      page.cleanup();
+      continue;
+    }
+
+    candidateTexts.push(raw);
+
+    // Pass 1: Strict dot/colon delimited Q. ANS
+    const matches = raw.matchAll(/(?:^|\s)(\d{1,3})\s*[.:]\s*([A-Za-z0-9]+)/g);
+    for (const m of matches) {
+      const qNum = parseInt(m[1], 10);
+      let ans = m[2].trim().toUpperCase();
+      if (qNum >= 1 && qNum <= 350 && !/^(PAGE|YEAR|JEE|MAIN|TOTAL|ANS|TOP|QUESTIONS|PHYSICS)$/i.test(ans)) {
+        if (!answerKeyMap.has(qNum)) {
           answerKeyMap.set(qNum, ans);
         }
       }
     }
     page.cleanup();
+  }
+
+  // Pass 2: Targeted gap search for any missing Q (e.g. Q31 printed without dot)
+  const maxDetectedQ = Math.max(...answerKeyMap.keys(), 0);
+  for (let i = 1; i <= maxDetectedQ; i++) {
+    if (!answerKeyMap.has(i)) {
+      const gapRegex = new RegExp(`(?:^|\\s)${i}\\s+([A-Za-z0-9]+)`, 'g');
+      for (const text of candidateTexts) {
+        const m = gapRegex.exec(text);
+        if (m) {
+          const ans = m[1].trim().toUpperCase();
+          if (!/^(PAGE|YEAR|JEE|MAIN|TOTAL|ANS|TOP|QUESTIONS|PHYSICS)$/i.test(ans)) {
+            answerKeyMap.set(i, ans);
+            break;
+          }
+        }
+      }
+    }
   }
 
   const structuredQuestions = [];
@@ -156,8 +184,9 @@ async function processExam(entry) {
       if (
         /^\s*200\s+PHYSICS\s+QUESTIONS/i.test(rawText) ||
         /INTRODUCTION\s+PHYSICS\s+EDUNITI/i.test(rawText) ||
-        (/INDEX\s+TOP\s+200/i.test(rawText) && /Chapter/i.test(rawText)) ||
+        (/INDEX/i.test(rawText) && (/Chapter/i.test(rawText) || /S\.No/i.test(rawText) || /Page\s+No/i.test(rawText))) ||
         /OFFICIAL\s+ANSWER\s+KEY/i.test(rawText) ||
+        /FILL\s+YOUR\s+ANSWER/i.test(rawText) ||
         /TABLE\s+OF\s+CONTENTS/i.test(rawText)
       ) {
         page.cleanup();
@@ -174,7 +203,8 @@ async function processExam(entry) {
       const col2 = [];
       let footerTopY = pageH - 26;
 
-      for (const it of tc.items) {
+      for (let i = 0; i < tc.items.length; i++) {
+        const it = tc.items[i];
         if (!it.str || !it.str.trim()) continue;
         const x = it.transform[4];
         const y = it.transform[5];
@@ -184,15 +214,40 @@ async function processExam(entry) {
           if (topY < footerTopY) footerTopY = topY;
         }
 
+        let qNum = null;
         const m = it.str.match(qRegex);
         if (m) {
-          const qNum = parseInt(m[1], 10);
-          if (qNum > 0 && qNum <= 350) {
-            if (x < midX) {
-              col1.push({ qNum, topY, x });
+          qNum = parseInt(m[1], 10);
+        } else if (x < 60 || (x >= 250 && x <= 310)) {
+          let combinedStr = it.str;
+          let curX = x;
+          let matchedTokens = 0;
+          for (let j = 1; j <= 4; j++) {
+            const nextIt = tc.items[i + j];
+            if (nextIt && Math.abs(nextIt.transform[5] - y) < 4 && nextIt.transform[4] >= curX && (nextIt.transform[4] - curX) < 25) {
+              combinedStr += nextIt.str;
+              curX = nextIt.transform[4];
+              const testM = combinedStr.match(/^\s*(?:Q\.?\s*)?(\d{1,3})\s*[.)]/);
+              if (testM) {
+                qNum = parseInt(testM[1], 10);
+                matchedTokens = j;
+                break;
+              }
             } else {
-              col2.push({ qNum, topY, x });
+              break;
             }
+          }
+          if (matchedTokens > 0) {
+            i += matchedTokens;
+          }
+        }
+
+        if (qNum && qNum > 0 && qNum <= 350) {
+          // Eduniti Left column markers are at x < 60; Right column markers are at x >= 250
+          if (x < 200) {
+            col1.push({ qNum, topY, x });
+          } else {
+            col2.push({ qNum, topY, x });
           }
         }
       }
