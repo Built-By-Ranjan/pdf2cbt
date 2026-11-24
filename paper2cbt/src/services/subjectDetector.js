@@ -124,9 +124,11 @@ function isSubjectHeadingLine(text) {
     return SUBJECT_PATTERNS.some(({ pattern }) => pattern.test(trimmed));
   }
 
-  // Standalone subject title: short (<= 35 chars), must not contain sentence/prose words
+  // Standalone subject title: short (<= 35 chars), at most 4 words, must not contain sentence/prose words
   if (trimmed.length > 35) return false;
-  if (/\b(?:which|what|where|when|who|how|consider|following|steps|repair|patient|infant|disease|syndrome|causes|treatment|regarding|between|during|under|over|with|from|into|about|after|before|find|calculate|select)\b/i.test(trimmed)) {
+  const words = trimmed.split(/\s+/);
+  if (words.length > 4) return false;
+  if (/\b(?:of|in|the|for|by|to|at|an|a|is|are|was|were|has|have|had|with|from|into|about|after|before|which|what|where|when|who|how|consider|following|steps|repair|patient|infant|disease|syndrome|causes|treatment|regarding|between|during|under|over|find|calculate|select)\b/i.test(trimmed)) {
     return false;
   }
 

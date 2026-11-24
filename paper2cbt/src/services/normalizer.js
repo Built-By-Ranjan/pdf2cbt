@@ -47,6 +47,9 @@ export function normalizePageText(rawText) {
     text = text.replace(pattern, replacement);
   }
 
+  // Stray OCR glyph confusion: section sign (§) misinterpreted for '5' at start of numbered line
+  text = text.replace(/^[;:\s]*§\s*(\d{1,3}\s*[.)])/gm, '5$1');
+
   // Collapse runs of spaces/tabs (never touches digit runs, so "1234" or a
   // question number is never merged/split by this step).
   text = text.replace(/[ \t]+/g, ' ');

@@ -269,7 +269,7 @@ export function matchAllAnswerKeyEntries(text) {
 // ("Physics", "General Knowledge"). Capture group 1 is the marker/subject,
 // group 2 is anything trailing it on the same line.
 export const SECTION_HEADER_PATTERN =
-  /^\s*(section\s*[-:]?\s*[A-Z0-9]+|part\s*[-:]?\s*[A-Z0-9]+|module\s*[-:]?\s*\d+|exercise\s*[-:]?\s*\d+|unit\s*[-:]?\s*\d+|physics|chemistry|biology|mathematics|maths|english|hindi|history|geography|civics|economics|reasoning|general\s+knowledge|general\s+awareness|general\s+studies|quantitative\s+aptitude|computer\s+science)\s*[-:]?\s*(.*)$/i;
+  /^\s*(section\s*[-:]?\s*[A-Z0-9]+|part\s*[-:]?\s*[A-Z0-9]+|module\s*[-:]?\s*\d+|exercise\s*[-:]?\s*\d+|unit\s*[-:]?\s*\d+)\s*[-:]?\s*(.*)$|^\s*(physics|chemistry|biology|mathematics|maths|english|hindi|history|geography|civics|economics|reasoning|general\s+knowledge|general\s+awareness|general\s+studies|quantitative\s+aptitude|computer\s+science)\s*[:\-–]?\s*$/i;
 
 // ---------------------------------------------------------------------------
 // Numerical / integer-type question hints

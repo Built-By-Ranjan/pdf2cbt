@@ -9,6 +9,7 @@ import { tokenizePages } from '../paper2cbt/src/services/tokenizer.js';
 import { annotateSections } from '../paper2cbt/src/services/sectionDetector.js';
 import { annotateSubjects } from '../paper2cbt/src/services/subjectDetector.js';
 import { parseQuestions } from '../paper2cbt/src/services/questionParser.js';
+import { classifyNonQuestionPage } from '../paper2cbt/src/services/instructionParser.js';
 import { detectAllBoundaries, assignEndBoundaries, buildBoundaryMap } from '../paper2cbt/src/services/boundaryDetector.js';
 
 const DEBUG_CROPS_ROOT = 'P:/work/ptocbt/debug-crops';
@@ -103,6 +104,12 @@ export async function cropPdfQuestions(pdfPath, outFolderName, cachedPages = nul
   const outDir = path.join(DEBUG_CROPS_ROOT, outFolderName);
   if (!fs.existsSync(outDir)) {
     fs.mkdirSync(outDir, { recursive: true });
+  } else {
+    // Clear out any stale png crops so folder exactly reflects current questions
+    const oldFiles = fs.readdirSync(outDir).filter((f) => f.endsWith('.png'));
+    for (const f of oldFiles) {
+      fs.unlinkSync(path.join(outDir, f));
+    }
   }
 
   console.log(`\nGenerating crops for: ${outFolderName}`);
@@ -130,15 +137,24 @@ export async function cropPdfQuestions(pdfPath, outFolderName, cachedPages = nul
     }
   }
 
-  const cleaned = cleanPages(pages);
+  const nonQuestionPages = new Set();
+  for (const page of pages) {
+    const pageType = classifyNonQuestionPage(page.text || '');
+    if (pageType) {
+      nonQuestionPages.add(page.pageNumber);
+    }
+  }
+  const questionPages = pages.filter((p) => !nonQuestionPages.has(p.pageNumber));
+
+  const cleaned = cleanPages(questionPages);
   const normalized = normalizePages(cleaned);
   const tokens = tokenizePages(normalized);
   const sectioned = annotateSections(tokens);
   const subjectAnnotated = annotateSubjects(sectioned);
   const questions = parseQuestions(subjectAnnotated);
 
-  const rawBoundaries = detectAllBoundaries(pages);
-  const completedBoundaries = assignEndBoundaries(rawBoundaries, pages);
+  const rawBoundaries = detectAllBoundaries(questionPages);
+  const completedBoundaries = assignEndBoundaries(rawBoundaries, questionPages);
   const boundaryMap = buildBoundaryMap(completedBoundaries);
 
   console.log(`  Parsed ${questions.length} questions. Cropping at 1.5x scale...`);

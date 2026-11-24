@@ -1,5 +1,5 @@
 {
-  "totalQuestions": 118,
+  "totalQuestions": 120,
   "pageCountMap": {
     "2": 6,
     "3": 4,
@@ -13,7 +13,7 @@
     "11": 4,
     "12": 4,
     "13": 4,
-    "14": 4,
+    "14": 6,
     "15": 5,
     "16": 5,
     "17": 5,
@@ -22,8 +22,9 @@
     "20": 4,
     "21": 5,
     "22": 4,
-    "23": 5,
-    "25": 6,
+    "23": 3,
+    "24": 4,
+    "25": 4,
     "26": 5,
     "27": 3,
     "28": 4
@@ -31,8 +32,8 @@
   "duplicates": [],
   "missing": [],
   "typeCounts": {
-    "SINGLE_CHOICE": 95,
-    "SUBJECTIVE": 23
+    "SINGLE_CHOICE": 103,
+    "SUBJECTIVE": 17
   },
   "questions": [
     {
@@ -129,7 +130,7 @@
       "page": 4,
       "type": "SINGLE_CHOICE",
       "optionsCount": 4,
-      "textSnippet": "A 29-year-old lady presents with a the left breast since 1 month duration. Which"
+      "textSnippet": "A 29-year-old lady presents with a history of discharge from the nipple of the l"
     },
     {
       "number": 13,
@@ -472,11 +473,27 @@
       "displayNumber": 55,
       "page": 14,
       "type": "SINGLE_CHOICE",
-      "optionsCount": 5,
+      "optionsCount": 2,
       "textSnippet": "Early-onset fetal growth restriction is diagnosed before"
     },
     {
       "number": 56,
+      "displayNumber": 56,
+      "page": 14,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "Consider the following statements regarding vaginal epithelium in adult female :"
+    },
+    {
+      "number": 57,
+      "displayNumber": 57,
+      "page": 14,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "Which one of the following statements is true regarding neurovascular anatomy of"
+    },
+    {
+      "number": 58,
       "displayNumber": 58,
       "page": 14,
       "type": "SUBJECTIVE",
@@ -484,7 +501,7 @@
       "textSnippet": "Match List-1 with List-II and select the 81. 4% ee"
     },
     {
-      "number": 57,
+      "number": 59,
       "displayNumber": 59,
       "page": 14,
       "type": "SINGLE_CHOICE",
@@ -492,7 +509,7 @@
       "textSnippet": "When does the secondary oocyte complete the second meiotic division?"
     },
     {
-      "number": 58,
+      "number": 60,
       "displayNumber": 60,
       "page": 14,
       "type": "SINGLE_CHOICE",
@@ -500,7 +517,7 @@
       "textSnippet": "The growth and differentiation of primordial follicles is under the control of w"
     },
     {
-      "number": 59,
+      "number": 61,
       "displayNumber": 61,
       "page": 15,
       "type": "SINGLE_CHOICE",
@@ -508,7 +525,7 @@
       "textSnippet": "Consider the following statements with respect to endometrial cycle : 1. The bas"
     },
     {
-      "number": 60,
+      "number": 62,
       "displayNumber": 62,
       "page": 15,
       "type": "SINGLE_CHOICE",
@@ -516,7 +533,7 @@
       "textSnippet": "Which one of the following statements explains self-priming of gonadotrophs? (@)"
     },
     {
-      "number": 61,
+      "number": 63,
       "displayNumber": 63,
       "page": 15,
       "type": "SUBJECTIVE",
@@ -524,7 +541,7 @@
       "textSnippet": "Consider the following diagnostic criteria for acute pelvic inflammatory disease"
     },
     {
-      "number": 62,
+      "number": 64,
       "displayNumber": 64,
       "page": 15,
       "type": "SINGLE_CHOICE",
@@ -532,7 +549,7 @@
       "textSnippet": "Which one of the following statements is true regarding genital tuberculosis?"
     },
     {
-      "number": 63,
+      "number": 65,
       "displayNumber": 65,
       "page": 15,
       "type": "SINGLE_CHOICE",
@@ -540,7 +557,7 @@
       "textSnippet": "The drug of choice for treatment of | chlamydial cervicitis is (@) Metronidazole"
     },
     {
-      "number": 64,
+      "number": 66,
       "displayNumber": 66,
       "page": 16,
       "type": "SINGLE_CHOICE",
@@ -548,7 +565,7 @@
       "textSnippet": "Kit 6 used in syndromic management of STI/RTI includes which one of the followin"
     },
     {
-      "number": 65,
+      "number": 67,
       "displayNumber": 67,
       "page": 16,
       "type": "SINGLE_CHOICE",
@@ -556,7 +573,7 @@
       "textSnippet": "The most common site for vulvar carcinoma is"
     },
     {
-      "number": 66,
+      "number": 68,
       "displayNumber": 68,
       "page": 16,
       "type": "SINGLE_CHOICE",
@@ -564,7 +581,7 @@
       "textSnippet": "Point A in radiotherapy in carcinoma cervix marks the site for which of the foll"
     },
     {
-      "number": 67,
+      "number": 69,
       "displayNumber": 69,
       "page": 16,
       "type": "SINGLE_CHOICE",
@@ -572,7 +589,7 @@
       "textSnippet": "Which one of the following states the diagnostic criteria for postmolar gestatio"
     },
     {
-      "number": 68,
+      "number": 70,
       "displayNumber": 70,
       "page": 16,
       "type": "SINGLE_CHOICE",
@@ -580,7 +597,7 @@
       "textSnippet": "Consider the following regarding the steps in Fothergill repair surgery for uter"
     },
     {
-      "number": 69,
+      "number": 71,
       "displayNumber": 71,
       "page": 17,
       "type": "SINGLE_CHOICE",
@@ -588,7 +605,7 @@
       "textSnippet": "Consider the following surgical methods : 1. Haultain’s method 2. Gilliam’s oper"
     },
     {
-      "number": 70,
+      "number": 72,
       "displayNumber": 72,
       "page": 17,
       "type": "SINGLE_CHOICE",
@@ -596,7 +613,7 @@
       "textSnippet": "1f 100 couples have used a method for a period of 2 years and have resulted in 1"
     },
     {
-      "number": 71,
+      "number": 73,
       "displayNumber": 73,
       "page": 17,
       "type": "SINGLE_CHOICE",
@@ -604,7 +621,7 @@
       "textSnippet": "In postpartum period, the intrauterine device may be inserted in the woman (@ up"
     },
     {
-      "number": 72,
+      "number": 74,
       "displayNumber": 74,
       "page": 17,
       "type": "SINGLE_CHOICE",
@@ -612,7 +629,7 @@
       "textSnippet": "Consider the following conditions in a woman of reproductive age group : 1. Diab"
     },
     {
-      "number": 73,
+      "number": 75,
       "displayNumber": 75,
       "page": 17,
       "type": "SUBJECTIVE",
@@ -620,7 +637,7 @@
       "textSnippet": "Which of the following statements regarding progesterone-only pills are correct?"
     },
     {
-      "number": 74,
+      "number": 76,
       "displayNumber": 76,
       "page": 18,
       "type": "SINGLE_CHOICE",
@@ -628,7 +645,7 @@
       "textSnippet": "After undergoing vasectomy, how many ejaculations and months are required for a "
     },
     {
-      "number": 75,
+      "number": 77,
       "displayNumber": 77,
       "page": 18,
       "type": "SUBJECTIVE",
@@ -636,7 +653,7 @@
       "textSnippet": "Which of the following statements regarding lactational amenorrhea method are co"
     },
     {
-      "number": 76,
+      "number": 78,
       "displayNumber": 78,
       "page": 18,
       "type": "SINGLE_CHOICE",
@@ -644,7 +661,7 @@
       "textSnippet": "Laparoscopic tubal sterilization can be done after"
     },
     {
-      "number": 77,
+      "number": 79,
       "displayNumber": 79,
       "page": 18,
       "type": "SINGLE_CHOICE",
@@ -652,7 +669,7 @@
       "textSnippet": "According to the Medical Termination of Pregnancy (Amendment) Act, 2021, MTP for"
     },
     {
-      "number": 78,
+      "number": 80,
       "displayNumber": 80,
       "page": 18,
       "type": "SINGLE_CHOICE",
@@ -660,7 +677,7 @@
       "textSnippet": "The combi-pack approved by the DGHS for medical method of MTP in the first trime"
     },
     {
-      "number": 79,
+      "number": 81,
       "displayNumber": 81,
       "page": 19,
       "type": "SUBJECTIVE",
@@ -668,7 +685,7 @@
       "textSnippet": "In the history of public health, as a part of modern medicine, the following fou"
     },
     {
-      "number": 80,
+      "number": 82,
       "displayNumber": 82,
       "page": 19,
       "type": "SINGLE_CHOICE",
@@ -676,7 +693,7 @@
       "textSnippet": "A person meets with an accident and as a result of which, the person loses his/h"
     },
     {
-      "number": 81,
+      "number": 83,
       "displayNumber": 83,
       "page": 19,
       "type": "SINGLE_CHOICE",
@@ -684,7 +701,7 @@
       "textSnippet": "As per ‘the 2030 Agenda for Sustainable Development’, the target 3-4’ refers to "
     },
     {
-      "number": 82,
+      "number": 84,
       "displayNumber": 84,
       "page": 19,
       "type": "SINGLE_CHOICE",
@@ -692,7 +709,7 @@
       "textSnippet": "In a given set of conditions, a screening test has 90% sensitivity and 90% speci"
     },
     {
-      "number": 83,
+      "number": 85,
       "displayNumber": 85,
       "page": 20,
       "type": "SINGLE_CHOICE",
@@ -700,7 +717,7 @@
       "textSnippet": "In a historical study, the death rate among heavy smokers was 224 per 1 lakh per"
     },
     {
-      "number": 84,
+      "number": 86,
       "displayNumber": 86,
       "page": 20,
       "type": "SINGLE_CHOICE",
@@ -708,7 +725,7 @@
       "textSnippet": "The changes that the malarial parasite undergoes in the mosquito represent which"
     },
     {
-      "number": 85,
+      "number": 87,
       "displayNumber": 87,
       "page": 20,
       "type": "SINGLE_CHOICE",
@@ -716,7 +733,7 @@
       "textSnippet": "In a given population of 10000, there were 30 cases of diabetes already present "
     },
     {
-      "number": 86,
+      "number": 88,
       "displayNumber": 88,
       "page": 20,
       "type": "SINGLE_CHOICE",
@@ -724,7 +741,7 @@
       "textSnippet": "The parameter which provides an estimate of the amount by which the disease unde"
     },
     {
-      "number": 87,
+      "number": 89,
       "displayNumber": 89,
       "page": 21,
       "type": "SINGLE_CHOICE",
@@ -732,7 +749,7 @@
       "textSnippet": "Which of the following correctly represent ‘late expanding) ie., the third stage"
     },
     {
-      "number": 88,
+      "number": 90,
       "displayNumber": 90,
       "page": 21,
       "type": "SINGLE_CHOICE",
@@ -740,7 +757,7 @@
       "textSnippet": "Which one of the following statements regarding sample registration system is no"
     },
     {
-      "number": 89,
+      "number": 91,
       "displayNumber": 91,
       "page": 21,
       "type": "SINGLE_CHOICE",
@@ -748,7 +765,7 @@
       "textSnippet": "Which one of the following fertility- related statistics most appropriately give"
     },
     {
-      "number": 90,
+      "number": 92,
       "displayNumber": 92,
       "page": 21,
       "type": "SINGLE_CHOICE",
@@ -756,7 +773,7 @@
       "textSnippet": "A person had undergone the serology for suspected hepatitis B infection. His/Her"
     },
     {
-      "number": 91,
+      "number": 93,
       "displayNumber": 93,
       "page": 21,
       "type": "SINGLE_CHOICE",
@@ -764,7 +781,7 @@
       "textSnippet": "Inoculation rate’, an important vector index for malaria survey, is correctly de"
     },
     {
-      "number": 92,
+      "number": 94,
       "displayNumber": 94,
       "page": 22,
       "type": "SINGLE_CHOICE",
@@ -772,7 +789,7 @@
       "textSnippet": "A doctor receives a telephonic call from the mother of an 8-year-old boy, who in"
     },
     {
-      "number": 93,
+      "number": 95,
       "displayNumber": 95,
       "page": 22,
       "type": "SINGLE_CHOICE",
@@ -780,7 +797,7 @@
       "textSnippet": "Horrocks’ apparatus was used to find out the dose of bleaching powder required t"
     },
     {
-      "number": 94,
+      "number": 96,
       "displayNumber": 96,
       "page": 22,
       "type": "SINGLE_CHOICE",
@@ -788,7 +805,7 @@
       "textSnippet": "To be effective, the size of the openings in the mosquito net should not exceed"
     },
     {
-      "number": 95,
+      "number": 97,
       "displayNumber": 97,
       "page": 22,
       "type": "SINGLE_CHOICE",
@@ -796,79 +813,79 @@
       "textSnippet": "As per the WHO expert group, the cutoff point of haemoglobin in venous blood for"
     },
     {
-      "number": 96,
+      "number": 98,
       "displayNumber": 98,
       "page": 23,
-      "type": "SUBJECTIVE",
-      "optionsCount": 0,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
       "textSnippet": "A 12-year-old boy presented to a health centre in Telangana along with his paren"
     },
     {
-      "number": 97,
-      "displayNumber": 1,
-      "page": 23,
-      "type": "SUBJECTIVE",
-      "optionsCount": 0,
-      "textSnippet": "Absolute avoidance of milk in the child’s diet"
-    },
-    {
-      "number": 98,
-      "displayNumber": 2,
-      "page": 23,
-      "type": "SUBJECTIVE",
-      "optionsCount": 0,
-      "textSnippet": "Encouraging shift of cereal consumption from sorghum to ‘maize"
-    },
-    {
       "number": 99,
-      "displayNumber": 3,
+      "displayNumber": 99,
       "page": 23,
-      "type": "SUBJECTIVE",
-      "optionsCount": 0,
-      "textSnippet": "Encouraging consumption of meat in the childs diet, if the family can afford"
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "As per the National Blindness and Visual ! Impairment Survey India (2015-2019), "
     },
     {
       "number": 100,
-      "displayNumber": 4,
+      "displayNumber": 100,
       "page": 23,
       "type": "SINGLE_CHOICE",
-      "optionsCount": 8,
-      "textSnippet": "Supplementation with nicotinic acid or nicotinamide Which of the plans of action"
+      "optionsCount": 3,
+      "textSnippet": "Which one of the following most appropriately describes the ‘tracking’ phenomeno"
     },
     {
       "number": 101,
-      "displayNumber": 1,
-      "page": 25,
-      "type": "SUBJECTIVE",
-      "optionsCount": 0,
-      "textSnippet": "The Health Organization of the League of Nations"
+      "displayNumber": 101,
+      "page": 24,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "An adult is weighing 80 kg and having a height of 1/6 meters. Under which catego"
     },
     {
       "number": 102,
-      "displayNumber": 2,
-      "page": 25,
-      "type": "SUBJECTIVE",
-      "optionsCount": 0,
-      "textSnippet": "The Pan American Sanitary Bureau"
+      "displayNumber": 102,
+      "page": 24,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "A 42-year-old male industrial worker presented to a health centre with complaint"
     },
     {
       "number": 103,
-      "displayNumber": 3,
-      "page": 25,
-      "type": "SUBJECTIVE",
-      "optionsCount": 0,
-      "textSnippet": "The United Nations Relief and Rehabilitation Administration"
+      "displayNumber": 103,
+      "page": 24,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "Leukemia’, as an occupational cancer, is most commonly related to the exposure t"
     },
     {
       "number": 104,
-      "displayNumber": 4,
-      "page": 25,
+      "displayNumber": 104,
+      "page": 24,
       "type": "SINGLE_CHOICE",
       "optionsCount": 2,
-      "textSnippet": "The World Health Organization Which one of the following represents the correct "
+      "textSnippet": "Which one of the following statements regarding sex chromosomes in the human bod"
     },
     {
       "number": 105,
+      "displayNumber": 105,
+      "page": 25,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Consider the following organizations of importance in the history of internation"
+    },
+    {
+      "number": 106,
+      "displayNumber": 106,
+      "page": 25,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "Which one among the following terms best fits the description “the entire gamut "
+    },
+    {
+      "number": 107,
       "displayNumber": 107,
       "page": 25,
       "type": "SINGLE_CHOICE",
@@ -876,7 +893,7 @@
       "textSnippet": "A 10-week-old infant was taken to a primary health centre by his/her mother for "
     },
     {
-      "number": 106,
+      "number": 108,
       "displayNumber": 108,
       "page": 25,
       "type": "SINGLE_CHOICE",
@@ -884,7 +901,7 @@
       "textSnippet": "All of the following correctly represent the basic criteria for identifying ‘at "
     },
     {
-      "number": 107,
+      "number": 109,
       "displayNumber": 109,
       "page": 26,
       "type": "SUBJECTIVE",
@@ -892,7 +909,7 @@
       "textSnippet": "Which of the following drugs have been used as part of mass drug administration "
     },
     {
-      "number": 108,
+      "number": 110,
       "displayNumber": 110,
       "page": 26,
       "type": "SINGLE_CHOICE",
@@ -900,7 +917,7 @@
       "textSnippet": "As per the National Framework for Malaria Elimination in India (2016-2030), whic"
     },
     {
-      "number": 109,
+      "number": 111,
       "displayNumber": 111,
       "page": 26,
       "type": "SINGLE_CHOICE",
@@ -908,7 +925,7 @@
       "textSnippet": "As per the Jal Jeevan Mission (JJM), the goal is to provide every rural househol"
     },
     {
-      "number": 110,
+      "number": 112,
       "displayNumber": 112,
       "page": 26,
       "type": "SINGLE_CHOICE",
@@ -916,7 +933,7 @@
       "textSnippet": "Which of the following vaccines are live vaccines? (@) BCG, Measles, Injectable "
     },
     {
-      "number": 111,
+      "number": 113,
       "displayNumber": 113,
       "page": 26,
       "type": "SINGLE_CHOICE",
@@ -924,7 +941,7 @@
       "textSnippet": "Which one of the following is correct regarding the classification of the infant"
     },
     {
-      "number": 112,
+      "number": 114,
       "displayNumber": 114,
       "page": 27,
       "type": "SUBJECTIVE",
@@ -932,7 +949,7 @@
       "textSnippet": "What is/are the most appropriate treatment(s) for the infant? 1. Give lst dose o"
     },
     {
-      "number": 113,
+      "number": 115,
       "displayNumber": 115,
       "page": 27,
       "type": "SINGLE_CHOICE",
@@ -940,7 +957,7 @@
       "textSnippet": "Which one among the following test kits available under the National Health Prog"
     },
     {
-      "number": 114,
+      "number": 116,
       "displayNumber": 116,
       "page": 27,
       "type": "SINGLE_CHOICE",
@@ -948,7 +965,7 @@
       "textSnippet": "Once the confirmation of the pregnancy is done, consider the following statement"
     },
     {
-      "number": 115,
+      "number": 117,
       "displayNumber": 117,
       "page": 28,
       "type": "SINGLE_CHOICE",
@@ -956,7 +973,7 @@
       "textSnippet": "Assuming that a pregnancy was confirmed, the ASHA informed Mrs. M that she shoul"
     },
     {
-      "number": 116,
+      "number": 118,
       "displayNumber": 118,
       "page": 28,
       "type": "SINGLE_CHOICE",
@@ -964,7 +981,7 @@
       "textSnippet": "From the data given in the case scenario, consider if the lady's pregnancy would"
     },
     {
-      "number": 117,
+      "number": 119,
       "displayNumber": 119,
       "page": 28,
       "type": "SINGLE_CHOICE",
@@ -972,7 +989,7 @@
       "textSnippet": "Consider the following advices to be given by the ASHA to Mrs. M (assuming pregn"
     },
     {
-      "number": 118,
+      "number": 120,
       "displayNumber": 120,
       "page": 28,
       "type": "SINGLE_CHOICE",
