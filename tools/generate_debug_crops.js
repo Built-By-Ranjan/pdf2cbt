@@ -212,7 +212,56 @@ export async function cropPdfQuestions(pdfPath, outFolderName, cachedPages = nul
   return savedCount;
 }
 
-// Standalone execution if needed
-if (process.argv[1] && process.argv[1].includes('generate_debug_crops')) {
-  console.log('Script loaded directly.');
+async function runAll() {
+  console.log('Generating visual proof crops into /debug-crops/ ...');
+
+  // 1. File 1 (IIT Growth)
+  await cropPdfQuestions(
+    'P:/work/ptocbt/test file/114001_IIT_GROWTH_3_July_MINOR_01_02_08_2026_Student_Copy.pdf',
+    '114001_IIT_GROWTH_3'
+  );
+
+  // 2. File 2 (IIT Excel)
+  await cropPdfQuestions(
+    'P:/work/ptocbt/test file/122004_IIT_EXCEL (May)_MINOR-04_[02-08-2026]_Student Copy.pdf',
+    '122004_IIT_EXCEL'
+  );
+
+  // 3. File 4 (UPSC CMSE - 32 pages)
+  let file4Pages = null;
+  const file4CachePath = 'P:/work/ptocbt/tools/file4_32pages_cache.json';
+  if (fs.existsSync(file4CachePath)) {
+    const file4Cache = JSON.parse(fs.readFileSync(file4CachePath, 'utf-8'));
+    file4Pages = Object.keys(file4Cache)
+      .map(Number)
+      .sort((a, b) => a - b)
+      .map((pNum) => file4Cache[pNum]);
+  }
+  await cropPdfQuestions(
+    'P:/work/ptocbt/test file/QP-CMSE-26-SrgryGynaeObstPvntSclMdcnPaper-II-03082026.pdf',
+    'QP-CMSE-26',
+    file4Pages
+  );
+
+  // 4. Adi File: Challenge 14
+  await cropPdfQuestions(
+    'P:/work/ptocbt/Adi/Challenge 14_30 Experiment & Instruments Questions_Eduniti.pdf',
+    'Challenge_14'
+  );
+
+  // 5. Adi File: Challenge 15
+  await cropPdfQuestions(
+    'P:/work/ptocbt/Adi/Challenge 15_Top 50 Circuit Questions_Full Physics.pdf',
+    'Challenge_15'
+  );
+
+  // 6. Adi File: Challenge 7
+  await cropPdfQuestions(
+    'P:/work/ptocbt/Adi/Challenge 7_Top 100 Questions of JEE Main 2020 Physics.pdf',
+    'Challenge_7'
+  );
+
+  console.log('\nAll visual proof crops generated successfully!');
 }
+
+runAll().catch(console.error);
