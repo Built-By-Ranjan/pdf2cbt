@@ -5,8 +5,8 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 1: All PYQs of JEE Main 2019",
     "filename": "Challenge 1_All PYQs of JEE Main 2019.pdf",
     "subject": "Physics",
-    "totalQuestions": 47,
-    "answerCount": 41,
+    "totalQuestions": 70,
+    "answerCount": 24,
     "questions": [
       {
         "id": "challenge_1_q1",
@@ -831,7 +831,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q26",
@@ -864,7 +864,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q27",
@@ -897,7 +897,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q28",
@@ -930,7 +930,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q29",
@@ -963,7 +963,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q30",
@@ -996,7 +996,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q31",
@@ -1029,7 +1029,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q32",
@@ -1062,7 +1062,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q33",
@@ -1095,7 +1095,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q34",
@@ -1128,7 +1128,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q35",
@@ -1161,7 +1161,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q36",
@@ -1194,7 +1194,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q37",
@@ -1227,7 +1227,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q38",
@@ -1260,7 +1260,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q39",
@@ -1293,7 +1293,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q40",
@@ -1326,7 +1326,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q41",
@@ -1359,7 +1359,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": null
       },
       {
         "id": "challenge_1_q42",
@@ -1558,6 +1558,765 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q48",
+        "number": 48,
+        "displayNumber": 48,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q048.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q49",
+        "number": 49,
+        "displayNumber": 49,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q049.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q50",
+        "number": 50,
+        "displayNumber": 50,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q050.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q51",
+        "number": 51,
+        "displayNumber": 51,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q051.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q52",
+        "number": 52,
+        "displayNumber": 52,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q052.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q53",
+        "number": 53,
+        "displayNumber": 53,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q053.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q54",
+        "number": 54,
+        "displayNumber": 54,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q054.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q55",
+        "number": 55,
+        "displayNumber": 55,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q055.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q56",
+        "number": 56,
+        "displayNumber": 56,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q056.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q57",
+        "number": 57,
+        "displayNumber": 57,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q057.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q58",
+        "number": 58,
+        "displayNumber": 58,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q058.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q59",
+        "number": 59,
+        "displayNumber": 59,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q059.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q60",
+        "number": 60,
+        "displayNumber": 60,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q060.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q61",
+        "number": 61,
+        "displayNumber": 61,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q061.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q62",
+        "number": 62,
+        "displayNumber": 62,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q062.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q63",
+        "number": 63,
+        "displayNumber": 63,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q063.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q64",
+        "number": 64,
+        "displayNumber": 64,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q064.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q65",
+        "number": 65,
+        "displayNumber": 65,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q065.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q66",
+        "number": 66,
+        "displayNumber": 66,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q066.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q67",
+        "number": 67,
+        "displayNumber": 67,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q067.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q68",
+        "number": 68,
+        "displayNumber": 68,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q068.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q69",
+        "number": 69,
+        "displayNumber": 69,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q069.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
+        "id": "challenge_1_q70",
+        "number": 70,
+        "displayNumber": 70,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_1/Q070.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
       }
     ],
     "answerKey": {
@@ -1584,24 +2343,7 @@ export const PRELOADED_EXAMS = [
       "21": "C",
       "22": "A",
       "23": "D",
-      "24": "B",
-      "25": "B",
-      "26": "C",
-      "27": "C",
-      "28": "C",
-      "29": "C",
-      "30": "A",
-      "31": "B",
-      "32": "A",
-      "33": "D",
-      "34": "B",
-      "35": "B",
-      "36": "C",
-      "37": "D",
-      "38": "B",
-      "39": "C",
-      "40": "B",
-      "41": "C"
+      "24": "B"
     }
   },
   {
@@ -1609,7 +2351,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 2: Top 200 Questions of JEE Main 2023 Physics",
     "filename": "Challenge 2_Top 200 Questions of JEE Main 2023 Physics.pdf",
     "subject": "Physics",
-    "totalQuestions": 170,
+    "totalQuestions": 196,
     "answerCount": 199,
     "questions": [
       {
@@ -2108,14 +2850,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
-        "id": "challenge_2_q16",
-        "number": 16,
-        "displayNumber": 16,
+        "id": "challenge_2_q17",
+        "number": 17,
+        "displayNumber": 17,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_2/Q016.png",
+        "imageUrl": "/exams/challenge_2/Q017.png",
         "options": [
           {
             "label": "A",
@@ -2138,7 +2880,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "1"
+        "correctAnswer": "4"
       },
       {
         "id": "challenge_2_q18",
@@ -2380,6 +3122,72 @@ export const PRELOADED_EXAMS = [
         "subject": "Physics",
         "section": "Physics",
         "imageUrl": "/exams/challenge_2/Q025.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_2_q26",
+        "number": 26,
+        "displayNumber": 26,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q026.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "245"
+      },
+      {
+        "id": "challenge_2_q27",
+        "number": 27,
+        "displayNumber": 27,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q027.png",
         "options": [
           {
             "label": "A",
@@ -2766,6 +3574,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_2_q39",
+        "number": 39,
+        "displayNumber": 39,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q039.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
       },
       {
         "id": "challenge_2_q40",
@@ -3263,14 +4104,47 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
-        "id": "challenge_2_q58",
-        "number": 58,
-        "displayNumber": 58,
+        "id": "challenge_2_q55",
+        "number": 55,
+        "displayNumber": 55,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_2/Q058.png",
+        "imageUrl": "/exams/challenge_2/Q055.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "20"
+      },
+      {
+        "id": "challenge_2_q56",
+        "number": 56,
+        "displayNumber": 56,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q056.png",
         "options": [
           {
             "label": "A",
@@ -3294,6 +4168,72 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_2_q57",
+        "number": 57,
+        "displayNumber": 57,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q057.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "40"
+      },
+      {
+        "id": "challenge_2_q59",
+        "number": 59,
+        "displayNumber": 59,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q059.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
       },
       {
         "id": "challenge_2_q60",
@@ -3395,6 +4335,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "10"
       },
       {
+        "id": "challenge_2_q63",
+        "number": 63,
+        "displayNumber": 63,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q063.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_2_q64",
+        "number": 64,
+        "displayNumber": 64,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q064.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1150"
+      },
+      {
         "id": "challenge_2_q65",
         "number": 65,
         "displayNumber": 65,
@@ -3459,6 +4465,72 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_2_q67",
+        "number": 67,
+        "displayNumber": 67,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q067.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_2_q68",
+        "number": 68,
+        "displayNumber": 68,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q068.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "40"
       },
       {
         "id": "challenge_2_q69",
@@ -3659,14 +4731,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
-        "id": "challenge_2_q78",
-        "number": 78,
-        "displayNumber": 78,
+        "id": "challenge_2_q75",
+        "number": 75,
+        "displayNumber": 75,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_2/Q078.png",
+        "imageUrl": "/exams/challenge_2/Q075.png",
         "options": [
           {
             "label": "A",
@@ -3689,7 +4761,73 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "4"
+        "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_2_q76",
+        "number": 76,
+        "displayNumber": 76,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q076.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_2_q77",
+        "number": 77,
+        "displayNumber": 77,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q077.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
       },
       {
         "id": "challenge_2_q79",
@@ -3789,6 +4927,72 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "80"
+      },
+      {
+        "id": "challenge_2_q82",
+        "number": 82,
+        "displayNumber": 82,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q082.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "500"
+      },
+      {
+        "id": "challenge_2_q83",
+        "number": 83,
+        "displayNumber": 83,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q083.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "90"
       },
       {
         "id": "challenge_2_q84",
@@ -5111,6 +6315,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
+        "id": "challenge_2_q124",
+        "number": 124,
+        "displayNumber": 124,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q124.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "40"
+      },
+      {
         "id": "challenge_2_q125",
         "number": 125,
         "displayNumber": 125,
@@ -5441,6 +6678,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
+        "id": "challenge_2_q135",
+        "number": 135,
+        "displayNumber": 135,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q135.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "88"
+      },
+      {
         "id": "challenge_2_q136",
         "number": 136,
         "displayNumber": 136,
@@ -5540,14 +6810,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
-        "id": "challenge_2_q142",
-        "number": 142,
-        "displayNumber": 142,
+        "id": "challenge_2_q139",
+        "number": 139,
+        "displayNumber": 139,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_2/Q142.png",
+        "imageUrl": "/exams/challenge_2/Q139.png",
         "options": [
           {
             "label": "A",
@@ -5570,7 +6840,73 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "52"
+        "correctAnswer": "240"
+      },
+      {
+        "id": "challenge_2_q140",
+        "number": 140,
+        "displayNumber": 140,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q140.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_2_q141",
+        "number": 141,
+        "displayNumber": 141,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q141.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "120"
       },
       {
         "id": "challenge_2_q143",
@@ -5870,6 +7206,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "98"
       },
       {
+        "id": "challenge_2_q152",
+        "number": 152,
+        "displayNumber": 152,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q152.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_2_q153",
+        "number": 153,
+        "displayNumber": 153,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q153.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
         "id": "challenge_2_q154",
         "number": 154,
         "displayNumber": 154,
@@ -6033,6 +7435,105 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "10"
+      },
+      {
+        "id": "challenge_2_q159",
+        "number": 159,
+        "displayNumber": 159,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q159.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_2_q160",
+        "number": 160,
+        "displayNumber": 160,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q160.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "462"
+      },
+      {
+        "id": "challenge_2_q161",
+        "number": 161,
+        "displayNumber": 161,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q161.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "30"
       },
       {
         "id": "challenge_2_q162",
@@ -6992,6 +8493,105 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
+        "id": "challenge_2_q191",
+        "number": 191,
+        "displayNumber": 191,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q191.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_2_q192",
+        "number": 192,
+        "displayNumber": 192,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q192.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_2_q193",
+        "number": 193,
+        "displayNumber": 193,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_2/Q193.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4125"
+      },
+      {
         "id": "challenge_2_q194",
         "number": 194,
         "displayNumber": 194,
@@ -7430,7 +9030,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 3: Top 200 Questions of JEE Main 2024 Physics",
     "filename": "Challenge 3_Top 200 Questions of JEE Main 2024 Physics.pdf",
     "subject": "Physics",
-    "totalQuestions": 179,
+    "totalQuestions": 197,
     "answerCount": 196,
     "questions": [
       {
@@ -7698,6 +9298,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
+        "id": "challenge_3_q9",
+        "number": 9,
+        "displayNumber": 9,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q009.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
         "id": "challenge_3_q10",
         "number": 10,
         "displayNumber": 10,
@@ -7960,6 +9593,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_3_q18",
+        "number": 18,
+        "displayNumber": 18,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q018.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
       },
       {
         "id": "challenge_3_q19",
@@ -8389,6 +10055,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": null
+      },
+      {
+        "id": "challenge_3_q32",
+        "number": 32,
+        "displayNumber": 32,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q032.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
       },
       {
         "id": "challenge_3_q33",
@@ -9018,14 +10717,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "1"
       },
       {
-        "id": "challenge_3_q53",
-        "number": 53,
-        "displayNumber": 53,
+        "id": "challenge_3_q52",
+        "number": 52,
+        "displayNumber": 52,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_3/Q053.png",
+        "imageUrl": "/exams/challenge_3/Q052.png",
         "options": [
           {
             "label": "A",
@@ -9048,7 +10747,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "2"
+        "correctAnswer": "4"
       },
       {
         "id": "challenge_3_q54",
@@ -9150,6 +10849,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "7"
       },
       {
+        "id": "challenge_3_q57",
+        "number": 57,
+        "displayNumber": 57,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q057.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "6"
+      },
+      {
         "id": "challenge_3_q59",
         "number": 59,
         "displayNumber": 59,
@@ -9214,6 +10946,105 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "12"
+      },
+      {
+        "id": "challenge_3_q61",
+        "number": 61,
+        "displayNumber": 61,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q061.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "id": "challenge_3_q62",
+        "number": 62,
+        "displayNumber": 62,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q062.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "600"
+      },
+      {
+        "id": "challenge_3_q63",
+        "number": 63,
+        "displayNumber": 63,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q063.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
       },
       {
         "id": "challenge_3_q64",
@@ -9612,6 +11443,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
+        "id": "challenge_3_q76",
+        "number": 76,
+        "displayNumber": 76,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q076.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_3_q77",
+        "number": 77,
+        "displayNumber": 77,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q077.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
         "id": "challenge_3_q78",
         "number": 78,
         "displayNumber": 78,
@@ -9742,6 +11639,72 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "400"
+      },
+      {
+        "id": "challenge_3_q82",
+        "number": 82,
+        "displayNumber": 82,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q082.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "60"
+      },
+      {
+        "id": "challenge_3_q83",
+        "number": 83,
+        "displayNumber": 83,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q083.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "740"
       },
       {
         "id": "challenge_3_q84",
@@ -11064,14 +13027,47 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
-        "id": "challenge_3_q127",
-        "number": 127,
-        "displayNumber": 127,
+        "id": "challenge_3_q124",
+        "number": 124,
+        "displayNumber": 124,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_3/Q127.png",
+        "imageUrl": "/exams/challenge_3/Q124.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "50"
+      },
+      {
+        "id": "challenge_3_q125",
+        "number": 125,
+        "displayNumber": 125,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q125.png",
         "options": [
           {
             "label": "A",
@@ -11095,6 +13091,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "5"
+      },
+      {
+        "id": "challenge_3_q126",
+        "number": 126,
+        "displayNumber": 126,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q126.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
       },
       {
         "id": "challenge_3_q128",
@@ -11194,6 +13223,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_3_q131",
+        "number": 131,
+        "displayNumber": 131,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q131.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "28"
       },
       {
         "id": "challenge_3_q132",
@@ -11757,6 +13819,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "10"
       },
       {
+        "id": "challenge_3_q149",
+        "number": 149,
+        "displayNumber": 149,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q149.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
+      },
+      {
         "id": "challenge_3_q150",
         "number": 150,
         "displayNumber": 150,
@@ -12021,6 +14116,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "6"
       },
       {
+        "id": "challenge_3_q158",
+        "number": 158,
+        "displayNumber": 158,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q158.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "200"
+      },
+      {
+        "id": "challenge_3_q159",
+        "number": 159,
+        "displayNumber": 159,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q159.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
         "id": "challenge_3_q160",
         "number": 160,
         "displayNumber": 160,
@@ -12217,6 +14378,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_3_q166",
+        "number": 166,
+        "displayNumber": 166,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_3/Q166.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
       },
       {
         "id": "challenge_3_q167",
@@ -13545,7 +15739,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 4: Top 200 Questions of JEE Main 2022 Physics",
     "filename": "Challenge 4_Top 200 Questions of JEE Main 2022 Physics.pdf",
     "subject": "Physics",
-    "totalQuestions": 169,
+    "totalQuestions": 190,
     "answerCount": 199,
     "questions": [
       {
@@ -14440,14 +16634,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "C"
       },
       {
-        "id": "challenge_4_q31",
-        "number": 31,
-        "displayNumber": 31,
+        "id": "challenge_4_q28",
+        "number": 28,
+        "displayNumber": 28,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q031.png",
+        "imageUrl": "/exams/challenge_4/Q028.png",
         "options": [
           {
             "label": "A",
@@ -14470,7 +16664,73 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": null
+        "correctAnswer": "B"
+      },
+      {
+        "id": "challenge_4_q29",
+        "number": 29,
+        "displayNumber": 29,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q029.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "challenge_4_q30",
+        "number": 30,
+        "displayNumber": 30,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q030.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "120"
       },
       {
         "id": "challenge_4_q32",
@@ -14704,14 +16964,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "10"
       },
       {
-        "id": "challenge_4_q42",
-        "number": 42,
-        "displayNumber": 42,
+        "id": "challenge_4_q39",
+        "number": 39,
+        "displayNumber": 39,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q042.png",
+        "imageUrl": "/exams/challenge_4/Q039.png",
         "options": [
           {
             "label": "A",
@@ -14734,7 +16994,73 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "8"
+        "correctAnswer": "C"
+      },
+      {
+        "id": "challenge_4_q40",
+        "number": 40,
+        "displayNumber": 40,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q040.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "challenge_4_q41",
+        "number": 41,
+        "displayNumber": 41,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q041.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "D"
       },
       {
         "id": "challenge_4_q43",
@@ -15133,14 +17459,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "25"
       },
       {
-        "id": "challenge_4_q58",
-        "number": 58,
-        "displayNumber": 58,
+        "id": "challenge_4_q55",
+        "number": 55,
+        "displayNumber": 55,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q058.png",
+        "imageUrl": "/exams/challenge_4/Q055.png",
         "options": [
           {
             "label": "A",
@@ -15163,7 +17489,73 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "D"
+      },
+      {
+        "id": "challenge_4_q56",
+        "number": 56,
+        "displayNumber": 56,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q056.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "30"
+      },
+      {
+        "id": "challenge_4_q57",
+        "number": 57,
+        "displayNumber": 57,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q057.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "363"
       },
       {
         "id": "challenge_4_q59",
@@ -15925,6 +18317,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "D"
       },
       {
+        "id": "challenge_4_q82",
+        "number": 82,
+        "displayNumber": 82,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q082.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
         "id": "challenge_4_q83",
         "number": 83,
         "displayNumber": 83,
@@ -16385,39 +18810,6 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "1"
-      },
-      {
-        "id": "challenge_4_q97",
-        "number": 97,
-        "displayNumber": 97,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q097.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "B"
       },
       {
         "id": "challenge_4_q98",
@@ -17311,6 +19703,105 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "B"
       },
       {
+        "id": "challenge_4_q125",
+        "number": 125,
+        "displayNumber": 125,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q125.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "challenge_4_q126",
+        "number": 126,
+        "displayNumber": 126,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q126.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "challenge_4_q127",
+        "number": 127,
+        "displayNumber": 127,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q127.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
         "id": "challenge_4_q128",
         "number": 128,
         "displayNumber": 128,
@@ -17443,6 +19934,105 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "D"
       },
       {
+        "id": "challenge_4_q132",
+        "number": 132,
+        "displayNumber": 132,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q132.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "16"
+      },
+      {
+        "id": "challenge_4_q133",
+        "number": 133,
+        "displayNumber": 133,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q133.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": "challenge_4_q134",
+        "number": 134,
+        "displayNumber": 134,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q134.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
         "id": "challenge_4_q135",
         "number": 135,
         "displayNumber": 135,
@@ -17509,6 +20099,105 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "10"
       },
       {
+        "id": "challenge_4_q137",
+        "number": 137,
+        "displayNumber": 137,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q137.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "242"
+      },
+      {
+        "id": "challenge_4_q138",
+        "number": 138,
+        "displayNumber": 138,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q138.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "0"
+      },
+      {
+        "id": "challenge_4_q139",
+        "number": 139,
+        "displayNumber": 139,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q139.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "15"
+      },
+      {
         "id": "challenge_4_q140",
         "number": 140,
         "displayNumber": 140,
@@ -17540,6 +20229,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "0"
+      },
+      {
+        "id": "challenge_4_q141",
+        "number": 141,
+        "displayNumber": 141,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q141.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "C"
       },
       {
         "id": "challenge_4_q142",
@@ -17971,14 +20693,80 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "15"
       },
       {
-        "id": "challenge_4_q155",
-        "number": 155,
-        "displayNumber": 155,
+        "id": "challenge_4_q156",
+        "number": 156,
+        "displayNumber": 156,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q155.png",
+        "imageUrl": "/exams/challenge_4/Q156.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_4_q157",
+        "number": 157,
+        "displayNumber": 157,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q157.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "600"
+      },
+      {
+        "id": "challenge_4_q158",
+        "number": 158,
+        "displayNumber": 158,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q158.png",
         "options": [
           {
             "label": "A",
@@ -18002,39 +20790,6 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "B"
-      },
-      {
-        "id": "challenge_4_q159",
-        "number": 159,
-        "displayNumber": 159,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q159.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "630"
       },
       {
         "id": "challenge_4_q160",
@@ -18134,6 +20889,72 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "C"
+      },
+      {
+        "id": "challenge_4_q163",
+        "number": 163,
+        "displayNumber": 163,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q163.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "challenge_4_q164",
+        "number": 164,
+        "displayNumber": 164,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q164.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "43"
       },
       {
         "id": "challenge_4_q165",
@@ -18829,6 +21650,105 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
+        "id": "challenge_4_q186",
+        "number": 186,
+        "displayNumber": 186,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q186.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_4_q187",
+        "number": 187,
+        "displayNumber": 187,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q187.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "challenge_4_q188",
+        "number": 188,
+        "displayNumber": 188,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q188.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
         "id": "challenge_4_q189",
         "number": 189,
         "displayNumber": 189,
@@ -18862,39 +21782,6 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "A"
       },
       {
-        "id": "challenge_4_q190",
-        "number": 190,
-        "displayNumber": 190,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q190.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "35"
-      },
-      {
         "id": "challenge_4_q191",
         "number": 191,
         "displayNumber": 191,
@@ -18926,105 +21813,6 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "A"
-      },
-      {
-        "id": "challenge_4_q192",
-        "number": 192,
-        "displayNumber": 192,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q192.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "B"
-      },
-      {
-        "id": "challenge_4_q193",
-        "number": 193,
-        "displayNumber": 193,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q193.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "3"
-      },
-      {
-        "id": "challenge_4_q194",
-        "number": 194,
-        "displayNumber": 194,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_4/Q194.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "D"
       },
       {
         "id": "challenge_4_q195",
@@ -19124,6 +21912,105 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "5"
+      },
+      {
+        "id": "challenge_4_q198",
+        "number": 198,
+        "displayNumber": 198,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q198.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "26"
+      },
+      {
+        "id": "challenge_4_q199",
+        "number": 199,
+        "displayNumber": 199,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q199.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "15"
+      },
+      {
+        "id": "challenge_4_q200",
+        "number": 200,
+        "displayNumber": 200,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_4/Q200.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "D"
       }
     ],
     "answerKey": {
@@ -19333,7 +22220,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 5: Top 200 Questions of JEE Main 2025 Physics",
     "filename": "Challenge 5_Top 200 Questions of JEE Main 2025 Physics.pdf",
     "subject": "Physics",
-    "totalQuestions": 184,
+    "totalQuestions": 194,
     "answerCount": 199,
     "questions": [
       {
@@ -19931,6 +22818,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "3"
       },
       {
+        "id": "challenge_5_q19",
+        "number": 19,
+        "displayNumber": 19,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q019.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_5_q20",
+        "number": 20,
+        "displayNumber": 20,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q020.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
         "id": "challenge_5_q21",
         "number": 21,
         "displayNumber": 21,
@@ -20030,6 +22983,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
+        "id": "challenge_5_q24",
+        "number": 24,
+        "displayNumber": 24,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q024.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_5_q25",
+        "number": 25,
+        "displayNumber": 25,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q025.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
         "id": "challenge_5_q26",
         "number": 26,
         "displayNumber": 26,
@@ -20104,6 +23123,39 @@ export const PRELOADED_EXAMS = [
         "subject": "Physics",
         "section": "Physics",
         "imageUrl": "/exams/challenge_5/Q028.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_5_q29",
+        "number": 29,
+        "displayNumber": 29,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q029.png",
         "options": [
           {
             "label": "A",
@@ -20591,6 +23643,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
+        "id": "challenge_5_q44",
+        "number": 44,
+        "displayNumber": 44,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q044.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
         "id": "challenge_5_q45",
         "number": 45,
         "displayNumber": 45,
@@ -20690,39 +23775,6 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
-        "id": "challenge_5_q49",
-        "number": 49,
-        "displayNumber": 49,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_5/Q049.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "1"
-      },
-      {
         "id": "challenge_5_q50",
         "number": 50,
         "displayNumber": 50,
@@ -20820,6 +23872,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_5_q53",
+        "number": 53,
+        "displayNumber": 53,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q053.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
       },
       {
         "id": "challenge_5_q54",
@@ -21284,6 +24369,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "1"
       },
       {
+        "id": "challenge_5_q68",
+        "number": 68,
+        "displayNumber": 68,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q068.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
         "id": "challenge_5_q69",
         "number": 69,
         "displayNumber": 69,
@@ -21317,14 +24435,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
-        "id": "challenge_5_q70",
-        "number": 70,
-        "displayNumber": 70,
+        "id": "challenge_5_q71",
+        "number": 71,
+        "displayNumber": 71,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_5/Q070.png",
+        "imageUrl": "/exams/challenge_5/Q071.png",
         "options": [
           {
             "label": "A",
@@ -21347,40 +24465,7 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "2"
-      },
-      {
-        "id": "challenge_5_q72",
-        "number": 72,
-        "displayNumber": 72,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_5/Q072.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "3"
+        "correctAnswer": "40"
       },
       {
         "id": "challenge_5_q73",
@@ -21480,6 +24565,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "360"
+      },
+      {
+        "id": "challenge_5_q76",
+        "number": 76,
+        "displayNumber": 76,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q076.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
       },
       {
         "id": "challenge_5_q77",
@@ -22175,14 +25293,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "1"
       },
       {
-        "id": "challenge_5_q98",
-        "number": 98,
-        "displayNumber": 98,
+        "id": "challenge_5_q99",
+        "number": 99,
+        "displayNumber": 99,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_5/Q098.png",
+        "imageUrl": "/exams/challenge_5/Q099.png",
         "options": [
           {
             "label": "A",
@@ -22205,7 +25323,40 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "3"
+        "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_5_q100",
+        "number": 100,
+        "displayNumber": 100,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q100.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
       },
       {
         "id": "challenge_5_q101",
@@ -23000,14 +26151,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
-        "id": "challenge_5_q125",
-        "number": 125,
-        "displayNumber": 125,
+        "id": "challenge_5_q126",
+        "number": 126,
+        "displayNumber": 126,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_5/Q125.png",
+        "imageUrl": "/exams/challenge_5/Q126.png",
         "options": [
           {
             "label": "A",
@@ -23031,6 +26182,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_5_q127",
+        "number": 127,
+        "displayNumber": 127,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q127.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
       },
       {
         "id": "challenge_5_q128",
@@ -23625,6 +26809,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_5_q146",
+        "number": 146,
+        "displayNumber": 146,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_5/Q146.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
       },
       {
         "id": "challenge_5_q147",
@@ -25616,7 +28833,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 6: Top 200 Questions of JEE Main 2021 Physics",
     "filename": "Challenge 6_Top 200 Questions of JEE Main 2021 Physics.pdf",
     "subject": "Physics",
-    "totalQuestions": 176,
+    "totalQuestions": 194,
     "answerCount": 199,
     "questions": [
       {
@@ -25651,6 +28868,105 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_6_q2",
+        "number": 2,
+        "displayNumber": 2,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q002.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_6_q3",
+        "number": 3,
+        "displayNumber": 3,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q003.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_6_q4",
+        "number": 4,
+        "displayNumber": 4,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q004.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
       },
       {
         "id": "challenge_6_q5",
@@ -26057,6 +29373,39 @@ export const PRELOADED_EXAMS = [
         "subject": "Physics",
         "section": "Physics",
         "imageUrl": "/exams/challenge_6/Q017.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_6_q18",
+        "number": 18,
+        "displayNumber": 18,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q018.png",
         "options": [
           {
             "label": "A",
@@ -26742,6 +30091,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "3"
       },
       {
+        "id": "challenge_6_q39",
+        "number": 39,
+        "displayNumber": 39,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q039.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "30"
+      },
+      {
+        "id": "challenge_6_q40",
+        "number": 40,
+        "displayNumber": 40,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q040.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
         "id": "challenge_6_q41",
         "number": 41,
         "displayNumber": 41,
@@ -26839,6 +30254,72 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "400"
+      },
+      {
+        "id": "challenge_6_q44",
+        "number": 44,
+        "displayNumber": 44,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q044.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "20"
+      },
+      {
+        "id": "challenge_6_q45",
+        "number": 45,
+        "displayNumber": 45,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q045.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
       },
       {
         "id": "challenge_6_q46",
@@ -28062,6 +31543,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "50"
       },
       {
+        "id": "challenge_6_q83",
+        "number": 83,
+        "displayNumber": 83,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q083.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "60"
+      },
+      {
         "id": "challenge_6_q84",
         "number": 84,
         "displayNumber": 84,
@@ -29184,6 +32698,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
+        "id": "challenge_6_q118",
+        "number": 118,
+        "displayNumber": 118,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q118.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_6_q119",
+        "number": 119,
+        "displayNumber": 119,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q119.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
         "id": "challenge_6_q121",
         "number": 121,
         "displayNumber": 121,
@@ -29877,6 +33457,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "3"
       },
       {
+        "id": "challenge_6_q143",
+        "number": 143,
+        "displayNumber": 143,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q143.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_6_q144",
+        "number": 144,
+        "displayNumber": 144,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q144.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
         "id": "challenge_6_q145",
         "number": 145,
         "displayNumber": 145,
@@ -30471,14 +34117,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "12"
       },
       {
-        "id": "challenge_6_q166",
-        "number": 166,
-        "displayNumber": 166,
+        "id": "challenge_6_q163",
+        "number": 163,
+        "displayNumber": 163,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_6/Q166.png",
+        "imageUrl": "/exams/challenge_6/Q163.png",
         "options": [
           {
             "label": "A",
@@ -30501,7 +34147,73 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "600"
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_6_q164",
+        "number": 164,
+        "displayNumber": 164,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q164.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "30"
+      },
+      {
+        "id": "challenge_6_q165",
+        "number": 165,
+        "displayNumber": 165,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q165.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
       },
       {
         "id": "challenge_6_q167",
@@ -31032,39 +34744,6 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
-        "id": "challenge_6_q184",
-        "number": 184,
-        "displayNumber": 184,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_6/Q184.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "5"
-      },
-      {
         "id": "challenge_6_q185",
         "number": 185,
         "displayNumber": 185,
@@ -31164,6 +34843,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "1"
       },
       {
+        "id": "challenge_6_q188",
+        "number": 188,
+        "displayNumber": 188,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q188.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "5"
+      },
+      {
+        "id": "challenge_6_q189",
+        "number": 189,
+        "displayNumber": 189,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q189.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "20"
+      },
+      {
         "id": "challenge_6_q190",
         "number": 190,
         "displayNumber": 190,
@@ -31228,39 +34973,6 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "10"
-      },
-      {
-        "id": "challenge_6_q192",
-        "number": 192,
-        "displayNumber": 192,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_6/Q192.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "15"
       },
       {
         "id": "challenge_6_q193",
@@ -31360,6 +35072,105 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_6_q196",
+        "number": 196,
+        "displayNumber": 196,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q196.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_6_q197",
+        "number": 197,
+        "displayNumber": 197,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q197.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_6_q198",
+        "number": 198,
+        "displayNumber": 198,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_6/Q198.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
       },
       {
         "id": "challenge_6_q199",
@@ -31635,7 +35446,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 7: Top 100 Questions of JEE Main 2020 Physics",
     "filename": "Challenge 7_Top 100 Questions of JEE Main 2020 Physics.pdf",
     "subject": "Physics",
-    "totalQuestions": 99,
+    "totalQuestions": 100,
     "answerCount": 99,
     "questions": [
       {
@@ -31934,6 +35745,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "A"
+      },
+      {
+        "id": "challenge_7_q10",
+        "number": 10,
+        "displayNumber": 10,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_7/Q010.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "C"
       },
       {
         "id": "challenge_7_q11",
@@ -35013,7 +38857,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 8: Top 200 Questions of JEE Main 2026 Physics",
     "filename": "Challenge 8_Top 200 Questions of JEE Main 2026 Physics.pdf",
     "subject": "Physics",
-    "totalQuestions": 194,
+    "totalQuestions": 193,
     "answerCount": 199,
     "questions": [
       {
@@ -35246,39 +39090,6 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "4"
-      },
-      {
-        "id": "challenge_8_q8",
-        "number": 8,
-        "displayNumber": 8,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_8/Q008.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "1"
       },
       {
         "id": "challenge_8_q9",
@@ -36535,72 +40346,6 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
-        "id": "challenge_8_q47",
-        "number": 47,
-        "displayNumber": 47,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_8/Q047.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "4"
-      },
-      {
-        "id": "challenge_8_q48",
-        "number": 48,
-        "displayNumber": 48,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_8/Q048.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "1"
-      },
-      {
         "id": "challenge_8_q49",
         "number": 49,
         "displayNumber": 49,
@@ -37061,105 +40806,6 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "2"
-      },
-      {
-        "id": "challenge_8_q63",
-        "number": 63,
-        "displayNumber": 63,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_8/Q063.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "1"
-      },
-      {
-        "id": "challenge_8_q64",
-        "number": 64,
-        "displayNumber": 64,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_8/Q064.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "1"
-      },
-      {
-        "id": "challenge_8_q65",
-        "number": 65,
-        "displayNumber": 65,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_8/Q065.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "3"
       },
       {
         "id": "challenge_8_q66",
@@ -39208,6 +42854,105 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
+        "id": "challenge_8_q128",
+        "number": 128,
+        "displayNumber": 128,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_8/Q128.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_8_q129",
+        "number": 129,
+        "displayNumber": 129,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_8/Q129.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_8_q130",
+        "number": 130,
+        "displayNumber": 130,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_8/Q130.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
         "id": "challenge_8_q131",
         "number": 131,
         "displayNumber": 131,
@@ -39307,14 +43052,80 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "100"
       },
       {
-        "id": "challenge_8_q137",
-        "number": 137,
-        "displayNumber": 137,
+        "id": "challenge_8_q134",
+        "number": 134,
+        "displayNumber": 134,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_8/Q137.png",
+        "imageUrl": "/exams/challenge_8/Q134.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_8_q135",
+        "number": 135,
+        "displayNumber": 135,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_8/Q135.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_8_q136",
+        "number": 136,
+        "displayNumber": 136,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_8/Q136.png",
         "options": [
           {
             "label": "A",
@@ -41626,7 +45437,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 9: Theoretical Questions 2020 to 2023 JEE Main",
     "filename": "Challenge 9_Theoretical Ques 2020 to 2023 JEE Main.pdf",
     "subject": "Physics",
-    "totalQuestions": 125,
+    "totalQuestions": 137,
     "answerCount": 140,
     "questions": [
       {
@@ -42620,6 +46431,39 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "2"
       },
       {
+        "id": "challenge_9_q31",
+        "number": 31,
+        "displayNumber": 31,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q031.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": null
+      },
+      {
         "id": "challenge_9_q32",
         "number": 32,
         "displayNumber": 32,
@@ -43577,6 +47421,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "A"
       },
       {
+        "id": "challenge_9_q62",
+        "number": 62,
+        "displayNumber": 62,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q062.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": "challenge_9_q63",
+        "number": 63,
+        "displayNumber": 63,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q063.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "C"
+      },
+      {
         "id": "challenge_9_q64",
         "number": 64,
         "displayNumber": 64,
@@ -44237,6 +48147,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
+        "id": "challenge_9_q84",
+        "number": 84,
+        "displayNumber": 84,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q084.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_9_q85",
+        "number": 85,
+        "displayNumber": 85,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q085.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
+      },
+      {
         "id": "challenge_9_q86",
         "number": 86,
         "displayNumber": 86,
@@ -44301,39 +48277,6 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "C"
-      },
-      {
-        "id": "challenge_9_q88",
-        "number": 88,
-        "displayNumber": 88,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_9/Q088.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "A"
       },
       {
         "id": "challenge_9_q89",
@@ -44831,6 +48774,72 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "B"
       },
       {
+        "id": "challenge_9_q104",
+        "number": 104,
+        "displayNumber": 104,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q104.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": "challenge_9_q105",
+        "number": 105,
+        "displayNumber": 105,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q105.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
         "id": "challenge_9_q106",
         "number": 106,
         "displayNumber": 106,
@@ -45161,14 +49170,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
-        "id": "challenge_9_q119",
-        "number": 119,
-        "displayNumber": 119,
+        "id": "challenge_9_q116",
+        "number": 116,
+        "displayNumber": 116,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_9/Q119.png",
+        "imageUrl": "/exams/challenge_9/Q116.png",
         "options": [
           {
             "label": "A",
@@ -45191,7 +49200,73 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "2"
+        "correctAnswer": "D"
+      },
+      {
+        "id": "challenge_9_q117",
+        "number": 117,
+        "displayNumber": 117,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q117.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_9_q118",
+        "number": 118,
+        "displayNumber": 118,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q118.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
       },
       {
         "id": "challenge_9_q120",
@@ -45202,6 +49277,72 @@ export const PRELOADED_EXAMS = [
         "subject": "Physics",
         "section": "Physics",
         "imageUrl": "/exams/challenge_9/Q120.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_9_q121",
+        "number": 121,
+        "displayNumber": 121,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q121.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_9_q122",
+        "number": 122,
+        "displayNumber": 122,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q122.png",
         "options": [
           {
             "label": "A",
@@ -45390,6 +49531,72 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_9_q128",
+        "number": 128,
+        "displayNumber": 128,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q128.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_9_q129",
+        "number": 129,
+        "displayNumber": 129,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q129.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "C"
       },
       {
         "id": "challenge_9_q130",
@@ -45590,39 +49797,6 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "3"
       },
       {
-        "id": "challenge_9_q136",
-        "number": 136,
-        "displayNumber": 136,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_9/Q136.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "4"
-      },
-      {
         "id": "challenge_9_q137",
         "number": 137,
         "displayNumber": 137,
@@ -45654,6 +49828,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "2"
+      },
+      {
+        "id": "challenge_9_q138",
+        "number": 138,
+        "displayNumber": 138,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_9/Q138.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
       },
       {
         "id": "challenge_9_q139",
@@ -45903,7 +50110,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 11: Rank Booster Questions Physics",
     "filename": "Challenge 11_Rank Booster Questions Physics.pdf",
     "subject": "Physics",
-    "totalQuestions": 22,
+    "totalQuestions": 20,
     "answerCount": 0,
     "questions": [
       {
@@ -46542,72 +50749,6 @@ export const PRELOADED_EXAMS = [
         "subject": "Physics",
         "section": "Physics",
         "imageUrl": "/exams/challenge_11/Q020.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": null
-      },
-      {
-        "id": "challenge_11_q21",
-        "number": 21,
-        "displayNumber": 21,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_11/Q021.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": null
-      },
-      {
-        "id": "challenge_11_q22",
-        "number": 22,
-        "displayNumber": 22,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_11/Q022.png",
         "options": [
           {
             "label": "A",
@@ -50820,7 +54961,7 @@ export const PRELOADED_EXAMS = [
     "title": "Challenge 15: Top 50 Circuit Questions (Full Physics)",
     "filename": "Challenge 15_Top 50 Circuit Questions_Full Physics.pdf",
     "subject": "Physics",
-    "totalQuestions": 39,
+    "totalQuestions": 46,
     "answerCount": 49,
     "questions": [
       {
@@ -51055,39 +55196,6 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "3"
       },
       {
-        "id": "challenge_15_q8",
-        "number": 8,
-        "displayNumber": 8,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_15/Q008.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "8"
-      },
-      {
         "id": "challenge_15_q9",
         "number": 9,
         "displayNumber": 9,
@@ -51185,6 +55293,39 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_15_q12",
+        "number": 12,
+        "displayNumber": 12,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_15/Q012.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
       },
       {
         "id": "challenge_15_q13",
@@ -51286,14 +55427,14 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "4"
       },
       {
-        "id": "challenge_15_q19",
-        "number": 19,
-        "displayNumber": 19,
+        "id": "challenge_15_q16",
+        "number": 16,
+        "displayNumber": 16,
         "type": "HYBRID",
         "hasImage": true,
         "subject": "Physics",
         "section": "Physics",
-        "imageUrl": "/exams/challenge_15/Q019.png",
+        "imageUrl": "/exams/challenge_15/Q016.png",
         "options": [
           {
             "label": "A",
@@ -51316,7 +55457,73 @@ export const PRELOADED_EXAMS = [
             "isImageOption": true
           }
         ],
-        "correctAnswer": "5"
+        "correctAnswer": "50"
+      },
+      {
+        "id": "challenge_15_q17",
+        "number": 17,
+        "displayNumber": 17,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_15/Q017.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_15_q18",
+        "number": 18,
+        "displayNumber": 18,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_15/Q018.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
       },
       {
         "id": "challenge_15_q20",
@@ -51550,6 +55757,105 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "1"
       },
       {
+        "id": "challenge_15_q27",
+        "number": 27,
+        "displayNumber": 27,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_15/Q027.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "1"
+      },
+      {
+        "id": "challenge_15_q28",
+        "number": 28,
+        "displayNumber": 28,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_15/Q028.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "3"
+      },
+      {
+        "id": "challenge_15_q29",
+        "number": 29,
+        "displayNumber": 29,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_15/Q029.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "2"
+      },
+      {
         "id": "challenge_15_q30",
         "number": 30,
         "displayNumber": 30,
@@ -51614,6 +55920,72 @@ export const PRELOADED_EXAMS = [
           }
         ],
         "correctAnswer": null
+      },
+      {
+        "id": "challenge_15_q32",
+        "number": 32,
+        "displayNumber": 32,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_15/Q032.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "400"
+      },
+      {
+        "id": "challenge_15_q33",
+        "number": 33,
+        "displayNumber": 33,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_15/Q033.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "36"
       },
       {
         "id": "challenge_15_q35",
@@ -51946,39 +56318,6 @@ export const PRELOADED_EXAMS = [
         "correctAnswer": "40"
       },
       {
-        "id": "challenge_15_q45",
-        "number": 45,
-        "displayNumber": 45,
-        "type": "HYBRID",
-        "hasImage": true,
-        "subject": "Physics",
-        "section": "Physics",
-        "imageUrl": "/exams/challenge_15/Q045.png",
-        "options": [
-          {
-            "label": "A",
-            "text": "(1)",
-            "isImageOption": true
-          },
-          {
-            "label": "B",
-            "text": "(2)",
-            "isImageOption": true
-          },
-          {
-            "label": "C",
-            "text": "(3)",
-            "isImageOption": true
-          },
-          {
-            "label": "D",
-            "text": "(4)",
-            "isImageOption": true
-          }
-        ],
-        "correctAnswer": "5"
-      },
-      {
         "id": "challenge_15_q46",
         "number": 46,
         "displayNumber": 46,
@@ -52020,6 +56359,39 @@ export const PRELOADED_EXAMS = [
         "subject": "Physics",
         "section": "Physics",
         "imageUrl": "/exams/challenge_15/Q047.png",
+        "options": [
+          {
+            "label": "A",
+            "text": "(1)",
+            "isImageOption": true
+          },
+          {
+            "label": "B",
+            "text": "(2)",
+            "isImageOption": true
+          },
+          {
+            "label": "C",
+            "text": "(3)",
+            "isImageOption": true
+          },
+          {
+            "label": "D",
+            "text": "(4)",
+            "isImageOption": true
+          }
+        ],
+        "correctAnswer": "4"
+      },
+      {
+        "id": "challenge_15_q48",
+        "number": 48,
+        "displayNumber": 48,
+        "type": "HYBRID",
+        "hasImage": true,
+        "subject": "Physics",
+        "section": "Physics",
+        "imageUrl": "/exams/challenge_15/Q048.png",
         "options": [
           {
             "label": "A",
