@@ -153,6 +153,125 @@
   margin: 0;
 }
 
+/* Actions Row: Merge & Split */
+.review-card__actions-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.review-card__btn {
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  color: var(--color-text);
+  transition: all 0.15s;
+}
+
+.review-card__btn:hover {
+  background: var(--color-primary-light, #e0e7ff);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.review-card__split-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.review-card__split-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.review-card__split-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.review-card__btn-sub {
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 3px;
+  border: 1px solid #94a3b8;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.review-card__btn-sub:hover {
+  background: #e2e8f0;
+}
+
+/* Crop Adjustment Section */
+.review-card__crop-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.review-card__crop-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.review-card__crop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.review-card__crop-axis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #475569;
+}
+
+.review-card__btn-group {
+  display: flex;
+  gap: 2px;
+}
+
+.review-card__btn-group button {
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 600;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.review-card__btn-group button:hover {
+  background: #e2e8f0;
+}
+
+.review-card__crop-status {
+  font-size: 10px;
+  color: #64748b;
+  font-family: monospace;
+}
+
 .review-screen__actions {
   display: flex;
   justify-content: flex-end;

@@ -8,7 +8,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useExam } from '../../context/ExamContext';
-import { QUESTION_TYPES, QUESTION_STATUS } from '../../utils/constants';
+import { QUESTION_TYPES } from '../../utils/constants';
+import { saveQuestions, saveAnswerKey } from '../../services/indexedDbService';
 import Button from '../common/Button';
 import './ReviewScreen.css';
 
@@ -34,27 +35,57 @@ function flagQuestion(q, allQuestions, answerKey) {
     QUESTION_TYPES.ASSERTION_REASON,
   ].includes(q.type);
 
-  if (isMcq && q.options.length < 4) flags.push(`Only ${q.options.length} option(s)`);
-  if (isMcq && q.options.length > 4) flags.push(`${q.options.length} options`);
+  if (isMcq && (!q.options || q.options.length < 4)) flags.push(`Only ${q.options?.length || 0} option(s)`);
+  if (isMcq && q.options && q.options.length > 4) flags.push(`${q.options.length} options`);
 
   // Duplicate number check
   const sameNumber = allQuestions.filter((x) => x.number === q.number);
   if (sameNumber.length > 1) flags.push('Duplicate number');
 
-  // Answer key mismatch
-  if (answerKey && !answerKey.has(q.number) && isMcq) flags.push('No answer key');
+  // Answer key check
+  const hasAnswer = (answerKey && answerKey.has(q.number)) || Boolean(q.inlineAnswer);
+  if (!hasAnswer && isMcq) flags.push('No answer key');
+
+  // Confidence check
+  if (q.confidence !== undefined && q.confidence < 0.6) flags.push('Low confidence');
 
   return flags;
 }
 
+function combineBboxes(b1, b2) {
+  if (!b1 && !b2) return null;
+  if (!b1) return b2 ? { ...b2 } : null;
+  if (!b2) return b1 ? { ...b1 } : null;
+  const x = Math.min(b1.x, b2.x);
+  const y = Math.min(b1.y, b2.y);
+  const right = Math.max(b1.x + b1.width, b2.x + b2.width);
+  const bottom = Math.max(b1.y + b1.height, b2.y + b2.height);
+  return {
+    pageNumber: b1.pageNumber || b2.pageNumber,
+    x,
+    y,
+    width: right - x,
+    height: bottom - y,
+  };
+}
+
 export default function ReviewScreen({ onProceed }) {
-  const { questions, answerKey, getQuestionImageUrl, setQuestions } = useExam();
+  const { questions, answerKey, getQuestionImageUrl, setQuestions, setAnswerKey } = useExam();
   const navigate = useNavigate();
 
   // Local editable copy of questions
   const [localQuestions, setLocalQuestions] = useState(() => questions.map((q) => ({ ...q })));
+  const [localAnswerKey, setLocalAnswerKey] = useState(() => {
+    const map = new Map();
+    if (answerKey instanceof Map) {
+      for (const [k, v] of answerKey.entries()) map.set(k, v);
+    }
+    return map;
+  });
+
   const [imageUrls, setImageUrls] = useState({});
   const [expanded, setExpanded] = useState(null);
+  const [splitTargetId, setSplitTargetId] = useState(null);
 
   // Load thumbnails for all questions lazily
   useEffect(() => {
@@ -77,6 +108,14 @@ export default function ReviewScreen({ onProceed }) {
 
   const subjects = [...new Set(localQuestions.map((q) => q.subject || 'General'))];
 
+  function renumberQuestions(qs) {
+    return qs.map((q, idx) => ({
+      ...q,
+      number: idx + 1,
+      displayNumber: q.displayNumber || String(idx + 1),
+    }));
+  }
+
   function changeType(qId, newType) {
     setLocalQuestions((prev) =>
       prev.map((q) => q.id === qId ? { ...q, type: newType } : q)
@@ -89,15 +128,127 @@ export default function ReviewScreen({ onProceed }) {
     );
   }
 
-  function handleProceed() {
-    // Push local edits back to context
+  function handleAnswerChange(qNumber, val) {
+    setLocalAnswerKey((prev) => {
+      const next = new Map(prev);
+      if (val) next.set(qNumber, val);
+      else next.delete(qNumber);
+      return next;
+    });
+  }
+
+  function handleMergeWithNext(qId) {
+    setLocalQuestions((prev) => {
+      const idx = prev.findIndex((q) => q.id === qId);
+      if (idx === -1 || idx >= prev.length - 1) return prev;
+      const q1 = prev[idx];
+      const q2 = prev[idx + 1];
+
+      const merged = {
+        ...q1,
+        text: [q1.text, q2.text].filter(Boolean).join('\n'),
+        options: [...(q1.options || []), ...(q2.options || [])],
+        bbox: combineBboxes(q1.bbox, q2.bbox),
+        inlineAnswer: q1.inlineAnswer || q2.inlineAnswer || null,
+        solutionText: [q1.solutionText, q2.solutionText].filter(Boolean).join('\n') || null,
+      };
+
+      const next = [...prev.slice(0, idx), merged, ...prev.slice(idx + 2)];
+      return renumberQuestions(next);
+    });
+  }
+
+  function handleSplitQuestion(qId, splitOptionIndex = null) {
+    setLocalQuestions((prev) => {
+      const idx = prev.findIndex((q) => q.id === qId);
+      if (idx === -1) return prev;
+      const q = prev[idx];
+
+      let q1Options = q.options || [];
+      let q2Options = [];
+      let q1Text = q.text || '';
+      let q2Text = '';
+
+      if (splitOptionIndex !== null && q.options && q.options.length > splitOptionIndex) {
+        q1Options = q.options.slice(0, splitOptionIndex);
+        q2Options = q.options.slice(splitOptionIndex);
+      } else {
+        // Split text in half if no options
+        const lines = (q.text || '').split('\n');
+        const mid = Math.max(1, Math.floor(lines.length / 2));
+        q1Text = lines.slice(0, mid).join('\n');
+        q2Text = lines.slice(mid).join('\n');
+      }
+
+      const q1 = {
+        ...q,
+        text: q1Text,
+        options: q1Options,
+      };
+
+      const q2 = {
+        ...q,
+        id: `${q.id}_split_${Date.now()}`,
+        text: q2Text,
+        options: q2Options,
+        inlineAnswer: null,
+        solutionText: null,
+      };
+
+      const next = [...prev.slice(0, idx), q1, q2, ...prev.slice(idx + 1)];
+      return renumberQuestions(next);
+    });
+    setSplitTargetId(null);
+  }
+
+  function adjustCropBox(qId, edge, delta) {
+    setLocalQuestions((prev) =>
+      prev.map((q) => {
+        if (q.id !== qId) return q;
+        const currentAdj = q.cropAdjust || { top: 0, bottom: 0, left: 0, right: 0 };
+        const nextAdj = {
+          ...currentAdj,
+          [edge]: (currentAdj[edge] || 0) + delta,
+        };
+
+        let nextBbox = q.bbox ? { ...q.bbox } : null;
+        if (nextBbox) {
+          if (edge === 'top') {
+            nextBbox.y = Math.max(0, nextBbox.y - delta);
+            nextBbox.height = Math.max(10, nextBbox.height + delta);
+          } else if (edge === 'bottom') {
+            nextBbox.height = Math.max(10, nextBbox.height + delta);
+          } else if (edge === 'left') {
+            nextBbox.x = Math.max(0, nextBbox.x - delta);
+            nextBbox.width = Math.max(10, nextBbox.width + delta);
+          } else if (edge === 'right') {
+            nextBbox.width = Math.max(10, nextBbox.width + delta);
+          }
+        }
+
+        return {
+          ...q,
+          bbox: nextBbox,
+          cropAdjust: nextAdj,
+        };
+      })
+    );
+  }
+
+  async function handleProceed() {
     setQuestions(localQuestions);
+    setAnswerKey(localAnswerKey);
+    try {
+      await saveQuestions(localQuestions);
+      await saveAnswerKey(localAnswerKey);
+    } catch { /* skip */ }
+
     if (onProceed) onProceed();
     else navigate('/settings');
   }
 
   const totalFlags = localQuestions.reduce(
-    (sum, q) => sum + flagQuestion(q, localQuestions, answerKey).length,
+    (sum, q) => sum + flagQuestion(q, localQuestions, localAnswerKey).length,
     0
   );
 
@@ -121,9 +272,12 @@ export default function ReviewScreen({ onProceed }) {
               {subject} <span className="review-screen__count">({subjectQs.length})</span>
             </h3>
             <div className="review-screen__grid">
-              {subjectQs.map((q, idx) => {
-                const flags = flagQuestion(q, localQuestions, answerKey);
+              {subjectQs.map((q) => {
+                const globalIdx = localQuestions.findIndex((item) => item.id === q.id);
+                const flags = flagQuestion(q, localQuestions, localAnswerKey);
                 const isExpanded = expanded === q.id;
+                const currentAnswer = localAnswerKey.get(q.number) || q.inlineAnswer || '';
+
                 return (
                   <div
                     key={q.id}
@@ -164,6 +318,7 @@ export default function ReviewScreen({ onProceed }) {
                             ))}
                           </select>
                         </label>
+
                         <label>
                           Subject:
                           <input
@@ -174,12 +329,113 @@ export default function ReviewScreen({ onProceed }) {
                             placeholder="e.g. Physics"
                           />
                         </label>
-                        {q.inlineAnswer && (
-                          <p className="review-card__info">Inline answer: <strong>{q.inlineAnswer}</strong></p>
-                        )}
-                        {q.options.length > 0 && (
+
+                        <label>
+                          Answer Key:
+                          <input
+                            type="text"
+                            className="review-card__input"
+                            value={currentAnswer}
+                            onChange={(e) => handleAnswerChange(q.number, e.target.value.toUpperCase().trim())}
+                            placeholder="e.g. A or 42"
+                          />
+                        </label>
+
+                        {q.options && q.options.length > 0 && (
                           <p className="review-card__info">Options: {q.options.map((o) => o.label).join(', ')}</p>
                         )}
+
+                        {/* Merge and Split Controls */}
+                        <div className="review-card__actions-row">
+                          {globalIdx < localQuestions.length - 1 && (
+                            <button
+                              type="button"
+                              className="review-card__btn review-card__btn--merge"
+                              onClick={() => handleMergeWithNext(q.id)}
+                              title="Merge with next question"
+                            >
+                              ⇥ Merge with Q{localQuestions[globalIdx + 1]?.number}
+                            </button>
+                          )}
+                          <button
+                            type="button"
+                            className="review-card__btn review-card__btn--split"
+                            onClick={() => setSplitTargetId(splitTargetId === q.id ? null : q.id)}
+                            title="Split into two questions"
+                          >
+                            ✂ Split Question
+                          </button>
+                        </div>
+
+                        {splitTargetId === q.id && (
+                          <div className="review-card__split-panel">
+                            <span className="review-card__split-label">Select split point:</span>
+                            {q.options && q.options.length > 1 ? (
+                              <div className="review-card__split-options">
+                                {q.options.map((opt, oIdx) => (
+                                  oIdx > 0 && (
+                                    <button
+                                      key={opt.label + oIdx}
+                                      type="button"
+                                      className="review-card__btn-sub"
+                                      onClick={() => handleSplitQuestion(q.id, oIdx)}
+                                    >
+                                      Split at Option {opt.label}
+                                    </button>
+                                  )
+                                ))}
+                              </div>
+                            ) : (
+                              <button
+                                type="button"
+                                className="review-card__btn-sub"
+                                onClick={() => handleSplitQuestion(q.id, null)}
+                              >
+                                Split in Half
+                              </button>
+                            )}
+                          </div>
+                        )}
+
+                        {/* Crop Box Adjustment */}
+                        <div className="review-card__crop-section">
+                          <span className="review-card__crop-title">Adjust Crop Box (pts):</span>
+                          <div className="review-card__crop-grid">
+                            <div className="review-card__crop-axis">
+                              <span>Top</span>
+                              <div className="review-card__btn-group">
+                                <button type="button" onClick={() => adjustCropBox(q.id, 'top', -10)}>-10</button>
+                                <button type="button" onClick={() => adjustCropBox(q.id, 'top', 10)}>+10</button>
+                              </div>
+                            </div>
+                            <div className="review-card__crop-axis">
+                              <span>Bottom</span>
+                              <div className="review-card__btn-group">
+                                <button type="button" onClick={() => adjustCropBox(q.id, 'bottom', -10)}>-10</button>
+                                <button type="button" onClick={() => adjustCropBox(q.id, 'bottom', 10)}>+10</button>
+                              </div>
+                            </div>
+                            <div className="review-card__crop-axis">
+                              <span>Left</span>
+                              <div className="review-card__btn-group">
+                                <button type="button" onClick={() => adjustCropBox(q.id, 'left', -10)}>-10</button>
+                                <button type="button" onClick={() => adjustCropBox(q.id, 'left', 10)}>+10</button>
+                              </div>
+                            </div>
+                            <div className="review-card__crop-axis">
+                              <span>Right</span>
+                              <div className="review-card__btn-group">
+                                <button type="button" onClick={() => adjustCropBox(q.id, 'right', -10)}>-10</button>
+                                <button type="button" onClick={() => adjustCropBox(q.id, 'right', 10)}>+10</button>
+                              </div>
+                            </div>
+                          </div>
+                          {q.cropAdjust && (
+                            <span className="review-card__crop-status">
+                              Offsets: T:{q.cropAdjust.top || 0} B:{q.cropAdjust.bottom || 0} L:{q.cropAdjust.left || 0} R:{q.cropAdjust.right || 0}
+                            </span>
+                          )}
+                        </div>
                       </div>
                     )}
                   </div>

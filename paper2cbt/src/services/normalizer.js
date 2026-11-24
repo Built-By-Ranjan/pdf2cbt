@@ -17,11 +17,6 @@ const OCR_ARTIFACT_FIXES = [
   [/([.,;:])\1{2,}/g, '$1'],
   // Common bullet glyphs normalized to a single canonical bullet.
   [/[▪▫‣⁃●○]/g, '•'],
-  // Common OCR option symbol confusions:
-  [/[®]/g, '(B)'],
-  [/[(]?[©€][)]?/g, '(C)'],
-  [/\(8\)/g, '(B)'],
-  [/\([0o]\)/g, '(D)'],
 ];
 
 /**

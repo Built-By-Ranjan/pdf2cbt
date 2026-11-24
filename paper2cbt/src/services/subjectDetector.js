@@ -113,13 +113,25 @@ export function detectSubjectFromLine(text, extraPatterns = []) {
  * @returns {boolean}
  */
 function isSubjectHeadingLine(text) {
-  // Short lines that contain a subject keyword but no question marker
-  if (text.length > 100) return false;
-  const hasSubject = SUBJECT_PATTERNS.some(({ pattern }) => pattern.test(text));
-  if (!hasSubject) return false;
-  // Must not start with a question marker
-  if (/^\s*\d{1,4}\s*[.):]/.test(text)) return false;
-  return true;
+  const trimmed = (text || '').trim();
+  if (!trimmed || trimmed.length > 60) return false;
+  // Must not start with a question marker or option marker
+  if (/^\s*\d{1,4}\s*[.):]/.test(trimmed)) return false;
+  if (/^\s*\(?[A-Da-d1-4]\s*[.):]/.test(trimmed)) return false;
+
+  // If it has explicit heading prefix ("PART A: PHYSICS", "SECTION - I : MATHEMATICS")
+  if (SUBJECT_HEADING_PREFIX.test(trimmed)) {
+    return SUBJECT_PATTERNS.some(({ pattern }) => pattern.test(trimmed));
+  }
+
+  // Standalone subject title: short (<= 35 chars), must not contain sentence/prose words
+  if (trimmed.length > 35) return false;
+  if (/\b(?:which|what|where|when|who|how|consider|following|steps|repair|patient|infant|disease|syndrome|causes|treatment|regarding|between|during|under|over|with|from|into|about|after|before|find|calculate|select)\b/i.test(trimmed)) {
+    return false;
+  }
+
+  // Must match one of the subject patterns
+  return SUBJECT_PATTERNS.some(({ pattern }) => pattern.test(trimmed));
 }
 
 /**

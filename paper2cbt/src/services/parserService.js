@@ -185,7 +185,8 @@ export async function parsePdfToQuestions(file, onProgress = () => {}, options =
 
   // Stage 4: Cleaner — strip headers/footers/boilerplate, page-aware.
   onProgress(PROCESSING_STAGES.CLEANING);
-  const cleanedPages = cleanPages(extractedPages);
+  const questionPages = extractedPages.filter((p) => !nonQuestionPages.has(p.pageNumber));
+  const cleanedPages = cleanPages(questionPages);
 
   // Stage 5: Normalizer — per-page text cleanup, pages never merged.
   onProgress(PROCESSING_STAGES.NORMALIZING);

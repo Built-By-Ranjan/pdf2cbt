@@ -96,6 +96,10 @@ export function classifyNonQuestionPage(text) {
     return 'useful_data';
   }
 
+  if (/rough\s*work|space\s*for\s*rough\s*work/i.test(text) && !hasOptions) {
+    return 'blank';
+  }
+
   // Cover page or blank page: very short text, mostly metadata or header furniture
   const lines = text.split('\n').filter((l) => l.trim().length > 0);
   if (lines.length <= 4 && !hasOptions) {

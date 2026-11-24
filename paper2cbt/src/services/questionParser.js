@@ -74,12 +74,14 @@ function createQuestion({ number, text, page, section, sectionIsInteger, subject
     number,
     displayNumber: number, // the number printed on the paper
     question: text || '',
+    text: text || '',
     options: [],
     section: section || null,
     sectionIsInteger: sectionIsInteger || false,
     subject: subject || null,
     hasImage: false,
     page,
+    pageNumber: page,
     type: QUESTION_TYPES.SINGLE_CHOICE,
     inlineAnswer: null,
     solutionText: null,
@@ -117,6 +119,11 @@ export function parseQuestions(tokens) {
       current.question = cleanText;
       if (inlineAnswer) current.inlineAnswer = inlineAnswer;
       if (solutionText) current.solutionText = solutionText;
+      // If paper provided inline answer but no worked solution text, populate solutionText with answer
+      if (!current.solutionText && current.inlineAnswer) {
+        current.solutionText = `Ans. (${current.inlineAnswer})`;
+      }
+      current.text = current.question;
 
       current.type = classifyQuestionType(
         current.question,
@@ -158,16 +165,17 @@ export function parseQuestions(tokens) {
         const marker = matchQuestionStart(token.text);
 
         // Guard against false-positive numbered lines inside question/option text:
-        // Within the same subject & section, question numbers must strictly increase.
-        // If a line starts with a number <= current.number without any section/subject
-        // change, it is mathematical content or an enumeration within the question.
-        if (
+        // Within the same subject & section:
+        // 1. Numbers <= current.number (statements 1-4, math enumerations, or duplicates)
+        // 2. Wild forward jumps (> current.number + 4) caused by OCR noise, formulas, or table percentages
+        const isInternalOrNoise =
           current &&
           marker?.number &&
           current.number &&
           !sectionOrSubjectChanged &&
-          marker.number <= current.number
-        ) {
+          (marker.number <= current.number || marker.number > current.number + 4);
+
+        if (isInternalOrNoise) {
           // Treat as text continuation on current question or option
           if (state === PARSER_STATES.OPTION && current.options.length > 0) {
             const lastIndex = current.options.length - 1;
@@ -313,12 +321,23 @@ export function parseQuestions(tokens) {
 
   finalizeCurrent();
 
-  // Prefer the number actually printed on the paper (needed to match the
-  // answer key correctly); fall back to sequential position only when a
-  // question's marker didn't carry a parseable number.
-  return questions.map((q, index) => ({
-    ...q,
-    number: q.number ?? index + 1,
-    displayNumber: q.displayNumber ?? q.number ?? index + 1,
-  }));
+  // Phase D: Detect if question numbers restart per subject or contain duplicates:
+  const seenNumbers = new Set();
+  let hasDuplicates = false;
+  for (const q of questions) {
+    if (q.number !== null && seenNumbers.has(q.number)) {
+      hasDuplicates = true;
+      break;
+    }
+    if (q.number !== null) seenNumbers.add(q.number);
+  }
+
+  return questions.map((q, index) => {
+    const origNumber = q.number ?? index + 1;
+    return {
+      ...q,
+      number: hasDuplicates ? index + 1 : origNumber,
+      displayNumber: origNumber,
+    };
+  });
 }

@@ -52,44 +52,131 @@ function detectAnswerKeyPageByDensity(tokens) {
 }
 
 /**
- * Scans the full token stream for an answer key table and parses it.
- * @param {Array<{type:string, text:string, page:number}>} tokens
- * @returns {Map<number,string> | null}
+ * Scans the full token stream for an answer key table and parses raw entries.
+ * @param {Array<{type:string, text:string, page:number, subject?:string}>} tokens
+ * @returns {Array<{number:number, label:string, subject?:string}>}
  */
-function extractKeyFromTokens(tokens) {
+function extractRawKeyEntriesFromTokens(tokens) {
   let startIndex = findExplicitHeaderIndex(tokens);
 
   if (startIndex === -1) {
     const densePage = detectAnswerKeyPageByDensity(tokens);
-    if (densePage === -1) return null;
+    if (densePage === -1) return [];
     startIndex = tokens.findIndex((t) => t.page === densePage);
   }
 
-  const answerMap = new Map();
-  for (let i = startIndex + 1; i < tokens.length; i += 1) {
-    const match = matchAnswerKeyLine(tokens[i].text);
-    if (match) answerMap.set(match.number, match.label);
+  const rawEntries = [];
+  let currentSubject = null;
+
+  for (let i = startIndex; i < tokens.length; i += 1) {
+    const tok = tokens[i];
+    const text = (tok?.text || '').trim();
+    if (!text) continue;
+
+    if (tok.subject) currentSubject = tok.subject;
+
+    const match = matchAnswerKeyLine(text);
+    if (match) {
+      rawEntries.push({
+        number: match.number,
+        label: match.label,
+        subject: currentSubject,
+      });
+    }
   }
 
-  // Also parse the header/start line itself in case it's a dense-detection
-  // start (density fallback begins ON the first matching line, not after it).
-  const startMatch = matchAnswerKeyLine(tokens[startIndex]?.text || '');
-  if (startMatch) answerMap.set(startMatch.number, startMatch.label);
+  return rawEntries;
+}
 
-  return answerMap.size > 0 ? answerMap : null;
+/**
+ * Maps raw answer key entries to questions using (subject, order) resolution.
+ * Handles papers where question numbering restarts per subject (e.g. Maths 1-25,
+ * Physics 1-25) by matching to the correct unique question number.
+ * @param {Array<{number:number, label:string, subject?:string}>} rawEntries
+ * @param {Array<object>} questions
+ * @returns {Map<number,string>} question.number -> correct label
+ */
+export function mapKeyEntriesToQuestions(rawEntries, questions = []) {
+  const map = new Map();
+  if (!questions || questions.length === 0) {
+    for (const entry of rawEntries) map.set(entry.number, entry.label);
+    return map;
+  }
+
+  // Group questions by subject
+  const questionsBySubject = new Map();
+  for (const q of questions) {
+    const s = q.subject || 'General';
+    if (!questionsBySubject.has(s)) questionsBySubject.set(s, []);
+    questionsBySubject.get(s).push(q);
+  }
+
+  const hasMultipleSubjects = questionsBySubject.size > 1;
+  const entriesHaveSubjects = rawEntries.some((e) => e.subject);
+
+  if (hasMultipleSubjects && entriesHaveSubjects) {
+    for (const entry of rawEntries) {
+      const s = entry.subject || 'General';
+      const subjectQs = questionsBySubject.get(s) || [];
+      const q =
+        subjectQs.find((item) => item.displayNumber === entry.number) ||
+        subjectQs[entry.number - 1];
+      if (q) map.set(q.number, entry.label);
+    }
+  } else if (hasMultipleSubjects && rawEntries.some((e, idx) => idx > 0 && e.number <= rawEntries[idx - 1].number)) {
+    // Answer key restarts numbering per subject (e.g. 1..25, then 1..25)
+    const subjects = [...questionsBySubject.keys()];
+    let currentSubjIdx = 0;
+    let lastNum = -1;
+
+    for (const entry of rawEntries) {
+      if (entry.number <= lastNum && currentSubjIdx + 1 < subjects.length) {
+        currentSubjIdx += 1;
+      }
+      lastNum = entry.number;
+
+      const currentSubject = subjects[currentSubjIdx];
+      const subjectQs = questionsBySubject.get(currentSubject) || [];
+      const q =
+        subjectQs.find((item) => item.displayNumber === entry.number) ||
+        subjectQs[entry.number - 1];
+      if (q) {
+        map.set(q.number, entry.label);
+      } else if (questions[entry.number - 1]) {
+        map.set(questions[entry.number - 1].number, entry.label);
+      }
+    }
+  } else {
+    // Single continuous numbering or 1:1 positional match
+    if (rawEntries.length === questions.length) {
+      rawEntries.forEach((entry, idx) => {
+        map.set(questions[idx].number, entry.label);
+      });
+    } else {
+      for (const entry of rawEntries) {
+        const q =
+          questions.find((item) => item.displayNumber === entry.number) ||
+          questions.find((item) => item.number === entry.number);
+        if (q) map.set(q.number, entry.label);
+        else map.set(entry.number, entry.label);
+      }
+    }
+  }
+
+  return map;
 }
 
 /**
  * Scans the full token stream for an answer key and parses it into a
- * number->label map. Also accepts an optional pre-parsed inline answer map
- * (from faculty-copy parsing) and merges it in — the trailing key table
- * always takes precedence over inline answers for a given question number.
+ * number->label map. Accepts pre-parsed inline answers and merges them in.
+ * Uses (subject, order) mapping to resolve questions whose numbering restarts.
  * @param {Array<{type:string, text:string, page:number}>} tokens
- * @param {Array<{number:number, inlineAnswer:string|null}>} [questions]
+ * @param {Array<object>} [questions]
  * @returns {Map<number,string> | null}
  */
 export function extractAnswerKey(tokens, questions = []) {
-  const trailingKey = extractKeyFromTokens(tokens);
+  const rawKeyEntries = extractRawKeyEntriesFromTokens(tokens);
+  const trailingKey = rawKeyEntries.length > 0 ? mapKeyEntriesToQuestions(rawKeyEntries, questions) : null;
   const inlineKey = buildAnswerKeyFromInline(questions);
 
   if (!trailingKey && !inlineKey) return null;

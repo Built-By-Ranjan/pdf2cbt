@@ -1,0 +1,983 @@
+{
+  "totalQuestions": 118,
+  "pageCountMap": {
+    "2": 6,
+    "3": 4,
+    "4": 4,
+    "5": 4,
+    "6": 4,
+    "7": 5,
+    "8": 6,
+    "9": 5,
+    "10": 4,
+    "11": 4,
+    "12": 4,
+    "13": 4,
+    "14": 4,
+    "15": 5,
+    "16": 5,
+    "17": 5,
+    "18": 5,
+    "19": 4,
+    "20": 4,
+    "21": 5,
+    "22": 4,
+    "23": 5,
+    "25": 6,
+    "26": 5,
+    "27": 3,
+    "28": 4
+  },
+  "duplicates": [],
+  "missing": [],
+  "typeCounts": {
+    "SINGLE_CHOICE": 95,
+    "SUBJECTIVE": 23
+  },
+  "questions": [
+    {
+      "number": 1,
+      "displayNumber": 1,
+      "page": 2,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "A 50-year-old destitute is brought to the emergency with a foul-smelling wound o"
+    },
+    {
+      "number": 2,
+      "displayNumber": 2,
+      "page": 2,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Which one of the following is not a wound prone to the development of tetanus?"
+    },
+    {
+      "number": 3,
+      "displayNumber": 3,
+      "page": 2,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "All of the following are features of a major surgical site infection (SSI), exce"
+    },
+    {
+      "number": 4,
+      "displayNumber": 4,
+      "page": 2,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "An infant is brought to the clinic by the parents with the history of a swelling"
+    },
+    {
+      "number": 5,
+      "displayNumber": 5,
+      "page": 2,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Which one of the following statements regarding inherited cancer syndromes is no"
+    },
+    {
+      "number": 6,
+      "displayNumber": 6,
+      "page": 2,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Which of the following are the causes of secondary lymphoedema? 1. Trauma 2. Dee"
+    },
+    {
+      "number": 7,
+      "displayNumber": 7,
+      "page": 3,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "The classical presentation of an acute embolic occlusion in a limb includes all "
+    },
+    {
+      "number": 8,
+      "displayNumber": 8,
+      "page": 3,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "The typical ulcer as shown in the ————1 on me (@) syphilis"
+    },
+    {
+      "number": 9,
+      "displayNumber": 9,
+      "page": 3,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "A patient is undergoing a surgery for removal of a benign tumour from the paroti"
+    },
+    {
+      "number": 10,
+      "displayNumber": 10,
+      "page": 3,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "A 52-year-old carpenter presents with the history of a persistent non-healing ul"
+    },
+    {
+      "number": 11,
+      "displayNumber": 11,
+      "page": 4,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "A 40-year-old female presents with symptoms of heat intolerance, excessive sweat"
+    },
+    {
+      "number": 12,
+      "displayNumber": 12,
+      "page": 4,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "A 29-year-old lady presents with a the left breast since 1 month duration. Which"
+    },
+    {
+      "number": 13,
+      "displayNumber": 13,
+      "page": 4,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "A 45-year-old lady presents with a hard lump in the left breast. On examination,"
+    },
+    {
+      "number": 14,
+      "displayNumber": 14,
+      "page": 4,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "Which one of the following statements regarding choledochal cyst is not correct?"
+    },
+    {
+      "number": 15,
+      "displayNumber": 15,
+      "page": 5,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Which one of the following is the most common benign liver lesion?"
+    },
+    {
+      "number": 16,
+      "displayNumber": 16,
+      "page": 5,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "The line diagram shows the cross- as SH J fa TRE"
+    },
+    {
+      "number": 17,
+      "displayNumber": 17,
+      "page": 5,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "Which one of the following statements regarding peptic ulceration is not correct"
+    },
+    {
+      "number": 18,
+      "displayNumber": 18,
+      "page": 5,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "A trainee surgeon is performing his/her first cholecystectomy. The area marked r"
+    },
+    {
+      "number": 19,
+      "displayNumber": 19,
+      "page": 6,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "The manoeuvre (marked with an asterisk) shown in the following image is 4 3 / *"
+    },
+    {
+      "number": 20,
+      "displayNumber": 20,
+      "page": 6,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Which of the following are the common complications after splenectomy? 1. Pancre"
+    },
+    {
+      "number": 21,
+      "displayNumber": 21,
+      "page": 6,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "A 42-year-old lady underwent a laparoscopic cholecystectomy, which was uneventfu"
+    },
+    {
+      "number": 22,
+      "displayNumber": 22,
+      "page": 6,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "A 40-year-old male patient has undergone a surgical procedure for a swelling in "
+    },
+    {
+      "number": 23,
+      "displayNumber": 23,
+      "page": 7,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "A patient of blunt trauma to the abdomen is being explored in the emergency. Int"
+    },
+    {
+      "number": 24,
+      "displayNumber": 24,
+      "page": 7,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "The clinical condition shown in the image is ” R = aq » (@) malrotated kidney (5"
+    },
+    {
+      "number": 25,
+      "displayNumber": 25,
+      "page": 7,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "The principle of adaptation shown in the hs 5 ” = fof f esr — = (@ Moynihan’s ap"
+    },
+    {
+      "number": 26,
+      "displayNumber": 26,
+      "page": 7,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Astrocytomas are associated with all of the following syndromes, except"
+    },
+    {
+      "number": 27,
+      "displayNumber": 27,
+      "page": 7,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "The procedure shown in the following images is v a A Ne 4, = \\ Rf 1 ~ 2 (@) elec"
+    },
+    {
+      "number": 28,
+      "displayNumber": 28,
+      "page": 8,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Consider the following statements regarding flail chest : 1. Three or more ribs "
+    },
+    {
+      "number": 29,
+      "displayNumber": 29,
+      "page": 8,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "All of the following are causes of secondary osteoarthritis of the hip, except"
+    },
+    {
+      "number": 30,
+      "displayNumber": 30,
+      "page": 8,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "All of the following are causes of acute red eye, except (@ keratitis | (b) reti"
+    },
+    {
+      "number": 31,
+      "displayNumber": 31,
+      "page": 8,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "The maximum dose of Lidocaine (without adrenaline) for local anaesthesia is"
+    },
+    {
+      "number": 32,
+      "displayNumber": 32,
+      "page": 8,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "A young lady is brought to emergency department following stab injury to right c"
+    },
+    {
+      "number": 33,
+      "displayNumber": 33,
+      "page": 8,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "A 25-year-old motorcycle rider is brought to the emergency with history of motor"
+    },
+    {
+      "number": 34,
+      "displayNumber": 34,
+      "page": 9,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "The type of fracture marked with arrow J NC em & (J 1 IN, Nel Wy J \\ X77 J! 7 Gr"
+    },
+    {
+      "number": 35,
+      "displayNumber": 35,
+      "page": 9,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Which of the following are the important parameters to be maintained in a patien"
+    },
+    {
+      "number": 36,
+      "displayNumber": 36,
+      "page": 9,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "Which one of the following imaging ‘modalities imparts the highest dose of ioniz"
+    },
+    {
+      "number": 37,
+      "displayNumber": 37,
+      "page": 9,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Which of the following parameters are assessed during preoperative airway assess"
+    },
+    {
+      "number": 38,
+      "displayNumber": 38,
+      "page": 9,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "The type of suture technique shown in =) (CA === a"
+    },
+    {
+      "number": 39,
+      "displayNumber": 39,
+      "page": 10,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Which of the following gastrointestinal secretions normally do net contain bicar"
+    },
+    {
+      "number": 40,
+      "displayNumber": 40,
+      "page": 10,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "A 25-year-old motorcycle rider is brought to the emergency with history of motor"
+    },
+    {
+      "number": 41,
+      "displayNumber": 41,
+      "page": 10,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Which one of the following sets of vaccines is contraindicated in pregnancy?"
+    },
+    {
+      "number": 42,
+      "displayNumber": 42,
+      "page": 10,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "Consider the following statements regarding chorionic villus sampling (CVS) used"
+    },
+    {
+      "number": 43,
+      "displayNumber": 43,
+      "page": 11,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "As per the WHO recommendations, all of the following may be given for active man"
+    },
+    {
+      "number": 44,
+      "displayNumber": 44,
+      "page": 11,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Consider the following statements regarding the cause for onset of labour : Stat"
+    },
+    {
+      "number": 45,
+      "displayNumber": 45,
+      "page": 11,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Consider the following statements regarding the WHO Labour Care Guide for labour"
+    },
+    {
+      "number": 46,
+      "displayNumber": 46,
+      "page": 11,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "Which of the following are positive indicators for breech vaginal delivery?"
+    },
+    {
+      "number": 47,
+      "displayNumber": 47,
+      "page": 12,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Which one of the following correctly defines puerperal pyrexia?"
+    },
+    {
+      "number": 48,
+      "displayNumber": 48,
+      "page": 12,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "A mother presents on day 8 of normal vaginal delivery with painful left breast, "
+    },
+    {
+      "number": 49,
+      "displayNumber": 49,
+      "page": 12,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Consider the following abnormalities in a woman with preeclampsia : 1. Platelet "
+    },
+    {
+      "number": 50,
+      "displayNumber": 50,
+      "page": 12,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Which one of the following parameters precisely defines grade 3 abruptio placent"
+    },
+    {
+      "number": 51,
+      "displayNumber": 51,
+      "page": 13,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "A primigravida comes to antenatal clinic for a routine antenatal visit. When sho"
+    },
+    {
+      "number": 52,
+      "displayNumber": 52,
+      "page": 13,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "A primigravida comes to antenatal clinic at 6 weeks of pregnancy and mentions th"
+    },
+    {
+      "number": 53,
+      "displayNumber": 53,
+      "page": 13,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "The next step to follow for a mother with Rh-negative pregnancy and antibody tit"
+    },
+    {
+      "number": 54,
+      "displayNumber": 54,
+      "page": 13,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Match List-1 with List-Il and select the"
+    },
+    {
+      "number": 55,
+      "displayNumber": 55,
+      "page": 14,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 5,
+      "textSnippet": "Early-onset fetal growth restriction is diagnosed before"
+    },
+    {
+      "number": 56,
+      "displayNumber": 58,
+      "page": 14,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Match List-1 with List-II and select the 81. 4% ee"
+    },
+    {
+      "number": 57,
+      "displayNumber": 59,
+      "page": 14,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "When does the secondary oocyte complete the second meiotic division?"
+    },
+    {
+      "number": 58,
+      "displayNumber": 60,
+      "page": 14,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "The growth and differentiation of primordial follicles is under the control of w"
+    },
+    {
+      "number": 59,
+      "displayNumber": 61,
+      "page": 15,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "Consider the following statements with respect to endometrial cycle : 1. The bas"
+    },
+    {
+      "number": 60,
+      "displayNumber": 62,
+      "page": 15,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Which one of the following statements explains self-priming of gonadotrophs? (@)"
+    },
+    {
+      "number": 61,
+      "displayNumber": 63,
+      "page": 15,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Consider the following diagnostic criteria for acute pelvic inflammatory disease"
+    },
+    {
+      "number": 62,
+      "displayNumber": 64,
+      "page": 15,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "Which one of the following statements is true regarding genital tuberculosis?"
+    },
+    {
+      "number": 63,
+      "displayNumber": 65,
+      "page": 15,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "The drug of choice for treatment of | chlamydial cervicitis is (@) Metronidazole"
+    },
+    {
+      "number": 64,
+      "displayNumber": 66,
+      "page": 16,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Kit 6 used in syndromic management of STI/RTI includes which one of the followin"
+    },
+    {
+      "number": 65,
+      "displayNumber": 67,
+      "page": 16,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "The most common site for vulvar carcinoma is"
+    },
+    {
+      "number": 66,
+      "displayNumber": 68,
+      "page": 16,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Point A in radiotherapy in carcinoma cervix marks the site for which of the foll"
+    },
+    {
+      "number": 67,
+      "displayNumber": 69,
+      "page": 16,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "Which one of the following states the diagnostic criteria for postmolar gestatio"
+    },
+    {
+      "number": 68,
+      "displayNumber": 70,
+      "page": 16,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "Consider the following regarding the steps in Fothergill repair surgery for uter"
+    },
+    {
+      "number": 69,
+      "displayNumber": 71,
+      "page": 17,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "Consider the following surgical methods : 1. Haultain’s method 2. Gilliam’s oper"
+    },
+    {
+      "number": 70,
+      "displayNumber": 72,
+      "page": 17,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "1f 100 couples have used a method for a period of 2 years and have resulted in 1"
+    },
+    {
+      "number": 71,
+      "displayNumber": 73,
+      "page": 17,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "In postpartum period, the intrauterine device may be inserted in the woman (@ up"
+    },
+    {
+      "number": 72,
+      "displayNumber": 74,
+      "page": 17,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "Consider the following conditions in a woman of reproductive age group : 1. Diab"
+    },
+    {
+      "number": 73,
+      "displayNumber": 75,
+      "page": 17,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Which of the following statements regarding progesterone-only pills are correct?"
+    },
+    {
+      "number": 74,
+      "displayNumber": 76,
+      "page": 18,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "After undergoing vasectomy, how many ejaculations and months are required for a "
+    },
+    {
+      "number": 75,
+      "displayNumber": 77,
+      "page": 18,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Which of the following statements regarding lactational amenorrhea method are co"
+    },
+    {
+      "number": 76,
+      "displayNumber": 78,
+      "page": 18,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "Laparoscopic tubal sterilization can be done after"
+    },
+    {
+      "number": 77,
+      "displayNumber": 79,
+      "page": 18,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "According to the Medical Termination of Pregnancy (Amendment) Act, 2021, MTP for"
+    },
+    {
+      "number": 78,
+      "displayNumber": 80,
+      "page": 18,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "The combi-pack approved by the DGHS for medical method of MTP in the first trime"
+    },
+    {
+      "number": 79,
+      "displayNumber": 81,
+      "page": 19,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "In the history of public health, as a part of modern medicine, the following fou"
+    },
+    {
+      "number": 80,
+      "displayNumber": 82,
+      "page": 19,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "A person meets with an accident and as a result of which, the person loses his/h"
+    },
+    {
+      "number": 81,
+      "displayNumber": 83,
+      "page": 19,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "As per ‘the 2030 Agenda for Sustainable Development’, the target 3-4’ refers to "
+    },
+    {
+      "number": 82,
+      "displayNumber": 84,
+      "page": 19,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "In a given set of conditions, a screening test has 90% sensitivity and 90% speci"
+    },
+    {
+      "number": 83,
+      "displayNumber": 85,
+      "page": 20,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "In a historical study, the death rate among heavy smokers was 224 per 1 lakh per"
+    },
+    {
+      "number": 84,
+      "displayNumber": 86,
+      "page": 20,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "The changes that the malarial parasite undergoes in the mosquito represent which"
+    },
+    {
+      "number": 85,
+      "displayNumber": 87,
+      "page": 20,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "In a given population of 10000, there were 30 cases of diabetes already present "
+    },
+    {
+      "number": 86,
+      "displayNumber": 88,
+      "page": 20,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "The parameter which provides an estimate of the amount by which the disease unde"
+    },
+    {
+      "number": 87,
+      "displayNumber": 89,
+      "page": 21,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "Which of the following correctly represent ‘late expanding) ie., the third stage"
+    },
+    {
+      "number": 88,
+      "displayNumber": 90,
+      "page": 21,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "Which one of the following statements regarding sample registration system is no"
+    },
+    {
+      "number": 89,
+      "displayNumber": 91,
+      "page": 21,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "Which one of the following fertility- related statistics most appropriately give"
+    },
+    {
+      "number": 90,
+      "displayNumber": 92,
+      "page": 21,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "A person had undergone the serology for suspected hepatitis B infection. His/Her"
+    },
+    {
+      "number": 91,
+      "displayNumber": 93,
+      "page": 21,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "Inoculation rate’, an important vector index for malaria survey, is correctly de"
+    },
+    {
+      "number": 92,
+      "displayNumber": 94,
+      "page": 22,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "A doctor receives a telephonic call from the mother of an 8-year-old boy, who in"
+    },
+    {
+      "number": 93,
+      "displayNumber": 95,
+      "page": 22,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "Horrocks’ apparatus was used to find out the dose of bleaching powder required t"
+    },
+    {
+      "number": 94,
+      "displayNumber": 96,
+      "page": 22,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "To be effective, the size of the openings in the mosquito net should not exceed"
+    },
+    {
+      "number": 95,
+      "displayNumber": 97,
+      "page": 22,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "As per the WHO expert group, the cutoff point of haemoglobin in venous blood for"
+    },
+    {
+      "number": 96,
+      "displayNumber": 98,
+      "page": 23,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "A 12-year-old boy presented to a health centre in Telangana along with his paren"
+    },
+    {
+      "number": 97,
+      "displayNumber": 1,
+      "page": 23,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Absolute avoidance of milk in the child’s diet"
+    },
+    {
+      "number": 98,
+      "displayNumber": 2,
+      "page": 23,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Encouraging shift of cereal consumption from sorghum to ‘maize"
+    },
+    {
+      "number": 99,
+      "displayNumber": 3,
+      "page": 23,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Encouraging consumption of meat in the childs diet, if the family can afford"
+    },
+    {
+      "number": 100,
+      "displayNumber": 4,
+      "page": 23,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 8,
+      "textSnippet": "Supplementation with nicotinic acid or nicotinamide Which of the plans of action"
+    },
+    {
+      "number": 101,
+      "displayNumber": 1,
+      "page": 25,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "The Health Organization of the League of Nations"
+    },
+    {
+      "number": 102,
+      "displayNumber": 2,
+      "page": 25,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "The Pan American Sanitary Bureau"
+    },
+    {
+      "number": 103,
+      "displayNumber": 3,
+      "page": 25,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "The United Nations Relief and Rehabilitation Administration"
+    },
+    {
+      "number": 104,
+      "displayNumber": 4,
+      "page": 25,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "The World Health Organization Which one of the following represents the correct "
+    },
+    {
+      "number": 105,
+      "displayNumber": 107,
+      "page": 25,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "A 10-week-old infant was taken to a primary health centre by his/her mother for "
+    },
+    {
+      "number": 106,
+      "displayNumber": 108,
+      "page": 25,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "All of the following correctly represent the basic criteria for identifying ‘at "
+    },
+    {
+      "number": 107,
+      "displayNumber": 109,
+      "page": 26,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "Which of the following drugs have been used as part of mass drug administration "
+    },
+    {
+      "number": 108,
+      "displayNumber": 110,
+      "page": 26,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "As per the National Framework for Malaria Elimination in India (2016-2030), whic"
+    },
+    {
+      "number": 109,
+      "displayNumber": 111,
+      "page": 26,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "As per the Jal Jeevan Mission (JJM), the goal is to provide every rural househol"
+    },
+    {
+      "number": 110,
+      "displayNumber": 112,
+      "page": 26,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Which of the following vaccines are live vaccines? (@) BCG, Measles, Injectable "
+    },
+    {
+      "number": 111,
+      "displayNumber": 113,
+      "page": 26,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "Which one of the following is correct regarding the classification of the infant"
+    },
+    {
+      "number": 112,
+      "displayNumber": 114,
+      "page": 27,
+      "type": "SUBJECTIVE",
+      "optionsCount": 0,
+      "textSnippet": "What is/are the most appropriate treatment(s) for the infant? 1. Give lst dose o"
+    },
+    {
+      "number": 113,
+      "displayNumber": 115,
+      "page": 27,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 4,
+      "textSnippet": "Which one among the following test kits available under the National Health Prog"
+    },
+    {
+      "number": 114,
+      "displayNumber": 116,
+      "page": 27,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Once the confirmation of the pregnancy is done, consider the following statement"
+    },
+    {
+      "number": 115,
+      "displayNumber": 117,
+      "page": 28,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "Assuming that a pregnancy was confirmed, the ASHA informed Mrs. M that she shoul"
+    },
+    {
+      "number": 116,
+      "displayNumber": 118,
+      "page": 28,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 2,
+      "textSnippet": "From the data given in the case scenario, consider if the lady's pregnancy would"
+    },
+    {
+      "number": 117,
+      "displayNumber": 119,
+      "page": 28,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 3,
+      "textSnippet": "Consider the following advices to be given by the ASHA to Mrs. M (assuming pregn"
+    },
+    {
+      "number": 118,
+      "displayNumber": 120,
+      "page": 28,
+      "type": "SINGLE_CHOICE",
+      "optionsCount": 1,
+      "textSnippet": "Although different triage systems have been used as a part of disaster response,"
+    }
+  ]
+}

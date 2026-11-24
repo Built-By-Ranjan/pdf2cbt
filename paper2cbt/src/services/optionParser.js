@@ -42,14 +42,16 @@ export function matchOptionLine(line) {
 export function splitInlineOptions(line) {
   // Broad marker-position scan: Latin letter, digit, or roman numeral marker
   // followed by ) or . and whitespace.
-  const inlinePattern = /(?:\(|\[)?\s*([A-Fa-f]|[1-6]|x{0,2}(?:ix|iv|v?i{0,3}))\s*(?:\)|\]|\.)\s+/gi;
-  const matches = [...line.matchAll(inlinePattern)].filter((m) => normalizeOptionLabel(m[1]));
+  const inlinePattern =
+    /(?:\(|\[)\s*([A-Fa-f0-9®©€]|x{0,2}(?:ix|iv|v?i{0,3}))\s*(?:\)|\])\s*|(?:\b|\s)([A-Fa-f]|[1-6])\s*[.)]\s+|([①②③④ⓐⓑⓒⓓⒶⒷⒸⒹ®©€])\s+/gi;
+  const matches = [...line.matchAll(inlinePattern)].filter((m) => normalizeOptionLabel(m[1] || m[2] || m[3]));
   if (matches.length < 2) return [];
 
   const results = [];
   const seenLabels = new Set();
   for (let i = 0; i < matches.length; i += 1) {
-    const label = normalizeOptionLabel(matches[i][1]);
+    const raw = matches[i][1] || matches[i][2] || matches[i][3];
+    const label = normalizeOptionLabel(raw);
     if (!label || seenLabels.has(label)) continue; // avoid re-matching stray letters inside option text
     seenLabels.add(label);
 
@@ -63,7 +65,8 @@ export function splitInlineOptions(line) {
   return results.length >= 2 ? results : [];
 }
 
-const INLINE_OPTION_SCAN_PATTERN = /(?:\(|\[)?\s*([A-Fa-f]|[1-6]|x{0,2}(?:ix|iv|v?i{0,3}))\s*(?:\)|\]|\.)\s+/gi;
+const INLINE_OPTION_SCAN_PATTERN =
+  /(?:\(|\[)\s*([A-Fa-f0-9®©€]|x{0,2}(?:ix|iv|v?i{0,3}))\s*(?:\)|\])\s*|(?:\b|\s)([A-Fa-f]|[1-6])\s*[.)]\s+|([①②③④ⓐⓑⓒⓓⒶⒷⒸⒹ®©€])\s+/gi;
 
 /**
  * Like splitInlineOptions, but also returns the leading text BEFORE the
@@ -78,7 +81,9 @@ const INLINE_OPTION_SCAN_PATTERN = /(?:\(|\[)?\s*([A-Fa-f]|[1-6]|x{0,2}(?:ix|iv|
  */
 export function splitInlineOptionsWithPrefix(line) {
   if (!line) return null;
-  const matches = [...line.matchAll(INLINE_OPTION_SCAN_PATTERN)].filter((m) => normalizeOptionLabel(m[1]));
+  const matches = [...line.matchAll(INLINE_OPTION_SCAN_PATTERN)].filter((m) =>
+    normalizeOptionLabel(m[1] || m[2] || m[3])
+  );
   if (matches.length < 2) return null;
 
   const prefix = line.slice(0, matches[0].index).trim();
@@ -86,7 +91,8 @@ export function splitInlineOptionsWithPrefix(line) {
   const results = [];
   const seenLabels = new Set();
   for (let i = 0; i < matches.length; i += 1) {
-    const label = normalizeOptionLabel(matches[i][1]);
+    const raw = matches[i][1] || matches[i][2] || matches[i][3];
+    const label = normalizeOptionLabel(raw);
     if (!label || seenLabels.has(label)) continue;
     seenLabels.add(label);
 

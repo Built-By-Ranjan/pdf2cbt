@@ -31,13 +31,14 @@ const ROMAN_QUESTION_MARKER = /^\s*\(?([IVXLCDM]{1,7})\)?[.):]\s*/;
 // Matches option markers at the start of a line, e.g.:
 // "A.", "B.", "(A)", "A)", "①", "②", "Ⓐ", "ⓐ", roman numerals "I.", "II.",
 // and Hindi option letters "क)", "ख)".
+// Also matches common OCR glyph confusions (8, 0, ®, ©, €) ONLY in option-marker positions.
 export const OPTION_MARKERS = [
-  /^\s*\(\s*([A-Da-d])\s*\)\s*/,
-  /^\s*\[\s*([A-Da-d])\s*\]\s*/,
+  /^\s*\(\s*([A-Da-d0-9®©€])\s*\)\s*/,
+  /^\s*\[\s*([A-Da-d0-9®©€])\s*\]\s*/,
   /^\s*([A-Da-d])\s*[.):]\s*/,
-  /^\s*([①②③④ⓐⓑⓒⓓⒶⒷⒸⒹ])\s*/,
+  /^\s*([①②③④ⓐⓑⓒⓓⒶⒷⒸⒹ®©€])\s*/,
   /^\s*\(?\s*([क-ङ])\s*\)?[.):]\s*/,
-  /^\s*\(?\s*(I{1,3}V?|IV|VI{0,3})\s*\)?[.):]\s*/
+  /^\s*\(?\s*(I{1,3}V?|IV|VI{0,3})\s*\)?[.):]\s*/,
 ];
 
 // Circled unicode digits/letters -> alphabetic label mapping
@@ -56,6 +57,15 @@ export const CIRCLED_NUMERAL_MAP = {
   'Ⓓ': 'D',
   '®': 'B',
   '©': 'C',
+  '€': 'C',
+};
+
+// OCR misread numerals in option positions only:
+export const OCR_OPTION_GLYPH_MAP = {
+  '8': 'B',
+  '0': 'D',
+  'O': 'D',
+  'o': 'D',
 };
 
 export const ROMAN_TO_LABEL_MAP = {
@@ -73,6 +83,17 @@ export const HINDI_OPTION_MAP = {
   'घ': 'D',
   'ङ': 'E'
 };
+
+export function normalizeOptionLabel(rawLabel) {
+  if (!rawLabel) return null;
+  if (CIRCLED_NUMERAL_MAP[rawLabel]) return CIRCLED_NUMERAL_MAP[rawLabel];
+  if (HINDI_OPTION_MAP[rawLabel]) return HINDI_OPTION_MAP[rawLabel];
+  if (OCR_OPTION_GLYPH_MAP[rawLabel]) return OCR_OPTION_GLYPH_MAP[rawLabel];
+  const upper = rawLabel.toUpperCase();
+  if (ROMAN_TO_LABEL_MAP[upper]) return ROMAN_TO_LABEL_MAP[upper];
+  if (/^[A-F]$/.test(upper)) return upper;
+  return null;
+}
 
 // Detects an "Answer Key" section header. Must be anchored to the START of
 // the (trimmed) line and the line must be SHORT — a dedicated header line
@@ -98,15 +119,6 @@ export const ASSERTION_REASON_PATTERN = /assertion\s*\(?A\)?.*reason\s*\(?R\)?/i
 
 // Detects multi-correct hints ("choose all that apply", "select two")
 export const MULTIPLE_CHOICE_HINT = /choose\s+all|select\s+(two|three|multiple)|more\s+than\s+one\s+option/i;
-
-export function normalizeOptionLabel(rawLabel) {
-  if (!rawLabel) return null;
-  if (CIRCLED_NUMERAL_MAP[rawLabel]) return CIRCLED_NUMERAL_MAP[rawLabel];
-  if (HINDI_OPTION_MAP[rawLabel]) return HINDI_OPTION_MAP[rawLabel];
-  const upper = rawLabel.toUpperCase();
-  if (ROMAN_TO_LABEL_MAP[upper]) return ROMAN_TO_LABEL_MAP[upper];
-  return upper;
-}
 
 // ---------------------------------------------------------------------------
 // Question-start matching
