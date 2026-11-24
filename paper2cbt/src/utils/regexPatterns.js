@@ -105,7 +105,8 @@ export function normalizeOptionLabel(rawLabel) {
 // classified as the start of the answer-key section, silently truncating the
 // rest of the exam. Guard against that class of bug entirely by requiring
 // the match to start the line and the whole line to be short header text.
-export const ANSWER_KEY_HEADER = /^\s*answer\s*(s|-)?\s*key\b[^\n]{0,20}$|^\s*answers?\s*[:.-]?\s*$/i;
+export const ANSWER_KEY_HEADER =
+  /^\s*answer\s*(?:s|-)?\s*key\b(?:\s*[:\-–]|\s*\((?:set|paper|code)?[^\n)]*\))?\s*$|^\s*answers?\s*[:.-]?\s*$/i;
 
 // A single answer key line, e.g. "1. A", "1 - B", "Q1: C", "5. A,C" (multiple
 // correct), "4. 2" or "4. -3.5" (numerical/integer-type answer).

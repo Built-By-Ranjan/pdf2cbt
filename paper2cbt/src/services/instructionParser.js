@@ -108,6 +108,10 @@ export function classifyNonQuestionPage(text) {
     return 'blank';
   }
 
+  if (lines.length <= 4 && !hasOptions && !hasQuestionNumbers) {
+    return 'cover';
+  }
+
   if (lines.length < 8 && !hasOptions && /test\s*code|roll\s*no|booklet|student\s*copy|faculty\s*copy/i.test(text)) {
     return 'cover';
   }

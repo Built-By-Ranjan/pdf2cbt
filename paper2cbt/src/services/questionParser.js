@@ -315,6 +315,10 @@ export function parseQuestions(tokens) {
         // Reaching the answer key means the question list is complete —
         // answerKeyService parses this section separately from the full
         // token list, so questionParser just stops here.
+        // Guard: an answer key marker cannot end parsing if no questions have been found yet (e.g. cover page mention)
+        if (questions.length === 0 && !current) {
+          break;
+        }
         finalizeCurrent();
         state = PARSER_STATES.END;
         break;
