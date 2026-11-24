@@ -16,8 +16,7 @@ import { SECTION_HEADER_PATTERN } from '../utils/regexPatterns';
 const INTEGER_SECTION_PATTERNS = [
   /integer\s+(?:type|answer)/i,
   /numerical\s+(?:value|type|answer)/i,
-  /section\s*[-–]?\s*(?:II|Il|ll|2|B)\b/i, // Section II (or OCR variants Il, ll, 2)
-  /section\s*[-–]?\s*2\b/i,
+  /(?:section|part)\s*[-–]?\s*(?:II|Il|ll|2|B)\b/i, // Section II, Part B, Section 2 (or OCR variants Il, ll)
   /type\s*[-–]?\s*2\b.*(?:integer|numerical)/i,
 ];
 

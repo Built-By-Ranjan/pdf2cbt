@@ -213,30 +213,9 @@ export async function parsePdfToQuestions(file, onProgress = () => {}, options =
   onProgress(PROCESSING_STAGES.PARSING_ANSWER_KEY);
   const answerKey = extractAnswerKey(subjectAnnotatedTokens, questions);
 
-  // Phase C/D: Refine question types and options based on answer key.
-  // For image-first questions where options are in the image, an answer key with
-  // A-D or 1-4 establishes that it's a multiple choice question; a numerical answer
-  // establishes that it's an INTEGER/NUMERICAL question.
-  if (answerKey && questions.length > 0) {
-    for (const q of questions) {
-      const ans = answerKey.get(q.number);
-      if (ans && q.type === QUESTION_TYPES.SUBJECTIVE) {
-        if (/^[A-Da-d]$/.test(ans)) {
-          q.type = QUESTION_TYPES.SINGLE_CHOICE;
-          if (q.options.length === 0) {
-            q.options = ['A', 'B', 'C', 'D'].map((label) => ({ label, text: '', isImageOption: true }));
-          }
-        } else if (/^[1-4]$/.test(ans)) {
-          q.type = QUESTION_TYPES.SINGLE_CHOICE;
-          if (q.options.length === 0) {
-            q.options = ['1', '2', '3', '4'].map((label) => ({ label, text: '', isImageOption: true }));
-          }
-        } else if (/^-?\d+(?:\.\d+)?$/.test(ans)) {
-          q.type = QUESTION_TYPES.INTEGER;
-        }
-      }
-    }
-  }
+  // Note: Question types are strictly determined from question content (options/text)
+  // and section headings, never inferred from answer key values (to avoid collision
+  // between option numbers 1-4 and integer answers 1-4).
 
   // Phase A: Region Cropping — compute bounding boxes and crop each question.
   if (cropImages && questions.length > 0) {

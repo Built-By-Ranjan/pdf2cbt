@@ -34,12 +34,18 @@ function classifyQuestionType(questionText, options, sectionIsInteger, section) 
   // Integer section always overrides — no need for a hint in question text
   if (sectionIsInteger && options.length === 0) return QUESTION_TYPES.INTEGER;
   if (ASSERTION_REASON_PATTERN.test(questionText)) return QUESTION_TYPES.ASSERTION_REASON;
+
+  // Check if option labels (A-D, a-d, 1-4) exist inside question text
+  const hasOptionsInText =
+    /\([A-Da-d1-4]\)|\[[A-Da-d1-4]\]|\b[A-Da-d1-4]\s*[.)]\s+[A-Za-z0-9]|\b[①②③④ⓐⓑⓒⓓⒶⒷⒸⒹ]\b/.test(questionText);
+
   if (options.length === 0) {
-    if (NUMERICAL_ANSWER_HINT.test(questionText)) return QUESTION_TYPES.NUMERICAL;
     if (sectionIsInteger) return QUESTION_TYPES.INTEGER;
-    // Section-I / MCQ section in exam papers: if options are graphs or images,
+    if (NUMERICAL_ANSWER_HINT.test(questionText)) return QUESTION_TYPES.NUMERICAL;
+    if (hasOptionsInText) return QUESTION_TYPES.SINGLE_CHOICE;
+    // Section-I / Section A / MCQ section in exam papers: if options are graphs or images,
     // classify as SINGLE_CHOICE so option buttons appear on CBT screen.
-    if (section && /section\s*[-–:]?\s*(?:I|1|A)\b/i.test(section)) {
+    if (section && /(?:section|part)\s*[-–:]?\s*(?:I|1|A)\b/i.test(section)) {
       return QUESTION_TYPES.SINGLE_CHOICE;
     }
     return QUESTION_TYPES.SUBJECTIVE;

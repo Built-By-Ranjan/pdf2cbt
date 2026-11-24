@@ -232,27 +232,9 @@ async function processPdfFile(filename, ocrWorker) {
 
   const answerKeyMap = extractAnswerKey(tokens, questions);
 
-  // Refine question types and options based on answer key
-  if (answerKeyMap && questions.length > 0) {
-    for (const q of questions) {
-      const ans = answerKeyMap.get(q.number);
-      if (ans && q.type === QUESTION_TYPES.SUBJECTIVE) {
-        if (/^[A-Da-d]$/.test(ans)) {
-          q.type = QUESTION_TYPES.SINGLE_CHOICE;
-          if (!q.options || q.options.length === 0) {
-            q.options = ['A', 'B', 'C', 'D'].map((label) => ({ label, text: '', isImageOption: true }));
-          }
-        } else if (/^[1-4]$/.test(ans)) {
-          q.type = QUESTION_TYPES.SINGLE_CHOICE;
-          if (!q.options || q.options.length === 0) {
-            q.options = ['1', '2', '3', '4'].map((label) => ({ label, text: '', isImageOption: true }));
-          }
-        } else if (/^-?\d+(?:\.\d+)?$/.test(ans)) {
-          q.type = QUESTION_TYPES.INTEGER;
-        }
-      }
-    }
-  }
+  // Note: Question types are determined strictly from question content (options/text)
+  // and section headings, never inferred from answer key values (to avoid collision
+  // between option numbers 1-4 and integer answers 1-4).
 
   const durationSec = ((Date.now() - startTime) / 1000).toFixed(1);
 
