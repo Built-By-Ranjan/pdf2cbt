@@ -1,0 +1,324 @@
+===========================================================
+PROJECT ROADMAP
+AI PDF → CBT ENGINE
+Master Development Roadmap
+Version 1.0
+===========================================================
+
+Project Goal
+
+Build a production-grade AI powered PDF → CBT platform that can
+accurately convert Text PDFs, Scanned PDFs and Mixed PDFs into
+fully interactive CBT exams.
+
+Target Accuracy
+
+95–99% for standard exam PDFs.
+
+===========================================================
+PROJECT PHASES
+===========================================================
+
+[ ] PHASE 1
+PDF Reading & Document Intelligence
+
+Status:
+Not Started
+
+Modules
+
+✓ PDF Classification
+✓ OCR Engine
+✓ Layout Detection
+✓ Page Classification
+✓ Header/Footer Removal
+✓ Watermark Removal
+✓ Text Normalization
+✓ PDF Quality Analysis
+✓ Parser Logging
+✓ Validation
+
+Goal
+
+Understand every PDF correctly before parsing.
+
+-----------------------------------------------------------
+
+[ ] PHASE 2
+Intelligent Question Detection Engine
+
+Status:
+Not Started
+
+Modules
+
+✓ Question Boundary Detection
+✓ Question Start Detection
+✓ Question End Detection
+✓ Multi-line Questions
+✓ Question Type Detection
+✓ Subject Detection
+✓ Section Detection
+✓ Ignore Instructions
+✓ Ignore Solutions
+✓ Question Validation
+✓ Question Confidence
+✓ JSON Generation
+
+Goal
+
+Detect every question correctly.
+
+-----------------------------------------------------------
+
+[ ] PHASE 3
+Intelligent Option Detection Engine
+
+Status:
+Not Started
+
+Modules
+
+✓ A/B/C/D Detection
+✓ (A)(B)(C)(D)
+✓ A) B) C)
+✓ Wrapped Options
+✓ Single Line Options
+✓ Multi Line Options
+✓ Option Validation
+✓ Ignore Ans/Solution
+✓ Option Repair
+✓ Confidence Score
+
+Goal
+
+Detect options perfectly.
+
+-----------------------------------------------------------
+
+[ ] PHASE 4
+Math, Diagram & Image Engine
+
+Status:
+Not Started
+
+Modules
+
+✓ Limit Detection
+✓ Integration Detection
+✓ Matrix Detection
+✓ Fraction Detection
+✓ Sigma Detection
+✓ Equation Detection
+✓ Graph Detection
+✓ Diagram Detection
+✓ Circuit Detection
+✓ Table Detection
+✓ Geometry Detection
+✓ Chemistry Structure Detection
+✓ Auto Crop Engine
+✓ Image Attachment
+✓ Render Image in CBT
+
+Goal
+
+Never lose mathematical content.
+
+-----------------------------------------------------------
+
+[ ] PHASE 5
+Answer Key & Solution Engine
+
+Status:
+Not Started
+
+Modules
+
+✓ Answer Key Detection
+✓ Solution Detection
+✓ Explanation Detection
+✓ Auto Mapping
+✓ Auto Scoring
+✓ Integer Validation
+✓ Numerical Validation
+✓ Multi Correct Validation
+
+Goal
+
+Automatically evaluate tests.
+
+-----------------------------------------------------------
+
+[ ] PHASE 6
+AI Validation & Repair Engine
+
+Status:
+Not Started
+
+Modules
+
+✓ Missing Question Detection
+✓ Duplicate Detection
+✓ Broken Question Repair
+✓ Broken Option Repair
+✓ Number Validation
+✓ AI Repair Pass
+✓ Confidence Engine
+✓ Validation Report
+
+Goal
+
+Automatically repair parser mistakes.
+
+-----------------------------------------------------------
+
+[ ] PHASE 7
+CBT Experience Engine
+
+Status:
+Not Started
+
+Modules
+
+✓ Autosave
+✓ Resume Test
+✓ Fullscreen
+✓ Keyboard Shortcuts
+✓ Timer Persistence
+✓ Bookmark
+✓ Review Mode
+✓ Rough Sheet
+✓ Calculator
+✓ Mobile Optimization
+
+Goal
+
+Real exam experience.
+
+-----------------------------------------------------------
+
+[ ] PHASE 8
+Results & Analytics
+
+Status:
+Not Started
+
+Modules
+
+✓ Accuracy
+✓ Time Per Question
+✓ Weak Topics
+✓ Strong Topics
+✓ Subject Analysis
+✓ Section Analysis
+✓ Wrong Answer Review
+✓ Charts
+✓ Performance Report
+
+Goal
+
+Detailed result analysis.
+
+-----------------------------------------------------------
+
+[ ] PHASE 9
+Performance & Production
+
+Status:
+Not Started
+
+Modules
+
+✓ Large PDF Support
+✓ Background Workers
+✓ Parallel Processing
+✓ Caching
+✓ Memory Optimization
+✓ Faster OCR
+✓ Faster Parsing
+✓ Error Recovery
+
+Goal
+
+Production ready parser.
+
+-----------------------------------------------------------
+
+[ ] PHASE 10
+Enterprise Features
+
+Status:
+Not Started
+
+Modules
+
+✓ User Accounts
+✓ Cloud Storage
+✓ PDF Library
+✓ Test History
+✓ Export JSON
+✓ Export PDF
+✓ API Support
+✓ Offline Support
+✓ PWA
+✓ Admin Dashboard
+
+Goal
+
+Commercial SaaS ready.
+
+-----------------------------------------------------------
+
+[ ] PHASE 11
+Self Learning AI Engine
+
+Status:
+Not Started
+
+Modules
+
+✓ Feedback Learning
+✓ Parser Learning
+✓ Confidence Improvement
+✓ User Corrections
+✓ Auto Rule Generation
+✓ Pattern Learning
+
+Goal
+
+Self improving AI parser.
+
+===========================================================
+
+CURRENT PHASE
+
+Phase :
+Status :
+
+===========================================================
+
+NOTES
+
+After every completed phase
+
+1. Save ZIP
+2. Update this roadmap
+3. Send ZIP to ChatGPT
+4. Continue next phase only after review
+
+===========================================================
+
+PROJECT COMPLETE
+
+When all phases are completed,
+
+Target:
+
+✓ Production Ready
+✓ AI Powered
+✓ Commercial Grade
+✓ 95–99% Parser Accuracy
+✓ JEE / NEET / SSC / UPSC Ready
+✓ Handles Text, Scan and Mixed PDFs
+
+===========================================================

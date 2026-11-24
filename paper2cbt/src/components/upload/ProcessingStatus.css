@@ -1,0 +1,22 @@
+.processing-status {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.processing-status__label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.processing-status__detail {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.processing-status__type {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,27 @@
+.summary-card {
+  display: flex;
+  justify-content: space-around;
+  padding: 24px;
+}
+
+.summary-card__stat {
+  text-align: center;
+}
+
+.summary-card__value {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.summary-card__label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .summary-card {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

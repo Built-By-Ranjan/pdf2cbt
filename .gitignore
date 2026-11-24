@@ -1,0 +1,10 @@
+node_modules
+paper2cbt/node_modules
+paper2cbt/dist
+dist
+dist-test
+paper2cbt.zip
+.DS_Store
+*.log
+.cache
+debug-crops

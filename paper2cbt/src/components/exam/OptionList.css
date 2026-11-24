@@ -1,0 +1,57 @@
+.option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.option-item:hover {
+  border-color: var(--color-primary);
+}
+
+.option-item--selected {
+  border-color: var(--color-primary);
+  background: var(--color-surface-alt);
+}
+
+.option-item__marker {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.option-item__marker--square {
+  border-radius: 8px;
+}
+
+.option-item--selected .option-item__marker {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.option-item__text {
+  line-height: 1.5;
+}

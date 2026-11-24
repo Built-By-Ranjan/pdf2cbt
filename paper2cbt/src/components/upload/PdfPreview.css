@@ -1,0 +1,23 @@
+.pdf-preview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  margin-top: 16px;
+}
+
+.pdf-preview__icon {
+  font-size: 30px;
+}
+
+.pdf-preview__name {
+  font-weight: 600;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.pdf-preview__meta {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}

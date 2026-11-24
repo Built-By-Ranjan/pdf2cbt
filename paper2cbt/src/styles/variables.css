@@ -1,0 +1,63 @@
+/* variables.css
+   Design tokens shared across the whole app. Components should reference
+   these CSS variables rather than hard-coded colors/sizes. */
+
+:root {
+  --color-bg: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f0f2f5;
+  --color-border: #e2e5ea;
+  --color-text: #1a1d23;
+  --color-text-muted: #656b76;
+  --color-primary: #3b5bfd;
+  --color-primary-hover: #2d47d1;
+  --color-success: #1aa053;
+  --color-success-bg: #e6f7ed;
+  --color-danger: #e5484d;
+  --color-danger-bg: #fdecec;
+  --color-warning: #f5a524;
+  --color-warning-bg: #fef3e0;
+  --color-marked: #a855f7;
+  --color-marked-bg: #f3e8fd;
+  --color-not-visited: #d0d4da;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
+  --shadow-lg: 0 12px 32px rgba(16, 24, 40, 0.12);
+
+  --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --header-height: 64px;
+  --footer-height: 56px;
+
+  --transition-fast: 120ms ease;
+  --transition-normal: 200ms ease;
+}
+
+[data-theme='dark'] {
+  --color-bg: #101217;
+  --color-surface: #181b21;
+  --color-surface-alt: #21252c;
+  --color-border: #2c313a;
+  --color-text: #eef0f3;
+  --color-text-muted: #9aa1ac;
+  --color-primary: #6d85ff;
+  --color-primary-hover: #8296ff;
+  --color-success: #35c47a;
+  --color-success-bg: #103524;
+  --color-danger: #ff6b6f;
+  --color-danger-bg: #3a1618;
+  --color-warning: #ffbb50;
+  --color-warning-bg: #3a2a0d;
+  --color-marked: #c084fc;
+  --color-marked-bg: #2c1c3a;
+  --color-not-visited: #3a4049;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+}

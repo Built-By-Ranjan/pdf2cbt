@@ -1,0 +1,21 @@
+.app-footer {
+  min-height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.app-footer__link {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.app-footer__link:hover {
+  text-decoration: underline;
+}

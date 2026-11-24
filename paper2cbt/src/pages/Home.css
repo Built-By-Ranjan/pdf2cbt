@@ -1,0 +1,42 @@
+.home-page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.home-page__intro {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.home-page__intro h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.home-page__intro p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+.home-page__error {
+  color: var(--color-danger);
+  margin-top: 14px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.home-page__success {
+  margin-top: 20px;
+  padding: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .home-page__intro h1 {
+    font-size: 24px;
+  }
+}
